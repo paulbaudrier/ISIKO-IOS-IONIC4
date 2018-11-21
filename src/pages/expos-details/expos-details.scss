@@ -1,0 +1,123 @@
+page-expos-details {
+
+    .texthomepage p {
+        color: #ffaf57;
+        font-weight: 500;
+        text-align: center;
+
+        text-shadow: 2px 2px 12px black;
+     font-size: 25px;
+    }
+    .list-md .item-block .item-inner {
+        border:none;
+    }
+    img.listemenuimage {
+        z-index: -1;
+    }
+    
+    .texthomepage {
+        z-index: 999;
+        position: absolute;
+        width: 90%;
+        bottom: 40%;
+        font-weight: 700
+    }
+
+    .blackscreen {
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        background: #00000087;
+        width: 92%;
+        height: 90%;
+        // padding-right: 311px;
+        // padding-bottom: 467px;
+    }
+    page-expos-details .blackscreen {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    background: #00000087;
+    width: 92%;
+    height: 90%;
+}
+    img.listemenuimage {
+        z-index: -1;
+        width: 100%
+    }
+    .titleexpo {
+        position: absolute;
+        bottom: 50%;
+        left: 5%;
+        width: 90%;
+
+     text-shadow: 2px 2px 12px #f5a54d;
+    }
+    .titleexpo h2 {
+    
+        font-size: 30px !important;
+        text-align: center !important;
+    }
+    
+    .item-md p {
+        margin: 0 0 2px;
+        overflow: inherit;
+        line-height: normal;
+        text-overflow: inherit;
+    }
+    
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .title {
+        position: sticky;
+        top: 0px;
+        z-index: 9999999;
+        background: #3C3C3C;
+        border: 1px solid black;
+        color: #f5a54d;
+        text-shadow: 3px 3px 16px black;
+    }
+ 
+    // .description p {
+    //     font-size: 15px;
+    //     color:white;
+    //     font-weight: 500;
+    //     text-shadow: 2px 2px 9px black;
+    //     white-space: nowrap;
+    //     text-overflow: ellipsis;
+    // }
+
+   .description p {
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        text-shadow: 2px 2px 9px black;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 250px;
+    }
+
+    .description {
+        /* color: white; */
+        position: absolute;
+        bottom: 20%;
+        /* left: 10%; */
+        padding: 5%;
+        text-align: left;
+    }
+
+    span.button-inner {
+        font-size: 19px;
+        text-shadow: 2px 2px 4px black;
+        border: 2px solid;
+        border-radius: 6px;
+        background: #00000052;
+        /* box-shadow: 2px 2px white; */
+    }
+    .item-md{
+        background-color: transparent !important;
+    }
+}

@@ -1,0 +1,50 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.myboutton {
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    text-shadow: 2px 2px 17px black !important;
+    color: #ffc632 !important;
+    background-color: #474747;
+    -webkit-box-shadow: none;
+    box-shadow: 0 5px 15px 0px #d8ac2d !important;
+    -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toolbar-background-md {
+    border-color: #5d5d5d;
+    box-shadow: 0px 4px 10px black;
+    background: #191919;
+}
+
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2.5rem;
+    text-shadow: 1px 3px 5px #fbc631;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}

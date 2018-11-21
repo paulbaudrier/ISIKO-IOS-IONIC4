@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>Mon Profil</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <img [src]="user.image"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{user.name}}
+      </ion-card-title>
+      <p>
+        Bonjour,
+        
+        {{user.name}}.
+
+        Vous trouverez ici les informations de votre profil !
+      </p>
+    </ion-card-content>
+    <button ion-button block type="button" (click)='favoritPage()'>Mes favoris</button>
+    <button ion-button block type="button" (click)='logout()'>Se déconnecter</button>
+  </ion-card>
+</ion-content>
