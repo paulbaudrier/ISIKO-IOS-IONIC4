@@ -106,6 +106,23 @@ export class ExposDetailsPage {
     this.navCtrl.push('AllcommentPage');
   }
 
+  // LECTEUR VISITE LINK ALGO
+  //
+
+  // lecteuralgo(url: string)
+  // {
+  //   const options: InAppBrowserOptions = {
+  //     zoom: 'no'
+  //   }
+  //   IF ID = PREMIERE_EXPO
+  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+  //   IF ID = DEUXIEME_EXPO
+  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+  //   IF ID = TROISIEME_EXPO
+  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+
+  // }
+
   ionViewDidLoad() {
 
     console.log("MY VALUE :" + this.value);
