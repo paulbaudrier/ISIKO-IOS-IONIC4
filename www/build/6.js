@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 746:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyProfilePageModule", function() { return MyProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_profile__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(766);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MyProfilePageModule = /** @class */ (function () {
-    function MyProfilePageModule() {
+var MyFavoritesPageModule = /** @class */ (function () {
+    function MyFavoritesPageModule() {
     }
-    MyProfilePageModule = __decorate([
+    MyFavoritesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__my_profile__["a" /* MyProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_profile__["a" /* MyProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */]),
             ],
         })
-    ], MyProfilePageModule);
-    return MyProfilePageModule;
+    ], MyFavoritesPageModule);
+    return MyFavoritesPageModule;
 }());
 
-//# sourceMappingURL=my-profile.module.js.map
+//# sourceMappingURL=my-favorites.module.js.map
 
 /***/ }),
 
-/***/ 770:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyProfilePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyFavoritesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_service__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_auth_service__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_user_model__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(167);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,63 +58,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Generated class for the MyProfilePage page.
+ * Generated class for the MyFavoritesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MyProfilePage = /** @class */ (function () {
-    function MyProfilePage(navCtrl, navParams, restProvider, userService, authService) {
+var MyFavoritesPage = /** @class */ (function () {
+    function MyFavoritesPage(navCtrl, navParams, restProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.restProvider = restProvider;
-        this.userService = userService;
-        this.authService = authService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_5__core_user_model__["a" /* FirebaseUserModel */]();
-        // this.getProfile();
+        this.getUserFavorit();
     }
-    MyProfilePage.prototype.ionViewWillLoad = function () {
+    MyFavoritesPage.prototype.getUserFavorit = function () {
         var _this = this;
-        this.userService.getCurrentUser()
-            .then(function (user) {
-            _this.user = user;
-            console.log("USER IDDDDD" + user.name);
-        }, function (err) { return console.log(err); });
-    };
-    MyProfilePage.prototype.logout = function () {
-        var _this = this;
-        this.authService.doLogout()
-            .then(function (res) {
-            _this.navCtrl.push('WelcomePage');
-        }, function (error) {
-            console.log("Logout error", error);
+        this.restProvider.getUserFavorit()
+            .then(function (data) {
+            _this.users = data;
+            console.log(_this.users);
         });
     };
-    // getProfile() {
-    //   this.restProvider.getProfile()
-    //   .then(data => {
-    //     this.users = data;
-    //     console.log(this.users);
-    //   });
-    // }
-    MyProfilePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MyProfilePage');
+    MyFavoritesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyFavoritesPage');
     };
-    MyProfilePage = __decorate([
+    MyFavoritesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-profile',template:/*ion-inline-start:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/my-profile/my-profile.html"*/'<<<<<<< HEAD\n<ion-header>\n\n  <ion-navbar hideBackButton="true">\n\n    <ion-title>Mon Profil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <img [src]="user.image"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{user.name}}\n\n      </ion-card-title>\n\n      <p>\n\n        Bonjour, {{user.name}}.\n\n        <br>\n\n        <br>\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <br>\n\n      <p>\n\n        Mon email : {{user.email}}\n\n      </p>\n\n      <br>\n\n      Mon ID : {{user.uid}}\n\n\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n=======\n<ion-header>\n  <ion-navbar hideBackButton="true">\n    <ion-title>Mon Profil</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <img [src]="user.image"/>\n    <ion-card-content>\n      <ion-card-title>\n        {{user.name}}\n      </ion-card-title>\n      <p>\n        Bonjour, {{user.name}}.\n        <br>\n        <br>\n        Vous trouverez ici les informations de votre profil !\n      </p>\n      <br>\n      <p>\n        Mon email : {{user.email}}\n      </p>\n      <br>\n      Mon ID : {{user.uid}}\n\n    </ion-card-content>\n    <br>\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n  </ion-card>\n</ion-content>\n>>>>>>> 7a39b3d838cb80fb25cfb22fb9924dddb29411a9\n'/*ion-inline-end:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/my-profile/my-profile.html"*/,
+            selector: 'page-my-favorites',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-content>\n\n  <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <h2>{{user.id_Expo}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.id_Users}}</p>\n\n      </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__core_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_4__core_auth_service__["a" /* AuthService */]])
-    ], MyProfilePage);
-    return MyProfilePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
+    ], MyFavoritesPage);
+    return MyFavoritesPage;
 }());
 
-//# sourceMappingURL=my-profile.js.map
+//# sourceMappingURL=my-favorites.js.map
 
 /***/ })
 

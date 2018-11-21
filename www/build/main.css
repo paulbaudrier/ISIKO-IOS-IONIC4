@@ -25997,33 +25997,6 @@ page-item-detail .item-detail {
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-page-register .error-message {
-  color: red;
-}
-
-page-register .success-message {
-  color: green;
-}
-
-page-register .submit-button {
-  margin: 0px;
-  margin-top: 20px;
-}
-
-page-register .twitter-button {
-  margin: 0px;
-  margin-top: 20px;
-}
-
-page-register .facebook-button {
-  margin: 0px;
-}
-
-page-register .google-button {
-  margin: 0px;
-  margin-top: 20px;
-}
-
 .ionicsignup {
   color: white !important;
 }

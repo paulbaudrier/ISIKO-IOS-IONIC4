@@ -1,14 +1,15 @@
 webpackJsonp([13],{
 
-/***/ 738:
+/***/ 739:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LecteurVisitesPageModule", function() { return LecteurVisitesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemCreatePageModule", function() { return ItemCreatePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lecteur_visites__ = __webpack_require__(763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__item_create__ = __webpack_require__(760);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +19,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LecteurVisitesPageModule = /** @class */ (function () {
-    function LecteurVisitesPageModule() {
+
+var ItemCreatePageModule = /** @class */ (function () {
+    function ItemCreatePageModule() {
     }
-    LecteurVisitesPageModule = __decorate([
+    ItemCreatePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__lecteur_visites__["a" /* LecteurVisitesPage */],
+                __WEBPACK_IMPORTED_MODULE_3__item_create__["a" /* ItemCreatePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__lecteur_visites__["a" /* LecteurVisitesPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__item_create__["a" /* ItemCreatePage */]),
+                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_3__item_create__["a" /* ItemCreatePage */]
+            ]
         })
-    ], LecteurVisitesPageModule);
-    return LecteurVisitesPageModule;
+    ], ItemCreatePageModule);
+    return ItemCreatePageModule;
 }());
 
-//# sourceMappingURL=lecteur-visites.module.js.map
+//# sourceMappingURL=item-create.module.js.map
 
 /***/ }),
 
-/***/ 763:
+/***/ 760:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LecteurVisitesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemCreatePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,38 +65,84 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the LecteurVisitesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var LecteurVisitesPage = /** @class */ (function () {
-    function LecteurVisitesPage(navCtrl, navParams, inAppBrowser) {
+
+var ItemCreatePage = /** @class */ (function () {
+    function ItemCreatePage(navCtrl, viewCtrl, formBuilder, camera) {
+        var _this = this;
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.inAppBrowser = inAppBrowser;
+        this.viewCtrl = viewCtrl;
+        this.camera = camera;
+        this.form = formBuilder.group({
+            profilePic: [''],
+            name: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["g" /* Validators */].required],
+            about: ['']
+        });
+        // Watch the form for changes, and
+        this.form.valueChanges.subscribe(function (v) {
+            _this.isReadyToSave = _this.form.valid;
+        });
     }
-    LecteurVisitesPage.prototype.openWebpage = function (url) {
-        var options = {
-            zoom: 'no'
+    ItemCreatePage.prototype.ionViewDidLoad = function () {
+    };
+    ItemCreatePage.prototype.getPicture = function () {
+        var _this = this;
+        if (__WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]['installed']()) {
+            this.camera.getPicture({
+                destinationType: this.camera.DestinationType.DATA_URL,
+                targetWidth: 96,
+                targetHeight: 96
+            }).then(function (data) {
+                _this.form.patchValue({ 'profilePic': 'data:image/jpg;base64,' + data });
+            }, function (err) {
+                alert('Unable to take photo');
+            });
+        }
+        else {
+            this.fileInput.nativeElement.click();
+        }
+    };
+    ItemCreatePage.prototype.processWebImage = function (event) {
+        var _this = this;
+        var reader = new FileReader();
+        reader.onload = function (readerEvent) {
+            var imageData = readerEvent.target.result;
+            _this.form.patchValue({ 'profilePic': imageData });
         };
-        // Opening a URL and returning an InAppBrowserObject
-        var browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+        reader.readAsDataURL(event.target.files[0]);
     };
-    LecteurVisitesPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LecteurVisitesPage');
+    ItemCreatePage.prototype.getProfileImageStyle = function () {
+        return 'url(' + this.form.controls['profilePic'].value + ')';
     };
-    LecteurVisitesPage = __decorate([
+    /**
+     * The user cancelled, so we dismiss without sending data back.
+     */
+    ItemCreatePage.prototype.cancel = function () {
+        this.viewCtrl.dismiss();
+    };
+    /**
+     * The user is done and wants to create the item, so return it
+     * back to the presenter.
+     */
+    ItemCreatePage.prototype.done = function () {
+        if (!this.form.valid) {
+            return;
+        }
+        this.viewCtrl.dismiss(this.form.value);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('fileInput'),
+        __metadata("design:type", Object)
+    ], ItemCreatePage.prototype, "fileInput", void 0);
+    ItemCreatePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lecteur-visites',template:/*ion-inline-start:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/lecteur-visites/lecteur-visites.html"*/'\n\n<ion-content padding>\n\n\n\n  <button ion-button block clear (click)="openWebpage(\'http://player.isiko.io/360Player/?exhibition=Iletaitunefois\')">Commencer la visite</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/lecteur-visites/lecteur-visites.html"*/,
+            selector: 'page-item-create',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\item-create\item-create.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{ \'ITEM_CREATE_TITLE\' | translate }}</ion-title>\n\n    <ion-buttons start>\n\n      <button ion-button (click)="cancel()">\n\n        <span color="primary" showWhen="ios">\n\n          {{ \'CANCEL_BUTTON\' | translate }}\n\n        </span>\n\n        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n    <ion-buttons end>\n\n      <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>\n\n        <span color="primary" showWhen="ios">\n\n          {{ \'DONE_BUTTON\' | translate }}\n\n        </span>\n\n        <ion-icon name="md-checkmark" showWhen="core,android,windows"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">\n\n    <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />\n\n    <div class="profile-image-wrapper" (click)="getPicture()">\n\n      <div class="profile-image-placeholder" *ngIf="!this.form.controls.profilePic.value">\n\n        <ion-icon name="add"></ion-icon>\n\n        <div>\n\n          {{ \'ITEM_CREATE_CHOOSE_IMAGE\' | translate }}\n\n        </div>\n\n      </div>\n\n      <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.form.controls.profilePic.value"></div>\n\n    </div>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-input type="text" placeholder="{{ \'ITEM_NAME_PLACEHOLDER\' | translate }}" formControlName="name"></ion-input>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-input type="text" placeholder="{{ \'ITEM_ABOUT_PLACEHOLDER\' | translate }}" formControlName="about"></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n  </form>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\item-create\item-create.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
-    ], LecteurVisitesPage);
-    return LecteurVisitesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]])
+    ], ItemCreatePage);
+    return ItemCreatePage;
 }());
 
-//# sourceMappingURL=lecteur-visites.js.map
+//# sourceMappingURL=item-create.js.map
 
 /***/ })
 

@@ -5,11 +5,11 @@ webpackJsonp([17],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExposDetailsPageModule", function() { return ExposDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentPageModule", function() { return ContentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expos_details__ = __webpack_require__(759);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__content__ = __webpack_require__(755);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,36 +20,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExposDetailsPageModule = /** @class */ (function () {
-    function ExposDetailsPageModule() {
+var ContentPageModule = /** @class */ (function () {
+    function ContentPageModule() {
     }
-    ExposDetailsPageModule = __decorate([
+    ContentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__expos_details__["a" /* ExposDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__content__["a" /* ContentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__expos_details__["a" /* ExposDetailsPage */]),
-                __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__["a" /* StarRatingModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__content__["a" /* ContentPage */]),
+                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_3__content__["a" /* ContentPage */]
+            ]
         })
-    ], ExposDetailsPageModule);
-    return ExposDetailsPageModule;
+    ], ContentPageModule);
+    return ContentPageModule;
 }());
 
-//# sourceMappingURL=expos-details.module.js.map
+//# sourceMappingURL=content.module.js.map
 
 /***/ }),
 
-/***/ 759:
+/***/ 755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExposDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,105 +62,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-/**
- * Generated class for the ExposDetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ExposDetailsPage = /** @class */ (function () {
-    function ExposDetailsPage(navCtrl, navParams, restProvider, inAppBrowser, alertCtrl) {
+var ContentPage = /** @class */ (function () {
+    function ContentPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.restProvider = restProvider;
-        this.inAppBrowser = inAppBrowser;
-        this.alertCtrl = alertCtrl;
-        this.btn_txt = 'Ajouter à mes favoris';
-        this.value = navParams.get('user');
-        this.getUsers();
-        this.getExibitionsScript();
-        this.getComment();
     }
-    ExposDetailsPage.prototype.getUsers = function () {
-        var _this = this;
-        this.restProvider.getUsers()
-            .then(function (data) {
-            _this.users = data;
-            console.log("USERS : " + _this.users);
-        });
-    };
-    ExposDetailsPage.prototype.getComment = function () {
-        var _this = this;
-        this.restProvider.getComment()
-            .then(function (data) {
-            _this.comments = data;
-            console.log("COMMMENT :" + _this.comments);
-        });
-    };
-    ExposDetailsPage.prototype.addtomyfavorit = function (commentData) {
-        if (this.btn_txt == 'Ajouter à mes favoris') {
-            this.popupaddtomyfavorit();
-            this.btn_txt = 'Supprimé de mes favoris';
-        }
-        else {
-            console.log('go to next page');
-        }
-        // this.restProvider.postUerfavorit(commentData)
-    };
-    ExposDetailsPage.prototype.popupdeletetomyfavorit = function () {
-        var alert = this.alertCtrl.create({
-            title: 'Exposition supprimé de vos favoris !',
-            subTitle: 'Exposition supprimé de vos favoris',
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    ExposDetailsPage.prototype.popupaddtomyfavorit = function () {
-        var alert = this.alertCtrl.create({
-            title: 'Exposition ajouter à vos favoris !',
-            subTitle: 'Exposition ajouter à vos favoris',
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    ExposDetailsPage.prototype.getExibitionsScript = function () {
-        var _this = this;
-        this.restProvider.getExibitionsScript()
-            .then(function (data) {
-            _this.exib = data;
-            console.log("MY EXIB : " + _this.exib);
-        });
-    };
-    ExposDetailsPage.prototype.openWebpage = function (url) {
-        var options = {
-            zoom: 'no'
-        };
-        // Opening a URL and returning an InAppBrowserObject
-        var browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
-    };
-    ExposDetailsPage.prototype.addcomment = function () {
-        this.navCtrl.push('AddcommentPage');
-    };
-    ExposDetailsPage.prototype.allcomment = function () {
-        this.navCtrl.push('AllcommentPage');
-    };
-    ExposDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log("MY VALUE :" + this.value);
-        console.log('ionViewDidLoad ExposDetailsPage');
-    };
-    ExposDetailsPage = __decorate([
+    ContentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-expos-details',template:/*ion-inline-start:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/expos-details/expos-details.html"*/'<<<<<<< HEAD\n<ion-content>\n\n    <ion-list inset>\n\n      \n\n      <ion-item *ngFor="let user of users">\n\n        <div class="mondivinchAllah" *ngIf="value == user.id">\n\n            <div class="row">\n\n                <div class="blackscreen"></div>\n\n              <div class="titleexpo">\n\n                <h2>{{user.name}}</h2>\n\n              </div>\n\n              <div class="texthomepage">\n\n                <p>{{user.artists}}</p>\n\n              </div>\n\n              <div class="description">\n\n                <div class="item item-text-wrap">\n\n                  <p>{{user.starting_exhibition_date}}</p>\n\n                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>\n\n                </div>\n\n            </div>\n\n              <div class="imghome">\n\n                <img class="listemenuimage" src="{{user.images}}">\n\n          <!-- <h2>{{user.name}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.artists}}</p>\n\n        <p>{{user.ending_exhibition_date}}</p>\n\n        <p>{{user.stars}}</p> -->\n\n        <button ion-button block clear (click)="openWebpage(\'http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois\')">Commencer la visite</button>\n\n        <br>\n\n        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>\n\n\n\n        <br>\n\n        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>\n\n        <br>\n\n        <button ion-button block clear (click)="allcomment()">Voir tout les commentaires</button>\n\n      </div>\n\n        </div>\n\n      </div>\n\n    </ion-item>\n\n    </ion-list>\n\n=======\n<ion-content>\n    <ion-list inset>\n      \n      <ion-item *ngFor="let user of users">\n        <div class="mondivinchAllah" *ngIf="value == user.id">\n            <div class="row">\n                <div class="blackscreen"></div>\n              <div class="titleexpo">\n                <h2>{{user.name}}</h2>\n              </div>\n              <div class="texthomepage">\n                <p>{{user.artists}}</p>\n              </div>\n              <div class="description">\n                <div class="item item-text-wrap">\n                  <p>{{user.starting_exhibition_date}}</p>\n                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>\n                </div>\n            </div>\n              <div class="imghome">\n                <img class="listemenuimage" src="{{user.images}}">\n          <!-- <h2>{{user.name}}</h2>\n        <p>{{user.id}}</p>\n        <p>{{user.artists}}</p>\n        <p>{{user.ending_exhibition_date}}</p>\n        <p>{{user.stars}}</p> -->\n        <button ion-button block clear (click)="openWebpage(\'http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois\')">Commencer la visite</button>\n        <br>\n        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>\n\n        <br>\n        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>\n        <br>\n        <button ion-button block clear (click)="allcomment()">Voir tout les commentaires</button>\n      </div>\n        </div>\n      </div>\n    </ion-item>\n    </ion-list>\n>>>>>>> 7a39b3d838cb80fb25cfb22fb9924dddb29411a9\n</ion-content>'/*ion-inline-end:"/Users/rayan/Desktop/ISIKO_PAUL/ISIKO-IOS-MASTER/src/pages/expos-details/expos-details.html"*/,
+            selector: 'page-content',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\content\content.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Content\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <p>\n\n    This is a perfect starting point for a page with primarily text content. The body is padded nicely and ready for prose.\n\n  </p>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\content\content.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
-    ], ExposDetailsPage);
-    return ExposDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
+    ], ContentPage);
+    return ContentPage;
 }());
 
-//# sourceMappingURL=expos-details.js.map
+//# sourceMappingURL=content.js.map
 
 /***/ })
 
