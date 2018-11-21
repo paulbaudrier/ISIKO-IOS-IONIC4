@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <ion-content>
     <ion-list inset>
       
@@ -38,45 +37,4 @@
       </div>
     </ion-item>
     </ion-list>
-=======
-<ion-content>
-    <ion-list inset>
-      
-      <ion-item *ngFor="let user of users">
-        <div class="mondivinchAllah" *ngIf="value == user.id">
-            <div class="row">
-                <div class="blackscreen"></div>
-              <div class="titleexpo">
-                <h2>{{user.name}}</h2>
-              </div>
-              <div class="texthomepage">
-                <p>{{user.artists}}</p>
-              </div>
-              <div class="description">
-                <div class="item item-text-wrap">
-                  <p>{{user.starting_exhibition_date}}</p>
-                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>
-                </div>
-            </div>
-              <div class="imghome">
-                <img class="listemenuimage" src="{{user.images}}">
-          <!-- <h2>{{user.name}}</h2>
-        <p>{{user.id}}</p>
-        <p>{{user.artists}}</p>
-        <p>{{user.ending_exhibition_date}}</p>
-        <p>{{user.stars}}</p> -->
-        <button ion-button block clear (click)="openWebpage('http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois')">Commencer la visite</button>
-        <br>
-        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>
-
-        <br>
-        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>
-        <br>
-        <button ion-button block clear (click)="allcomment()">Voir tout les commentaires</button>
-      </div>
-        </div>
-      </div>
-    </ion-item>
-    </ion-list>
->>>>>>> 7a39b3d838cb80fb25cfb22fb9924dddb29411a9
 </ion-content>
