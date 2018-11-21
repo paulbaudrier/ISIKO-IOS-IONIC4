@@ -1,15 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 750:
+/***/ 736:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyProfilePageModule", function() { return MyProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(771);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_profile__ = __webpack_require__(744);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,39 +18,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var TabsPageModule = /** @class */ (function () {
-    function TabsPageModule() {
+var MyProfilePageModule = /** @class */ (function () {
+    function MyProfilePageModule() {
     }
-    TabsPageModule = __decorate([
+    MyProfilePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__my_profile__["a" /* MyProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_profile__["a" /* MyProfilePage */]),
             ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]
-            ]
         })
-    ], TabsPageModule);
-    return TabsPageModule;
+    ], MyProfilePageModule);
+    return MyProfilePageModule;
 }());
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=my-profile.module.js.map
 
 /***/ }),
 
-/***/ 771:
+/***/ 744:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyProfilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__welcome_welcome__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_user_service__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_auth_service__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_user_model__ = __webpack_require__(387);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,30 +62,64 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var TabsPage = /** @class */ (function () {
-    function TabsPage(navCtrl, translateService) {
-        var _this = this;
+
+
+
+
+/**
+ * Generated class for the MyProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MyProfilePage = /** @class */ (function () {
+    function MyProfilePage(navCtrl, navParams, restProvider, userService, authService) {
         this.navCtrl = navCtrl;
-        this.translateService = translateService;
-        this.tab1Title = " ";
-        this.tab2Title = " ";
-        this.tab3Title = " ";
-        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(function (values) {
-            _this.tab1Title = values['TAB1_TITLE'];
-            _this.tab2Title = values['TAB2_TITLE'];
-            _this.tab3Title = values['TAB3_TITLE'];
-        });
+        this.navParams = navParams;
+        this.restProvider = restProvider;
+        this.userService = userService;
+        this.authService = authService;
+        this.user = new __WEBPACK_IMPORTED_MODULE_6__core_user_model__["a" /* FirebaseUserModel */]();
+        // this.getProfile();
     }
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="search"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="cog"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\tabs\tabs.html"*/
+    MyProfilePage.prototype.ionViewWillLoad = function () {
+        var _this = this;
+        this.userService.getCurrentUser()
+            .then(function (user) {
+            _this.user = user;
+            console.log("USER IDDDDD" + user.name);
+        }, function (err) { return console.log(err); });
+    };
+    MyProfilePage.prototype.logout = function () {
+        var _this = this;
+        this.authService.doLogout()
+            .then(function (res) {
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__welcome_welcome__["a" /* WelcomePage */]);
+        }, function (error) {
+            console.log("Logout error", error);
+        });
+    };
+    // getProfile() {
+    //   this.restProvider.getProfile()
+    //   .then(data => {
+    //     this.users = data;
+    //     console.log(this.users);
+    //   });
+    // }
+    MyProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyProfilePage');
+    };
+    MyProfilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
+            selector: 'page-my-profile',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/'<ion-header>\n\n  <ion-navbar hideBackButton="true">\n\n    <ion-title>Mon Profil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <img [src]="user.image"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{user.name}}\n\n      </ion-card-title>\n\n      <p>\n\n        Bonjour, {{user.name}}.\n\n        <br>\n\n        <br>\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <br>\n\n      <p>\n\n        Mon email : {{user.email}}\n\n      </p>\n\n      <br>\n\n      Mon ID : {{user.uid}}\n\n\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
-    ], TabsPage);
-    return TabsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */]])
+    ], MyProfilePage);
+    return MyProfilePage;
 }());
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=my-profile.js.map
 
 /***/ })
 

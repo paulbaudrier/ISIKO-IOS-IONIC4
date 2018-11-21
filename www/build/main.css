@@ -25935,68 +25935,6 @@ page-home .title {
   text-shadow: 3px 3px 16px black;
 }
 
-page-item-create .profile-image-wrapper {
-  text-align: center;
-  margin: 20px 0;
-}
-
-page-item-create .profile-image-wrapper .profile-image {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-page-item-create .profile-image-wrapper .profile-image-placeholder {
-  display: inline-block;
-  background-color: #eee;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  font-size: 12px;
-}
-
-page-item-create .profile-image-wrapper .profile-image-placeholder ion-icon {
-  font-size: 44px;
-  margin-bottom: -10px;
-  margin-top: 10px;
-}
-
-page-item-detail .item-profile {
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
-  height: 250px;
-}
-
-page-item-detail .item-detail {
-  width: 100%;
-  background: white;
-  position: absolute;
-}
-
-.mybutton {
-  padding-left: 16px;
-  padding-right: 0;
-  position: relative;
-  font-size: 1.6rem;
-  font-weight: normal;
-  text-transform: none;
-  font-size: 20px;
-  font-weight: 300;
-  text-align: right;
-  text-shadow: 2px 2px 17px black !important;
-  color: #ffc632 !important;
-  background-color: #474747;
-  -webkit-box-shadow: none;
-  box-shadow: 0 5px 15px 0px #d8ac2d !important;
-  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ionicsignup {
   color: white !important;
 }

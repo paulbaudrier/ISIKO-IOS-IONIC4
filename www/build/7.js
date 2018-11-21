@@ -1,14 +1,15 @@
 webpackJsonp([7],{
 
-/***/ 745:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieListPageModule", function() { return MovieListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddcommentPageModule", function() { return AddcommentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movie_list__ = __webpack_require__(766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addcomment__ = __webpack_require__(738);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(384);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +19,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MovieListPageModule = /** @class */ (function () {
-    function MovieListPageModule() {
+
+var AddcommentPageModule = /** @class */ (function () {
+    function AddcommentPageModule() {
     }
-    MovieListPageModule = __decorate([
+    AddcommentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__movie_list__["a" /* MovieListPage */],
+                __WEBPACK_IMPORTED_MODULE_2__addcomment__["a" /* AddcommentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__movie_list__["a" /* MovieListPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__["a" /* StarRatingModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__addcomment__["a" /* AddcommentPage */]),
             ],
         })
-    ], MovieListPageModule);
-    return MovieListPageModule;
+    ], AddcommentPageModule);
+    return AddcommentPageModule;
 }());
 
-//# sourceMappingURL=movie-list.module.js.map
+//# sourceMappingURL=addcomment.module.js.map
 
 /***/ }),
 
-/***/ 766:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MovieListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddcommentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +59,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Generated class for the MovieListPage page.
+ * Generated class for the AddcommentPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MovieListPage = /** @class */ (function () {
-    function MovieListPage(navCtrl, navParams) {
+var AddcommentPage = /** @class */ (function () {
+    function AddcommentPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
     }
-    MovieListPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MovieListPage');
+    AddcommentPage.prototype.thankyou = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Commentaire poster !',
+            subTitle: 'Merci votre commentaire a bien était ajouter',
+            buttons: ['OK']
+        });
+        alert.present();
     };
-    MovieListPage = __decorate([
+    AddcommentPage.prototype.backvisit = function () {
+        this.navCtrl.push('HomePage');
+    };
+    AddcommentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddcommentPage');
+    };
+    AddcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-movie-list',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\movie-list\movie-list.html"*/'<!--\n\n  Generated template for the MovieListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>movie-list</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\movie-list\movie-list.html"*/,
+            selector: 'page-addcomment',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\addcomment\addcomment.html"*/'<!--\n  Generated template for the FeedbackPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Ajouter mon commentaire</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <ion-list inset> \n      <p>Quelle note donnez vous à cette éxposition ?</p>\n      <ionic3-star-rating \n      activeIcon = "ios-star"\n      defaultIcon = "ios-star-outline"\n      activeColor = "#488aff" \n      defaultColor = "#f4f4f4"\n      readonly="false"\n      [rating]="4">\n      </ionic3-star-rating>\n      <br/>\n      <br/>\n      <textarea #myInput id="myInput" rows="9" maxLength="800" [(ngModel)]="myStuff" placeholder="Laissez nous un commentaire"></textarea>\n      <br/>\n      <br/>\n      <button ion-button block (click)="thankyou()">{{ \'Envoyer mon commentaire\'}}</button>\n    </ion-list>\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\addcomment\addcomment.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
-    ], MovieListPage);
-    return MovieListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], AddcommentPage);
+    return AddcommentPage;
 }());
 
-//# sourceMappingURL=movie-list.js.map
+//# sourceMappingURL=addcomment.js.map
 
 /***/ })
 

@@ -33,7 +33,6 @@ import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
 import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
 import { UserPage} from '../pages/user/user';
 import { SignupPage } from '../pages/signup/signup';
 

@@ -8,7 +8,6 @@ import { User } from '../../providers';
 import { MainPage } from '../';
 import { HomePage } from '../home/home';
 
-import { RegisterPage } from '../register/register';
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
 

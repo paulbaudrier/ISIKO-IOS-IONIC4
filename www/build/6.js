@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 744:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllcommentPageModule", function() { return AllcommentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(765);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(739);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MyFavoritesPageModule = /** @class */ (function () {
-    function MyFavoritesPageModule() {
+var AllcommentPageModule = /** @class */ (function () {
+    function AllcommentPageModule() {
     }
-    MyFavoritesPageModule = __decorate([
+    AllcommentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__allcomment__["a" /* AllcommentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__allcomment__["a" /* AllcommentPage */]),
             ],
         })
-    ], MyFavoritesPageModule);
-    return MyFavoritesPageModule;
+    ], AllcommentPageModule);
+    return AllcommentPageModule;
 }());
 
-//# sourceMappingURL=my-favorites.module.js.map
+//# sourceMappingURL=allcomment.module.js.map
 
 /***/ }),
 
-/***/ 765:
+/***/ 739:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyFavoritesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllcommentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(167);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -59,39 +59,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the MyFavoritesPage page.
+ * Generated class for the AllcommentPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MyFavoritesPage = /** @class */ (function () {
-    function MyFavoritesPage(navCtrl, navParams, restProvider) {
+var AllcommentPage = /** @class */ (function () {
+    function AllcommentPage(navCtrl, navParams, restProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.restProvider = restProvider;
-        this.getUserFavorit();
+        this.getComment();
     }
-    MyFavoritesPage.prototype.getUserFavorit = function () {
+    AllcommentPage.prototype.getComment = function () {
         var _this = this;
-        this.restProvider.getUserFavorit()
+        this.restProvider.getComment()
             .then(function (data) {
-            _this.users = data;
-            console.log(_this.users);
+            _this.comments = data;
+            console.log("COMMMENT :" + _this.comments);
         });
     };
-    MyFavoritesPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MyFavoritesPage');
+    AllcommentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AllcommentPage');
     };
-    MyFavoritesPage = __decorate([
+    AllcommentPage.prototype.backvisit = function () {
+        this.navCtrl.push('AddcommentPage');
+    };
+    AllcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-favorites',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-content>\n\n  <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <h2>{{user.id_Expo}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.id_Users}}</p>\n\n      </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
+            selector: 'page-allcomment',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/'<!--\n  Generated template for the AllcommentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Commentaires Disponible</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n \n\n\n<ion-item *ngFor="let comment of comments" class="zeubilamouche">\n   <p class="commentaire">{{comment.content}}</p>\n   <p class="commentaire">{{comment.stars}}</p>\n   <p class="commentaire">{{comment.userID}}</p>\n</ion-item>\n<br>\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
-    ], MyFavoritesPage);
-    return MyFavoritesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
+    ], AllcommentPage);
+    return AllcommentPage;
 }());
 
-//# sourceMappingURL=my-favorites.js.map
+//# sourceMappingURL=allcomment.js.map
 
 /***/ })
 

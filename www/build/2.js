@@ -1,15 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 749:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(743);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,41 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var SettingsPageModule = /** @class */ (function () {
-    function SettingsPageModule() {
+var MyFavoritesPageModule = /** @class */ (function () {
+    function MyFavoritesPageModule() {
     }
-    SettingsPageModule = __decorate([
+    MyFavoritesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */]),
-                __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */]),
             ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* SettingsPage */]
-            ]
         })
-    ], SettingsPageModule);
-    return SettingsPageModule;
+    ], MyFavoritesPageModule);
+    return MyFavoritesPageModule;
 }());
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=my-favorites.module.js.map
 
 /***/ }),
 
-/***/ 770:
+/***/ 743:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyFavoritesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(167);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,89 +58,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
- * The Settings page is a simple form that syncs with a Settings provider
- * to enable the user to customize settings for the app.
+ * Generated class for the MyFavoritesPage page.
  *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
-var SettingsPage = /** @class */ (function () {
-    function SettingsPage(navCtrl, settings, formBuilder, navParams, translate) {
+var MyFavoritesPage = /** @class */ (function () {
+    function MyFavoritesPage(navCtrl, navParams, restProvider) {
         this.navCtrl = navCtrl;
-        this.settings = settings;
-        this.formBuilder = formBuilder;
         this.navParams = navParams;
-        this.translate = translate;
-        this.settingsReady = false;
-        this.profileSettings = {
-            page: 'profile',
-            pageTitleKey: 'SETTINGS_PAGE_PROFILE'
-        };
-        this.page = 'main';
-        this.pageTitleKey = 'SETTINGS_TITLE';
-        this.subSettings = SettingsPage_1;
+        this.restProvider = restProvider;
+        this.getUserFavorit();
     }
-    SettingsPage_1 = SettingsPage;
-    SettingsPage.prototype._buildForm = function () {
+    MyFavoritesPage.prototype.getUserFavorit = function () {
         var _this = this;
-        var group = {
-            option1: [this.options.option1],
-            option2: [this.options.option2],
-            option3: [this.options.option3]
-        };
-        switch (this.page) {
-            case 'main':
-                break;
-            case 'profile':
-                group = {
-                    option4: [this.options.option4]
-                };
-                break;
-        }
-        this.form = this.formBuilder.group(group);
-        // Watch the form for changes, and
-        this.form.valueChanges.subscribe(function (v) {
-            _this.settings.merge(_this.form.value);
+        this.restProvider.getUserFavorit()
+            .then(function (data) {
+            _this.users = data;
+            console.log(_this.users);
         });
     };
-    SettingsPage.prototype.ionViewDidLoad = function () {
-        // Build an empty form for the template to render
-        this.form = this.formBuilder.group({});
+    MyFavoritesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyFavoritesPage');
     };
-    SettingsPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        // Build an empty form for the template to render
-        this.form = this.formBuilder.group({});
-        this.page = this.navParams.get('page') || this.page;
-        this.pageTitleKey = this.navParams.get('pageTitleKey') || this.pageTitleKey;
-        this.translate.get(this.pageTitleKey).subscribe(function (res) {
-            _this.pageTitle = res;
-        });
-        this.settings.load().then(function () {
-            _this.settingsReady = true;
-            _this.options = _this.settings.allSettings;
-            _this._buildForm();
-        });
-    };
-    SettingsPage.prototype.ngOnChanges = function () {
-        console.log('Ng All Changes');
-    };
-    SettingsPage = SettingsPage_1 = __decorate([
+    MyFavoritesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-settings',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\settings\settings.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>{{ pageTitle }}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n  <form [formGroup]="form" *ngIf="settingsReady">\n\n    <ion-list *ngIf="page == \'main\'">\n\n      <ion-item>\n\n        <ion-label>{{ \'SETTINGS_OPTION1\' | translate }}</ion-label>\n\n        <ion-toggle formControlName="option1"></ion-toggle>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label>{{ \'SETTINGS_OPTION2\' | translate }}</ion-label>\n\n        <ion-input formControlName="option2"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label>{{ \'SETTINGS_OPTION3\' | translate }}</ion-label>\n\n        <ion-select formControlName="option3">\n\n          <ion-option value="1" checked="true">1</ion-option>\n\n          <ion-option value="2">2</ion-option>\n\n          <ion-option value="3">3</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n\n\n      <button ion-item [navPush]="subSettings" [navParams]="profileSettings">\n\n        {{ \'SETTINGS_PROFILE_BUTTON\' | translate }}\n\n      </button>\n\n    </ion-list>\n\n\n\n    <ion-list *ngIf="page == \'profile\'">\n\n      <ion-item>\n\n        <ion-label>{{ \'SETTINGS_OPTION4\' | translate }}</ion-label>\n\n        <ion-input formControlName="option4"></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n  </form>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\settings\settings.html"*/
+            selector: 'page-my-favorites',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-content>\n\n  <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <h2>{{user.id_Expo}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.id_Users}}</p>\n\n      </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* Settings */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
-    ], SettingsPage);
-    return SettingsPage;
-    var SettingsPage_1;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
+    ], MyFavoritesPage);
+    return MyFavoritesPage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=my-favorites.js.map
 
 /***/ })
 

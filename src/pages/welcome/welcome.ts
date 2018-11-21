@@ -8,7 +8,6 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 // ALERT POP UP IMPORT
 import { AlertController } from 'ionic-angular';
 
-import { RegisterPage } from '../register/register';
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
 
