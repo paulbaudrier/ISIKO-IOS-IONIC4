@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Se connecter à ISIKO</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -23,10 +23,12 @@
     <label class="error-message">{{errorMessage}}</label>
 
     <br>
+    <button ion-button full type="submit" class="google-button"  (click)="tryGoogleLogin()">Se connecter avec Google</button>
+    <br>
     <div>
       <p>Pas encore de compte ? <a (click)="goRegisterPage()">Créee un compte</a></p>
     </div>
-    <br>
+   
   </form>
-  <button ion-button full type="submit" class="google-button"  (click)="tryGoogleLogin()">Se connecter avec Google</button>
+  
 </ion-content>

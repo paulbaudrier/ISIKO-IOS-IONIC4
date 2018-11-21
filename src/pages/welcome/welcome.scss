@@ -7,6 +7,10 @@ page-welcome {.splash-bg {
   background-repeat: repeat-x;
   animation: animatedBackground 22s cubic-bezier(0.1, 0.1, 0.49, 0.81) infinite;
 }
+
+.hidden {
+  display: none!important;
+}
 .blackbg {
   position: fixed;
   top: 0;

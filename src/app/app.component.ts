@@ -36,7 +36,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Connexion / Se déconnecter', component: WelcomePage },
     { title: 'Liste des expositions', component: HomePage },
     { title: 'Mes favoris', component: 'MyFavoritesPage' },
     { title: 'Mon profil', component: 'MyProfilePage' },

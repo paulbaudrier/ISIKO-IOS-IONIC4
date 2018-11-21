@@ -23,6 +23,8 @@ import { AuthService } from '../core/auth.service';
 
 
 
+
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -48,7 +50,7 @@ export class WelcomePage {
     this.authService.doLogin(value)
     .then(res => {
       console.log(res);
-      this.navCtrl.push(UserPage);
+      this.navCtrl.push(HomePage);
     }, err => {
       console.log(err);
       this.errorMessage = err.message;
@@ -58,7 +60,7 @@ export class WelcomePage {
   tryFacebookLogin(){
     this.authService.doFacebookLogin()
     .then((res) => {
-      this.navCtrl.push(UserPage);
+      this.navCtrl.push(HomePage);
     }, (err) => {
       this.errorMessage = err.message;
     });
@@ -67,7 +69,7 @@ export class WelcomePage {
   tryTwitterLogin(){
     this.authService.doTwitterLogin()
     .then((res) => {
-      this.navCtrl.push(UserPage);
+      this.navCtrl.push(HomePage);
     }, (err) => {
       this.errorMessage = err.message;
     });
