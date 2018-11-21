@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 # ISIKO IOS APPLICATION 🎮
 
 
 
 # NPM INSTALL 🎮
 # CHECK / INSTALL PLATFORM 🎮
-=======
-# ISIKO IOS APPLICATION 🎮
-
-
-
-# NPM INSTALL 🎮
-# CHECK / INSTALL PLATFORM 🎮
->>>>>>> 7a39b3d838cb80fb25cfb22fb9924dddb29411a9
 # RUN 🎮
