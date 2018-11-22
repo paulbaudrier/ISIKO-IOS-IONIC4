@@ -37,7 +37,7 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Liste des expositions', component: HomePage },
-    { title: 'Mes favoris', component: 'MyFavoritesPage' },
+    { title: 'Ma liste de favoris', component: 'MyFavoritesPage' },
     { title: 'Mon profil', component: 'MyProfilePage' },
     { title: 'FeedBack', component: 'FeedbackPage' },
   ]

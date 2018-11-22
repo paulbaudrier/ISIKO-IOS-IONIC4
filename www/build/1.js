@@ -71,6 +71,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
+ *
+ * <!--  <ion-navbar hideBackButton="true"> -->
  */
 var MyProfilePage = /** @class */ (function () {
     function MyProfilePage(navCtrl, navParams, restProvider, userService, authService) {
@@ -111,7 +113,7 @@ var MyProfilePage = /** @class */ (function () {
     };
     MyProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-my-profile',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/'<ion-header>\n\n  <ion-navbar hideBackButton="true">\n\n    <ion-title>Mon Profil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <img [src]="user.image"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{user.name}}\n\n      </ion-card-title>\n\n      <p>\n\n        Bonjour, {{user.name}}.\n\n        <br>\n\n        <br>\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <br>\n\n      <p>\n\n        Mon email : {{user.email}}\n\n      </p>\n\n      <br>\n\n      Mon ID : {{user.uid}}\n\n\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/,
+            selector: 'page-my-profile',template:/*ion-inline-start:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-profile/my-profile.html"*/'<ion-header>\n    <ion-title>Mon Profil</ion-title>\n    <button ion-button menuToggle>Menu</button>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <img [src]="user.image"/>\n    <ion-card-content>\n      <ion-card-title>\n        {{user.name}}\n      </ion-card-title>\n      <p>\n        Bonjour, {{user.name}}.\n        <br>\n        <br>\n        Vous trouverez ici les informations de votre profil !\n      </p>\n      <br>\n      <p>\n        Mon email : {{user.email}}\n      </p>\n      <br>\n      Mon ID : {{user.uid}}\n\n    </ion-card-content>\n    <br>\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-profile/my-profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */]])

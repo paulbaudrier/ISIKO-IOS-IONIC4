@@ -1,9 +1,12 @@
 <ion-content>
+  <div>
+      <button ion-button menuToggle>Menu</button>
+  </div>
     <ion-list inset>
-      
       <ion-item *ngFor="let user of users">
         <div class="mondivinchAllah" *ngIf="value == user.id">
             <div class="row">
+            <div class="details">
                 <div class="blackscreen"></div>
               <div class="titleexpo">
                 <h2>{{user.name}}</h2>
@@ -17,6 +20,7 @@
                   <ion-item text-wrap><p>{{user.description}}</p></ion-item>
                 </div>
             </div>
+            </div>
               <div class="imghome">
                 <img class="listemenuimage" src="{{user.images}}">
           <!-- <h2>{{user.name}}</h2>
@@ -29,11 +33,12 @@
         <!-- <button ion-button block clear (click)="lecteuralgo()">Commencer la visite</button> -->
         <br>
         <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>
-
         <br>
         <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>
         <br>
         <button ion-button block clear (click)="allcomment()">Voir tout les commentaires</button>
+        <br>
+        <button ion-button block clear (click)="backexpos()">Revenir à la liste des expositions</button>
       </div>
         </div>
       </div>

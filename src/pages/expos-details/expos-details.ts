@@ -5,7 +5,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
 import { AlertController } from 'ionic-angular';
 import { AddcommentPage } from './../addcomment/addcomment';
-
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ExposDetailsPage page.
@@ -44,6 +44,11 @@ export class ExposDetailsPage {
       this.comments = data;
       console.log("COMMMENT :" + this.comments);
     });
+  }
+
+  backexpos()
+  {
+    this.navCtrl.push(HomePage);
   }
 
   btn_txt = 'Ajouter à mes favoris';
