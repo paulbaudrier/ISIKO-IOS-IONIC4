@@ -1,10 +1,16 @@
 <ion-content>
     <button ion-button menuToggle>Menu</button>
   <ion-list inset>
-      <ion-item *ngFor="let user of users">
-        <h2>{{user.id_Expo}}</h2>
-        <p>{{user.id}}</p>
-        <p>{{user.id_Users}}</p>
-      </ion-item>
+      <ng-container *ngFor="let expo of expos">
+          <p>{{expo.name}}</p>
+          </ng-container>
+      <ng-container *ngFor="let favorit of favorits">
+          <ion-option *ngIf="user.uid == favorit.id_Users" >
+              
+          <h2>{{favorit.id_Expo}}</h2>
+          <p>{{favorit.id_Users}}</p>
+          </ion-option>
+          
+        </ng-container>
     </ion-list>
 </ion-content>
