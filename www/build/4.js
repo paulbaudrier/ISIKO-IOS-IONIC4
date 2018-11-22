@@ -7,7 +7,7 @@ webpackJsonp([4],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExposDetailsPageModule", function() { return ExposDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expos_details__ = __webpack_require__(741);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(384);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -47,7 +47,7 @@ var ExposDetailsPageModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExposDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(387);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(49);
@@ -103,6 +103,14 @@ var ExposDetailsPage = /** @class */ (function () {
     };
     ExposDetailsPage.prototype.backexpos = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */]);
+    };
+    ExposDetailsPage.prototype.listoeuvres = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Bientôt Disponible',
+            subTitle: 'Merci de revenir plus tard !',
+            buttons: ['OK']
+        });
+        alert.present();
     };
     ExposDetailsPage.prototype.addtomyfavorit = function (commentData) {
         if (this.btn_txt == 'Ajouter à mes favoris') {
@@ -171,12 +179,11 @@ var ExposDetailsPage = /** @class */ (function () {
     };
     ExposDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-expos-details',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/'<ion-content>\n\n  <div>\n\n      <button ion-button menuToggle>Menu</button>\n\n  </div>\n\n    <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <div class="mondivinchAllah" *ngIf="value == user.id">\n\n            <div class="row">\n\n            <div class="details">\n\n                <div class="blackscreen"></div>\n\n              <div class="titleexpo">\n\n                <h2>{{user.name}}</h2>\n\n              </div>\n\n              <div class="texthomepage">\n\n                <p>{{user.artists}}</p>\n\n              </div>\n\n              <div class="description">\n\n                <div class="item item-text-wrap">\n\n                  <p>{{user.starting_exhibition_date}}</p>\n\n                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>\n\n                </div>\n\n            </div>\n\n            </div>\n\n              <div class="imghome">\n\n                <img class="listemenuimage" src="{{user.images}}">\n\n          <!-- <h2>{{user.name}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.artists}}</p>\n\n        <p>{{user.ending_exhibition_date}}</p>\n\n        <p>{{user.stars}}</p> -->\n\n        <button ion-button block clear (click)="openWebpage(\'http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois\')">Commencer la visite</button>\n\n        <!-- BUTTON ALGO LECTEUR FUNCTION -->\n\n        <!-- <button ion-button block clear (click)="lecteuralgo()">Commencer la visite</button> -->\n\n        <br>\n\n        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>\n\n        <br>\n\n        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>\n\n        <br>\n\n        <button ion-button block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>\n\n        <br>\n\n        <button ion-button block clear (click)="backexpos()">Revenir à la liste des expositions</button>\n\n      </div>\n\n        </div>\n\n      </div>\n\n      \n\n    </ion-item>\n\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/,
+            selector: 'page-expos-details',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/'<ion-content>\n\n  <div>\n\n      <button ion-button menuToggle>Menu</button>\n\n  </div>\n\n    <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <div class="mondivinchAllah" *ngIf="value == user.id">\n\n            <div class="row">\n\n            <div class="details">\n\n                <div class="blackscreen"></div>\n\n              <div class="titleexpo">\n\n                <h2>{{user.name}}</h2>\n\n              </div>\n\n              <div class="texthomepage">\n\n                <p>{{user.artists}}</p>\n\n              </div>\n\n              <div class="description">\n\n                <div class="item item-text-wrap">\n\n                  <p>{{user.starting_exhibition_date}}</p>\n\n                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>\n\n                </div>\n\n            </div>\n\n            </div>\n\n              <div class="imghome">\n\n                <img class="listemenuimage" src="{{user.images}}">\n\n          <!-- <h2>{{user.name}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.artists}}</p>\n\n        <p>{{user.ending_exhibition_date}}</p>\n\n        <p>{{user.stars}}</p> -->\n\n        <button ion-button block clear (click)="openWebpage(\'http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois\')">Commencer la visite</button>\n\n        <!-- BUTTON ALGO LECTEUR FUNCTION -->\n\n        <!-- <button ion-button block clear (click)="lecteuralgo()">Commencer la visite</button> -->\n\n        <br>\n\n        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>\n\n        <br>\n\n        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>\n\n        <br>\n\n        <button ion-button block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>\n\n        <br>\n\n        <button ion-button block clear (click)="listoeuvres()">Voir la liste des Oeuvres</button>\n\n        <br>\n\n        <button ion-button block clear (click)="backexpos()">Revenir à la liste des expositions</button>\n\n      </div>\n\n        </div>\n\n      </div>\n\n      \n\n    </ion-item>\n\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], ExposDetailsPage);
     return ExposDetailsPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=expos-details.js.map

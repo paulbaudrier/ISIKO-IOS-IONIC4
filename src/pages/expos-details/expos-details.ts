@@ -51,6 +51,16 @@ export class ExposDetailsPage {
     this.navCtrl.push(HomePage);
   }
 
+  listoeuvres()
+  {
+    let alert = this.alertCtrl.create({
+      title: 'Bientôt Disponible',
+      subTitle: 'Merci de revenir plus tard !',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
   btn_txt = 'Ajouter à mes favoris';
   addtomyfavorit(commentData)
   {
@@ -93,7 +103,7 @@ export class ExposDetailsPage {
       console.log("MY EXIB : " + this.exib);
     });
   }
-  
+
   openWebpage(url: string) {
     const options: InAppBrowserOptions = {
       zoom: 'no'

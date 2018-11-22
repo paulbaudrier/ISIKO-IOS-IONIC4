@@ -39,10 +39,12 @@ export class WelcomePage {
     }
 
   login() {
+    this.menuCtrl.enable(false);
     this.navCtrl.push(LoginPage);
   }
 
   signup() {
+    this.menuCtrl.enable(false);
     this.navCtrl.push(SignupPage);
   }
 
@@ -85,6 +87,10 @@ export class WelcomePage {
     }, (err) => {
       this.errorMessage = err.message;
     });
+  }
+
+  ionViewDidLoad() {
+    this.menuCtrl.enable(false);
   }
 
 }

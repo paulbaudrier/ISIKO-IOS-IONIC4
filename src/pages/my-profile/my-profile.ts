@@ -8,6 +8,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { FirebaseUserModel } from '../core/user.model';
+import { MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the MyProfilePage page.
@@ -27,7 +28,7 @@ export class MyProfilePage {
   user: FirebaseUserModel = new FirebaseUserModel();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,public userService: UserService,
-    public authService: AuthService) {
+    public authService: AuthService, public menuCtrl: MenuController) {
     // this.getProfile();
   }
 
@@ -47,6 +48,7 @@ export class MyProfilePage {
     this.authService.doLogout()
     .then((res) => {
       this.navCtrl.push(WelcomePage);
+      this.menuCtrl.enable(false);
     }, (error) => {
       console.log("Logout error", error);
     });
