@@ -101,14 +101,15 @@ export class ExposDetailsPage {
     const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
   }
 
+
   addcomment()
   {
     this.navCtrl.push('AddcommentPage');
   }
 
-  allcomment()
+  allcomment(id)
   {
-    this.navCtrl.push('AllcommentPage');
+    this.navCtrl.push('AllcommentPage', {expos:id});
   }
 
   // LECTEUR VISITE LINK ALGO

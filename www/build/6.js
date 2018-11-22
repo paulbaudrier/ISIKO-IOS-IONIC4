@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 731:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllcommentPageModule", function() { return AllcommentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(739);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(740);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var AllcommentPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 739:
+/***/ 740:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70,6 +70,7 @@ var AllcommentPage = /** @class */ (function () {
         this.navParams = navParams;
         this.restProvider = restProvider;
         this.getComment();
+        this.value = navParams.get('expos');
     }
     AllcommentPage.prototype.getComment = function () {
         var _this = this;
@@ -81,13 +82,14 @@ var AllcommentPage = /** @class */ (function () {
     };
     AllcommentPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad AllcommentPage');
+        console.log("Ma valeur " + this.value);
     };
     AllcommentPage.prototype.backvisit = function () {
         this.navCtrl.push('AddcommentPage');
     };
     AllcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-allcomment',template:/*ion-inline-start:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/'<!--\n  Generated template for the AllcommentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Commentaires Disponible</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n \n\n\n<ion-item *ngFor="let comment of comments" class="zeubilamouche">\n   <p class="commentaire">{{comment.content}}</p>\n   <p class="commentaire">{{comment.stars}}</p>\n   <p class="commentaire">{{comment.userID}}</p>\n</ion-item>\n<br>\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/,
+            selector: 'page-allcomment',template:/*ion-inline-start:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/'<!--\n  Generated template for the AllcommentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Commentaires Disponible</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n \n\n<ng-container *ngFor="let comment of comments" class="zeubilamouche">\n  <ion-option *ngIf="value == comment.exhibitionID" >\n   <p class="commentaire">{{comment.content}}</p>\n   <p class="commentaire">{{comment.stars}}</p>\n   <p class="commentaire">{{comment.userID}}</p>\n  </ion-option>\n  \n</ng-container>\n<br>\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/ISIKO-IOS-MASTER-Rayan/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
     ], AllcommentPage);

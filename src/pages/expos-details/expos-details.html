@@ -36,12 +36,13 @@
         <br>
         <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>
         <br>
-        <button ion-button block clear (click)="allcomment()">Voir tout les commentaires</button>
+        <button ion-button block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>
         <br>
         <button ion-button block clear (click)="backexpos()">Revenir à la liste des expositions</button>
       </div>
         </div>
       </div>
+      
     </ion-item>
     </ion-list>
 </ion-content>

@@ -14,12 +14,14 @@
 <ion-content padding>
  
 
-
-<ion-item *ngFor="let comment of comments" class="zeubilamouche">
+<ng-container *ngFor="let comment of comments" class="zeubilamouche">
+  <ion-option *ngIf="value == comment.exhibitionID" >
    <p class="commentaire">{{comment.content}}</p>
    <p class="commentaire">{{comment.stars}}</p>
    <p class="commentaire">{{comment.userID}}</p>
-</ion-item>
+  </ion-option>
+  
+</ng-container>
 <br>
 <button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>
 </ion-content>

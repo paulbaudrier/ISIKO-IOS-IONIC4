@@ -21,8 +21,10 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class AllcommentPage {
 
+  value:any
   constructor(public navCtrl: NavController, public navParams: NavParams,public restProvider: RestProvider) {
     this.getComment();
+    this.value = navParams.get('expos');
   }
 
   comments: any;
@@ -36,6 +38,7 @@ export class AllcommentPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AllcommentPage');
+    console.log("Ma valeur " + this.value);
   }
 
   backvisit()
