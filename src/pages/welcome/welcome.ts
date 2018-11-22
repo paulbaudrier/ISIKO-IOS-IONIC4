@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 // ALERT POP UP IMPORT
 import { AlertController } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
@@ -33,7 +34,9 @@ export class WelcomePage {
   errorMessage: string = '';
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
-    public formBuilder: FormBuilder) { }
+    public formBuilder: FormBuilder,public menuCtrl: MenuController) { 
+      this.menuCtrl.enable(false);
+    }
 
   login() {
     this.navCtrl.push(LoginPage);

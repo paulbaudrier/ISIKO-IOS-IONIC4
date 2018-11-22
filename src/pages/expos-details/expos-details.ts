@@ -93,6 +93,7 @@ export class ExposDetailsPage {
       console.log("MY EXIB : " + this.exib);
     });
   }
+  
   openWebpage(url: string) {
     const options: InAppBrowserOptions = {
       zoom: 'no'
@@ -123,9 +124,9 @@ export class ExposDetailsPage {
   //   IF ID = PREMIERE_EXPO
   //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
   //   IF ID = DEUXIEME_EXPO
-  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+  //   const browser = this.inAppBrowser.create('http://player.isiko.io/MobileVersion/?exhibition=Montagnes', '_self', options);
   //   IF ID = TROISIEME_EXPO
-  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+  //   const browser = this.inAppBrowser.create('http://player.isiko.io/MobileVersion/?exhibition=Alearand', '_self', options);
 
   // }
 
