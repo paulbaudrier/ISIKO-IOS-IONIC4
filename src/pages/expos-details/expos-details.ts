@@ -6,6 +6,7 @@ import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser"
 import { AlertController } from 'ionic-angular';
 import { AddcommentPage } from './../addcomment/addcomment';
 import { HomePage } from '../home/home';
+import { MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the ExposDetailsPage page.
@@ -22,7 +23,8 @@ import { HomePage } from '../home/home';
 export class ExposDetailsPage {
   url: string;
   value:any
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController, public menuCtrl: MenuController) {
+    menuCtrl.swipeEnable(false, 'main-menu');
     this.value = navParams.get('user');
     this.getUsers();
     this.getExibitionsScript();

@@ -21,6 +21,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, public menuCtrl: MenuController) {
     this.menuCtrl.enable(true);
+    menuCtrl.swipeEnable(false, 'main-menu');
     this.getUsers();
   }
   users: any;
@@ -38,10 +39,6 @@ export class HomePage {
     console.log("MY ID :" + id);
     this.navCtrl.push('ExposDetailsPage', {user:id});
   }
-
-  
-
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
