@@ -20,9 +20,13 @@ export class AddcommentPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController) {
   }
 
+  // POST COMMENT
+  DoAddComment()
+  {
 
-  
+  }
 
+  // ALERT POP UP 
   thankyou()
   {
     let alert = this.alertCtrl.create({
