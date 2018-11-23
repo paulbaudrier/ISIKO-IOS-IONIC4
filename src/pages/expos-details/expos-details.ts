@@ -24,7 +24,7 @@ export class ExposDetailsPage {
   url: string;
   value:any
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController, public menuCtrl: MenuController) {
-    menuCtrl.swipeEnable(false, 'main-menu');
+    menuCtrl.swipeEnable(false);
     this.value = navParams.get('user');
     this.getUsers();
     this.getExibitionsScript();

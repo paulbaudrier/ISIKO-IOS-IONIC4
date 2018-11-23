@@ -21,7 +21,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, public menuCtrl: MenuController) {
     this.menuCtrl.enable(true);
-    menuCtrl.swipeEnable(false, 'main-menu');
+    menuCtrl.swipeEnable(false);
     this.getUsers();
   }
   users: any;
