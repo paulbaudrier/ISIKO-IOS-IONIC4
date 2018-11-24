@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 736:
+/***/ 737:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyProfilePageModule", function() { return MyProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_profile__ = __webpack_require__(745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_profile__ = __webpack_require__(746);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MyProfilePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 745:
+/***/ 746:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,7 +116,7 @@ var MyProfilePage = /** @class */ (function () {
     };
     MyProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-my-profile',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/'<ion-header>\n\n    <ion-title>Mon Profil</ion-title>\n\n    <button ion-button menuToggle>Menu</button>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <img [src]="user.image"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{user.name}}\n\n      </ion-card-title>\n\n      <p>\n\n        Bonjour, {{user.name}}.\n\n        <br>\n\n        <br>\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <br>\n\n      <p>\n\n        Mon email : {{user.email}}\n\n      </p>\n\n      <br>\n\n      Mon ID : {{user.uid}}\n\n\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/,
+            selector: 'page-my-profile',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/'<ion-header>\n\n    <ion-title>Mon Profil</ion-title>\n\n    <button ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <img [src]="user.image"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{user.name}}\n\n      </ion-card-title>\n\n      <p>\n\n        Bonjour, {{user.name}}.\n\n        <br>\n\n        <br>\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <br>\n\n      <p>\n\n        Mon email : {{user.email}}\n\n      </p>\n\n      <br>\n\n      Mon ID : {{user.uid}}\n\n\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* MenuController */]])

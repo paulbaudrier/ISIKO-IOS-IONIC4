@@ -1,7 +1,8 @@
 <ion-content>
     <div class="title">
-        <button ion-button menuToggle>Menu</button>
-        <h1>Liste des expositions</h1>
+      <button ion-button [menuToggle]>
+        <ion-icon name="menu"></ion-icon>
+      </button>
     </div>
   <ion-list inset>
     <ion-item *ngFor="let user of users" (click)="expo_detail(user.id)">
