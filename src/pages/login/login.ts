@@ -10,6 +10,7 @@ import { HomePage } from '../home/home';
 
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
+import { MenuController } from 'ionic-angular';
 
 
 @Component({
@@ -36,7 +37,8 @@ export class LoginPage {
     public toastCtrl: ToastController,
     public translateService: TranslateService,
     public authService: AuthService,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    public menuCtrl: MenuController
     ) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
@@ -45,6 +47,7 @@ export class LoginPage {
   }
 
   ionViewWillLoad(){
+    this.menuCtrl.enable(false);
     this.loginForm = this.formBuilder.group({
       email: new FormControl(),
       password: new FormControl(),
@@ -52,6 +55,7 @@ export class LoginPage {
   }
 
   tryLogin(value){
+    this.menuCtrl.enable(false);
     this.authService.doLogin(value)
     .then(res => {
       console.log(res);
@@ -63,6 +67,7 @@ export class LoginPage {
   }
 
   tryGoogleLogin(){
+    this.menuCtrl.enable(false);
     this.authService.doGoogleLogin()
     .then((res) => {
       this.navCtrl.push(HomePage);
@@ -84,6 +89,7 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
+      this.menuCtrl.enable(false);
       this.navCtrl.push(HomePage);
   }
 }
