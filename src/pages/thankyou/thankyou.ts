@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -19,7 +20,7 @@ export class ThankyouPage {
   }
 
   home(){
-    this.navCtrl.push('HomePage');
+    this.navCtrl.push(HomePage);
 
   }
 
