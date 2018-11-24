@@ -86,7 +86,6 @@
       }
     },
     "platforms": [
-      "ios",
       "android"
     ]
   }
