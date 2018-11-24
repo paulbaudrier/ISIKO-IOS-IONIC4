@@ -35,6 +35,7 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
 import { LoginPage } from '../pages/login/login';
 import { UserPage} from '../pages/user/user';
 import { SignupPage } from '../pages/signup/signup';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -98,6 +99,7 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     AuthServices,
     InAppBrowser,
+    NativeAudio,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },

@@ -26,7 +26,7 @@
   "cordova-plugin-splashscreen": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-splashscreen@^5.0.2"
+      "id": "https://github.com/apache/cordova-plugin-splashscreen.git"
     },
     "is_top_level": true,
     "variables": {}
@@ -91,5 +91,13 @@
       "TWITTER_KEY": "kMV673U74jFqP3QZ81X4CduYL",
       "TWITTER_SECRET": "mb03DWehE5zRcb4g6Yl3PjJXlmCVEoDUxvCskotORCNy503rc4"
     }
+  },
+  "cordova-plugin-nativeaudio": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativeaudio"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

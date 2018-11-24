@@ -11,6 +11,7 @@ import { MenuController } from 'ionic-angular';
 
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
+import { SplashscreenPage } from '../splashscreen/splashscreen';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -83,6 +84,11 @@ export class WelcomePage {
     }, (err) => {
       this.errorMessage = err.message;
     });
+  }
+
+  isikoOpeningSound()
+  {
+    this.navCtrl.push('SplashscreenPage');
   }
 
   ionViewDidLoad() {

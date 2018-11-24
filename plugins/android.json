@@ -44,6 +44,9 @@
       "TWITTER_KEY": "kMV673U74jFqP3QZ81X4CduYL",
       "TWITTER_SECRET": "mb03DWehE5zRcb4g6Yl3PjJXlmCVEoDUxvCskotORCNy503rc4",
       "PACKAGE_NAME": "rayankeddache.com"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "rayankeddache.com"
     }
   },
   "dependent_plugins": {}
