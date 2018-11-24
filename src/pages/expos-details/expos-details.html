@@ -5,7 +5,9 @@
     <ion-list inset>
       <ion-item *ngFor="let user of users">
         <div class="mondivinchAllah" *ngIf="value == user.id">
-            <div class="row">
+          <div class="imghome">
+            <img class="listemenuimage" src="{{user.images}}">
+
             <div class="details">
                 <div class="blackscreen"></div>
               <div class="titleexpo">
@@ -14,37 +16,32 @@
               <div class="texthomepage">
                 <p>{{user.artists}}</p>
               </div>
-              <div class="description">
-                <div class="item item-text-wrap">
-                  <p>{{user.starting_exhibition_date}}</p>
-                  <ion-item text-wrap><p>{{user.description}}</p></ion-item>
-                </div>
-            </div>
-            </div>
-              <div class="imghome">
-                <img class="listemenuimage" src="{{user.images}}">
+
+                  </div>
           <!-- <h2>{{user.name}}</h2>
         <p>{{user.id}}</p>
         <p>{{user.artists}}</p>
         <p>{{user.ending_exhibition_date}}</p>
         <p>{{user.stars}}</p> -->
-        <button ion-button block clear (click)="openWebpage('http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois')">Commencer la visite</button>
+      <div class="buttonscontainer">
+        <button  class=" btn-hover color-2" block clear (click)="openWebpage('http://player.isiko.io/MobileVersion/?exhibition=Iletaitunefois')">Commencer la visite</button>
         <!-- BUTTON ALGO LECTEUR FUNCTION -->
         <!-- <button ion-button block clear (click)="lecteuralgo()">Commencer la visite</button> -->
         <br>
-        <button ion-button block clear (click)="addtomyfavorit()">{{btn_txt}}</button>
+        <button class="btn-hover color-2" block clear (click)="addtomyfavorit()">{{btn_txt}}</button>
         <br>
-        <button ion-button block clear (click)="addcomment()">Ajouter mon commentaire</button>
+        <button class="btn-hover color-2" block clear (click)="addcomment()">Ajouter mon commentaire</button>
         <br>
-        <button ion-button block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>
+        <button class="btn-hover color-2" block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>
         <br>
-        <button ion-button block clear (click)="listoeuvres()">Voir la liste des Oeuvres</button>
+        <button class="btn-hover color-2" block clear (click)="listoeuvres()">Voir la liste des Oeuvres</button>
         <br>
-        <button ion-button block clear (click)="backexpos()">Revenir à la liste des expositions</button>
+        <button class="btn-hover color-2" block clear (click)="backexpos()">Revenir à la liste des expositions</button>
       </div>
         </div>
       </div>
-      
+
+
     </ion-item>
     </ion-list>
 </ion-content>
