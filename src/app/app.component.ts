@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
 import { timer } from 'rxjs/observable/timer';
+import { MenuController } from 'ionic-angular';
+
 
 
 import { FirstRunPage } from '../pages';
@@ -44,8 +46,10 @@ export class MyApp {
     { title: 'FeedBack', component: 'FeedbackPage' },
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen,public menuCtrl: MenuController) {
     platform.ready().then(() => {
+      this.menuCtrl.enable(false);
+      menuCtrl.swipeEnable(false);
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
@@ -58,7 +62,7 @@ export class MyApp {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('fr');
     const browserLang = this.translate.getBrowserLang();
 
     if (browserLang) {
@@ -85,6 +89,7 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
+    this.menuCtrl.swipeEnable(false);
     this.nav.setRoot(page.component);
   }
 }

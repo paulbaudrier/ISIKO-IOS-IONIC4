@@ -7,7 +7,7 @@ webpackJsonp([3],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(744);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,7 +44,7 @@ var MyFavoritesPageModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyFavoritesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_service__ = __webpack_require__(385);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_auth_service__ = __webpack_require__(68);
@@ -109,7 +109,7 @@ var MyFavoritesPage = /** @class */ (function () {
     };
     MyFavoritesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-favorites',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-favorites/my-favorites.html"*/'<ion-content>\n    <button ion-button menuToggle>Menu</button>\n  <ion-list inset>\n      <ng-container *ngFor="let expo of expos">\n          <p>{{expo.name}}</p>\n          </ng-container>\n      <ng-container *ngFor="let favorit of favorits">\n          <ion-option *ngIf="user.uid == favorit.id_Users" >\n              \n          <h2>{{favorit.id_Expo}}</h2>\n          <p>{{favorit.id_Users}}</p>\n          </ion-option>\n          \n        </ng-container>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-favorites/my-favorites.html"*/,
+            selector: 'page-my-favorites',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-content>\n\n    <button ion-button menuToggle>Menu</button>\n\n  <ion-list inset>\n\n      <ng-container *ngFor="let expo of expos">\n\n          <p>{{expo.name}}</p>\n\n          </ng-container>\n\n      <ng-container *ngFor="let favorit of favorits">\n\n          <ion-option *ngIf="user.uid == favorit.id_Users" >\n\n              \n\n          <h2>{{favorit.id_Expo}}</h2>\n\n          <p>{{favorit.id_Users}}</p>\n\n          </ion-option>\n\n          \n\n        </ng-container>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__core_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_4__core_auth_service__["a" /* AuthService */]])

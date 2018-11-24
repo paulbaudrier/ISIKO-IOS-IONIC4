@@ -47,6 +47,7 @@ export class LoginPage {
   }
 
   ionViewWillLoad(){
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
     this.loginForm = this.formBuilder.group({
       email: new FormControl(),
@@ -55,6 +56,7 @@ export class LoginPage {
   }
 
   tryLogin(value){
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
     this.authService.doLogin(value)
     .then(res => {
@@ -67,6 +69,7 @@ export class LoginPage {
   }
 
   tryGoogleLogin(){
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
     this.authService.doGoogleLogin()
     .then((res) => {
@@ -77,6 +80,8 @@ export class LoginPage {
   }
 
   goRegisterPage(){
+    this.menuCtrl.swipeEnable(false);
+    this.menuCtrl.enable(false);
     this.navCtrl.push(SignupPage);
   }
 
@@ -89,6 +94,7 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
+      this.menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
       this.navCtrl.push(HomePage);
   }

@@ -35,15 +35,18 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
     public formBuilder: FormBuilder,public menuCtrl: MenuController) { 
+      menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
     }
 
   login() {
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
     this.navCtrl.push(LoginPage);
   }
 
   signup() {
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
     this.navCtrl.push(SignupPage);
   }
@@ -51,6 +54,7 @@ export class WelcomePage {
   
 
   tryLogin(value){
+    this.menuCtrl.swipeEnable(false);
     this.authService.doLogin(value)
     .then(res => {
       console.log(res);
@@ -62,6 +66,7 @@ export class WelcomePage {
   }
 
   tryFacebookLogin(){
+    this.menuCtrl.swipeEnable(false);
     this.authService.doFacebookLogin()
     .then((res) => {
       this.navCtrl.push(HomePage);
@@ -70,17 +75,8 @@ export class WelcomePage {
     });
   }
 
-  tryTwitterLogin(){
-    this.authService.doTwitterLogin()
-    .then((res) => {
-      this.navCtrl.push(HomePage);
-    }, (err) => {
-      this.errorMessage = err.message;
-    });
-  }
-
-
   tryGoogleLogin(){
+    this.menuCtrl.swipeEnable(false);
     this.authService.doGoogleLogin()
     .then((res) => {
       this.navCtrl.push(HomePage);
@@ -90,6 +86,7 @@ export class WelcomePage {
   }
 
   ionViewDidLoad() {
+    this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
   }
 
