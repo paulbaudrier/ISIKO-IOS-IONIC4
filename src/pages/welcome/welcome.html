@@ -1,3 +1,18 @@
+
+
+<div *ngIf="showSplash" class="splash">
+  <ion-content>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </ion-content>
+
+</div>
+
+<ion-nav [root]="WelcomePage" #content swipeBackEnabled="false"></ion-nav>
+
 <ion-content scroll="false">
   <div class="blackbg"></div>
   <div class="splash-bg"></div>
@@ -12,8 +27,6 @@
       <ion-icon name="logo-google"></ion-icon>
       Se connecter avec Google
     </button>
-    <br>
-    <button ion-button icon-left block clear (click)="isikoOpeningSound()"> NETFLIX SOUND</button>
   </div>
   </div>
 </ion-content>

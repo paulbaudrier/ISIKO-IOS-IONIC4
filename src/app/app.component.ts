@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform, ModalController } from 'ionic-angular';
 import { timer } from 'rxjs/observable/timer';
 import { MenuController } from 'ionic-angular';
-
+import { NativeAudio } from '@ionic-native/native-audio';
 
 
 import { FirstRunPage } from '../pages';
@@ -46,18 +46,35 @@ export class MyApp {
     { title: 'Mon profil', component: 'MyProfilePage' },
     { title: 'FeedBack', component: 'FeedbackPage' },
   ]
-
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, splashScreen: SplashScreen,public menuCtrl: MenuController, smartAudio: SmartAudioProvider,modalCtrl: ModalController) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, splashScreen: SplashScreen,public menuCtrl: MenuController, smartAudio: SmartAudioProvider,modalCtrl: ModalController,private nativeAudio: NativeAudio) {
     platform.ready().then(() => {
       this.menuCtrl.enable(false);
       menuCtrl.swipeEnable(false);
+      // smartAudio.play('opening');
+      this.statusBar.styleDefault();
+      splashScreen.hide();  // <-- hide static image
+      timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      // this.splashScreen.hide();  // <-- hide static image
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
+      smartAudio.play('opening');
+      
     });
+    
     this.initTranslate();
   }
+
+  ionViewDidLoad() {
+    
+    this.menuCtrl.swipeEnable(false);
+    this.menuCtrl.enable(false);
+    
+  }
+
+  
+
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
@@ -84,6 +101,7 @@ export class MyApp {
       this.config.set('ios', 'backButtonText', values.BACK_BUTTON_TEXT);
     });
   }
+
 
   openPage(page) {
     // Reset the content nav to have just this page

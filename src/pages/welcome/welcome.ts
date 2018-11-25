@@ -10,10 +10,14 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AlertController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { Config, Nav, Platform, ModalController } from 'ionic-angular';
 
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
 import { SplashscreenPage } from '../splashscreen/splashscreen';
+import { timer } from 'rxjs/observable/timer';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -33,11 +37,17 @@ import { SplashscreenPage } from '../splashscreen/splashscreen';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
+  showSplash = true; // <-- show animation
   loginForm: FormGroup;
   errorMessage: string = '';
+  
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
-    public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider) { 
+    public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio) { 
+      this.statusBar.styleDefault();
+      splashScreen.hide();  // <-- hide static image
+      smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
+      timer(2000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
     }
@@ -88,18 +98,19 @@ export class WelcomePage {
     });
   }
 
-  isikoOpeningSound()
+  Netflix()
   {
-    this.navCtrl.push("SplashscreenPage");
-    this.showSplashScreen();
+    this.smartAudio.play('opening');
   }
 
-  showSplashScreen()
+  Netflixsound()
   {
     this.smartAudio.play('opening');
   }
 
   ionViewDidLoad() {
+    this.Netflixsound();
+    this.Netflix();
     this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
   }

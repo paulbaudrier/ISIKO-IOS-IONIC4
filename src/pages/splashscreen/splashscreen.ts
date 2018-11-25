@@ -33,9 +33,13 @@ export class SplashscreenPage {
     this.smartAudio.play('opening');
   }
 
+  GobacktoHome()
+    {
+      this.navCtrl.push(WelcomePage);
+    }
+
+
   ionViewDidLoad() {
-    this.Netflixsound();
-    setTimeout(() => this.splash = false, 4000);
     console.log('ionViewDidLoad SplashscreenPage');
   }
 

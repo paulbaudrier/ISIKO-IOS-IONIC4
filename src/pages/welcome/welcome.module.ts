@@ -1,3 +1,4 @@
+import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from './../home/home';
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
@@ -10,6 +11,7 @@ import { WelcomePage } from './welcome';
     WelcomePage,
   ],
   imports: [
+    SplashScreen,
     IonicPageModule.forChild(WelcomePage),
     TranslateModule.forChild(),
   ],
