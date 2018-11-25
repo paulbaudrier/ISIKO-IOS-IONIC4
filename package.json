@@ -89,7 +89,8 @@
       "cordova-plugin-nativeaudio": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
