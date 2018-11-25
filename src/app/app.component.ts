@@ -5,7 +5,7 @@ import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { Config, Nav, Platform } from 'ionic-angular';
+import { Config, Nav, Platform, ModalController } from 'ionic-angular';
 import { timer } from 'rxjs/observable/timer';
 import { MenuController } from 'ionic-angular';
 
@@ -47,16 +47,13 @@ export class MyApp {
     { title: 'FeedBack', component: 'FeedbackPage' },
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen,public menuCtrl: MenuController, smartAudio: SmartAudioProvider) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, splashScreen: SplashScreen,public menuCtrl: MenuController, smartAudio: SmartAudioProvider,modalCtrl: ModalController) {
     platform.ready().then(() => {
       this.menuCtrl.enable(false);
       menuCtrl.swipeEnable(false);
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
-      this.statusBar.styleDefault();
-      timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
     });
     this.initTranslate();

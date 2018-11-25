@@ -1,3 +1,4 @@
+import { SmartAudioProvider } from './../../providers/smart-audio/smart-audio';
 import { SignupPage } from './../signup/signup';
 import { LoginPage } from './../login/login';
 import { HomePage } from './../home/home';
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 // ALERT POP UP IMPORT
 import { AlertController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
@@ -35,7 +37,7 @@ export class WelcomePage {
   errorMessage: string = '';
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
-    public formBuilder: FormBuilder,public menuCtrl: MenuController) { 
+    public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider) { 
       menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
     }
@@ -88,7 +90,13 @@ export class WelcomePage {
 
   isikoOpeningSound()
   {
-    this.navCtrl.push('SplashscreenPage');
+    this.navCtrl.push("SplashscreenPage");
+    this.showSplashScreen();
+  }
+
+  showSplashScreen()
+  {
+    this.smartAudio.play('opening');
   }
 
   ionViewDidLoad() {
