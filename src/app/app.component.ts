@@ -1,3 +1,4 @@
+import { SmartAudioProvider } from './../providers/smart-audio/smart-audio';
 import { HomePage } from './../pages/home/home';
 import { WelcomePage } from './../pages/welcome/welcome';
 import { Component, ViewChild } from '@angular/core';
@@ -46,7 +47,7 @@ export class MyApp {
     { title: 'FeedBack', component: 'FeedbackPage' },
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen,public menuCtrl: MenuController) {
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen,public menuCtrl: MenuController, smartAudio: SmartAudioProvider) {
     platform.ready().then(() => {
       this.menuCtrl.enable(false);
       menuCtrl.swipeEnable(false);
@@ -56,6 +57,7 @@ export class MyApp {
       this.splashScreen.hide();
       this.statusBar.styleDefault();
       timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
     });
     this.initTranslate();
   }

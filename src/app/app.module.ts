@@ -36,6 +36,7 @@ import { LoginPage } from '../pages/login/login';
 import { UserPage} from '../pages/user/user';
 import { SignupPage } from '../pages/signup/signup';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -100,6 +101,7 @@ export function provideSettings(storage: Storage) {
     AuthServices,
     InAppBrowser,
     NativeAudio,
+    SmartAudioProvider,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
@@ -112,7 +114,8 @@ export function provideSettings(storage: Storage) {
     AuthService,
     TwitterConnect,
     UserService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SmartAudioProvider,
   ]
 })
 export class AppModule { }

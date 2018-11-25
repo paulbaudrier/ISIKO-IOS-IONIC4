@@ -1,3 +1,4 @@
+import { SmartAudioProvider } from './../../providers/smart-audio/smart-audio';
 import { WelcomePage } from './../welcome/welcome';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -19,13 +20,14 @@ export class SplashscreenPage {
   splash = true;
   secondPage = WelcomePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeAudio: NativeAudio) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeAudio: NativeAudio, public smartAudio: SmartAudioProvider) {
     this.Netflixsound();
   }
 
   
   Netflixsound()
   {
+    this.smartAudio.play('opening');
     this.nativeAudio.preloadSimple('uniqueId1', 'src/assets/img/isiko-opening.mp3');
     this.nativeAudio.preloadComplex('uniqueId2', 'src/assets/img/isiko-opening.mp3', 1, 1, 0);
 
