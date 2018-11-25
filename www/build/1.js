@@ -76,19 +76,12 @@ var SplashscreenPage = /** @class */ (function () {
         this.smartAudio = smartAudio;
         this.splash = true;
         this.secondPage = __WEBPACK_IMPORTED_MODULE_1__welcome_welcome__["a" /* WelcomePage */];
-        this.Netflixsound();
     }
+    SplashscreenPage.prototype.back = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_1__welcome_welcome__["a" /* WelcomePage */]);
+    };
     SplashscreenPage.prototype.Netflixsound = function () {
         this.smartAudio.play('opening');
-        this.nativeAudio.preloadSimple('uniqueId1', 'src/assets/img/isiko-opening.mp3');
-        this.nativeAudio.preloadComplex('uniqueId2', 'src/assets/img/isiko-opening.mp3', 1, 1, 0);
-        this.nativeAudio.play('uniqueId1');
-        // can optionally pass a callback to be called when the file is done playing
-        this.nativeAudio.play('uniqueId1', function () { return console.log('uniqueId1 is done playing'); });
-        this.nativeAudio.loop('uniqueId2');
-        this.nativeAudio.setVolumeForComplexAsset('uniqueId2', 0.6);
-        this.nativeAudio.stop('uniqueId1');
-        this.nativeAudio.unload('uniqueId1');
     };
     SplashscreenPage.prototype.ionViewDidLoad = function () {
         var _this = this;
@@ -98,7 +91,7 @@ var SplashscreenPage = /** @class */ (function () {
     };
     SplashscreenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'page-splashscreen',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/'<!--\n\n  Generated template for the SplashscreenPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n</ion-header>\n\n<!-- <div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n\n  <div class="flb">\n\n    <div class="Aligner-item Aligner-item--top"></div>\n\n    <img src="assets/logo.svg">\n\n    <div class="Aligner-item Aligner-item--bottom"></div>\n\n  </div>\n\n</div> -->\n\n\n\nNetflixsound()\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/,
+            selector: 'page-splashscreen',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/'<!--\n\n  Generated template for the SplashscreenPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n</ion-header>\n\n<!-- <div id="custom-overlay" [style.display]="splash ? \'flex\': \'none\'">\n\n  <div class="flb">\n\n    <div class="Aligner-item Aligner-item--top"></div>\n\n    <img src="assets/logo.svg">\n\n    <div class="Aligner-item Aligner-item--bottom"></div>\n\n  </div>\n\n</div> -->\n\n\n\nNetflixsound()\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <button ion-button icon-left block clear (click)="back()"> BACK</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_audio__["a" /* NativeAudio */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_audio__["a" /* NativeAudio */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */]) === "function" && _d || Object])
     ], SplashscreenPage);

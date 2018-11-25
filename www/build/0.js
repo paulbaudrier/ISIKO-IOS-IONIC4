@@ -79,9 +79,10 @@ var ThankyouPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
             selector: 'page-thankyou',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\thankyou\thankyou.html"*/'<!--\n\n  Generated template for the ThankyouPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content >\n\n    <div class="title" textalign="center">\n\n        <h1>Merci pour votre retour !</h1>\n\n    </div>\n\n<br/>\n\n<br/> \n\n    <img class="fullscreen" src="../assets/img/thank-you.jpg">\n\n<br/>\n\n<br/>\n\n<button ion-button block (click)="home()">{{ \'Revenir à la Home\'}}</button>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\thankyou\thankyou.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object])
     ], ThankyouPage);
     return ThankyouPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=thankyou.js.map

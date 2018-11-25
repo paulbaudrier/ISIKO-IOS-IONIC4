@@ -21,28 +21,16 @@ export class SplashscreenPage {
   secondPage = WelcomePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private nativeAudio: NativeAudio, public smartAudio: SmartAudioProvider) {
-    this.Netflixsound();
   }
 
+  back()
+  {
+    this.navCtrl.push(WelcomePage);
+  }
   
   Netflixsound()
   {
     this.smartAudio.play('opening');
-    this.nativeAudio.preloadSimple('uniqueId1', 'src/assets/img/isiko-opening.mp3');
-    this.nativeAudio.preloadComplex('uniqueId2', 'src/assets/img/isiko-opening.mp3', 1, 1, 0);
-
-    this.nativeAudio.play('uniqueId1');
-
-// can optionally pass a callback to be called when the file is done playing
-    this.nativeAudio.play('uniqueId1', () => console.log('uniqueId1 is done playing'));
-
-    this.nativeAudio.loop('uniqueId2');
-
-    this.nativeAudio.setVolumeForComplexAsset('uniqueId2', 0.6);
-
-    this.nativeAudio.stop('uniqueId1');
-
-    this.nativeAudio.unload('uniqueId1');
   }
 
   ionViewDidLoad() {
