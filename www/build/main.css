@@ -25780,13 +25780,61 @@ page-expos-details * {
   box-sizing: border-box;
 }
 
+page-expos-details .buttonreturn {
+  border-radius: 4px;
+  background-color: #474747;
+  border: none;
+  color: #f6ae56;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 300px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid;
+}
+
+page-expos-details .headerisiko {
+  position: relative;
+  top: 20px;
+}
+
+page-expos-details .buttonreturn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+page-expos-details .buttonreturn span:after {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+page-expos-details .buttonreturn:hover span {
+  padding-left: 25px;
+}
+
+page-expos-details .buttonreturn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
 page-expos-details .buttons {
   margin: 10%;
   text-align: center;
 }
 
 page-expos-details .btn-hover {
-  width: 200px;
+  width: 310px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -25796,7 +25844,7 @@ page-expos-details .btn-hover {
   text-align: center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 50px;
+  border-radius: 8px;
   moz-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -25814,10 +25862,13 @@ page-expos-details .btn-hover:focus {
 }
 
 page-expos-details .btn-hover.color-2 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#f5ce62), color-stop(#e43603), color-stop(#fa7199), to(#e85a19));
-  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-  -webkit-box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
-  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#f6ae56), to(#e08f2d));
+  background-image: linear-gradient(to right, #29323c, #485563, #f6ae56, #e08f2d);
+}
+
+page-expos-details .btn-hover.color-8 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#f6ae56), to(#e08f2d));
+  background-image: linear-gradient(to right, #29323c, #485563, #f6ae56, #e08f2d);
 }
 
 page-expos-details .texthomepage p {
@@ -25859,6 +25910,15 @@ page-expos-details .blackscreen {
   height: 95%;
 }
 
+page-expos-details .titleblackscreen {
+  position: absolute;
+  top: 30px;
+  left: 16px;
+  background: #000000ab;
+  width: 92%;
+  height: 24%;
+}
+
 page-expos-details page-expos-details .blackscreen {
   position: absolute;
   top: 10px;
@@ -25878,10 +25938,10 @@ page-expos-details .titleexpo {
   top: 10%;
   left: 5%;
   width: 90%;
-  text-shadow: 2px 2px 12px #f5a54d;
 }
 
 page-expos-details .titleexpo h2 {
+  font-family: 'Cinzel', sans-serif;
   font-size: 30px !important;
   text-align: center !important;
 }
@@ -25906,7 +25966,6 @@ page-expos-details .title {
   background: #3C3C3C;
   border: 1px solid black;
   color: #f5a54d;
-  text-shadow: 3px 3px 16px black;
 }
 
 page-expos-details .description p {
@@ -25928,12 +25987,16 @@ page-expos-details .description {
   text-align: left;
 }
 
+page-expos-details .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 page-expos-details span.button-inner {
   font-size: 19px;
-  text-shadow: 2px 2px 4px black;
-  border: 2px solid;
   border-radius: 6px;
-  background: #00000052;
   /* box-shadow: 2px 2px white; */
 }
 
