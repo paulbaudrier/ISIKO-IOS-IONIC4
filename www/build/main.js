@@ -215,7 +215,7 @@ var LoginPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
@@ -305,7 +305,7 @@ var RestProvider = /** @class */ (function () {
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
         //let options = new RequestOptions({ headers: headers });
-        var data = { "id_Expo": ["9999999"], "id_Users": ["88888888"] };
+        var data = { "id_Expo": ["f4407900-1679-11e8-a774-0bda78ba5176"], "id_Users": ["zqhtGgUakITOzp2UjcNKn3x4L9v2"] };
         this.http.post("https://isiko.restlet.net/v2/getUser_Favoriteses/", data, { headers: headers })
             .subscribe(function (res) {
         }, function (err) {
@@ -313,6 +313,16 @@ var RestProvider = /** @class */ (function () {
         });
     };
     RestProvider.prototype.deleteUserfavorit = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
+        //let options = new RequestOptions({ headers: headers });
+        this.http.delete("https://isiko.restlet.net/v2/getUser_Favoriteses/8ddaafd1-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+            .subscribe(function (res) {
+        }, function (err) {
+            alert("Il y'a eu un problème durant la suppression du Favoris ! Merci de réessayer plus tard");
+        });
     };
     RestProvider.prototype.addComment = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]();
@@ -323,10 +333,10 @@ var RestProvider = /** @class */ (function () {
         var data = {
             "id": "sample id",
             "userID": [
-                "9999999999"
+                "zqhtGgUakITOzp2UjcNKn3x4L9v2"
             ],
             "exhibitionID": [
-                "888888888888888888"
+                "f4407900-1679-11e8-a774-0bda78ba5176"
             ],
             "content": [
                 "TEST PAUL IOS"
@@ -342,6 +352,16 @@ var RestProvider = /** @class */ (function () {
         });
     };
     RestProvider.prototype.deleteComment = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
+        //let options = new RequestOptions({ headers: headers });
+        this.http.delete("https://isiko.restlet.net/v2/getCommentses/48629171-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+            .subscribe(function (res) {
+        }, function (err) {
+            alert("Il y'a eu un problème durant la suppression du Commentaire ! Merci de réessayer plus tard");
+        });
     };
     RestProvider.prototype.getProfile = function () {
         var _this = this;
@@ -526,11 +546,11 @@ webpackEmptyAsyncContext.id = 184;
 
 var map = {
 	"../pages/addcomment/addcomment.module": [
-		732,
+		733,
 		8
 	],
 	"../pages/allcomment/allcomment.module": [
-		733,
+		732,
 		7
 	],
 	"../pages/core/core.module": [
@@ -542,11 +562,11 @@ var map = {
 		5
 	],
 	"../pages/feedback/feedback.module": [
-		736,
+		737,
 		4
 	],
 	"../pages/my-favorites/my-favorites.module": [
-		737,
+		736,
 		3
 	],
 	"../pages/my-profile/my-profile.module": [
@@ -993,12 +1013,12 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_10_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/addcomment/addcomment.module#AddcommentPageModule', name: 'AddcommentPage', segment: 'addcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/allcomment/allcomment.module#AllcommentPageModule', name: 'AllcommentPage', segment: 'allcomment', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/addcomment/addcomment.module#AddcommentPageModule', name: 'AddcommentPage', segment: 'addcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/core/core.module#CorePageModule', name: 'CorePage', segment: 'core', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expos-details/expos-details.module#ExposDetailsPageModule', name: 'ExposDetailsPage', segment: 'expos-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-favorites/my-favorites.module#MyFavoritesPageModule', name: 'MyFavoritesPage', segment: 'my-favorites', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/splashscreen/splashscreen.module#SplashscreenPageModule', name: 'SplashscreenPage', segment: 'splashscreen', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] }

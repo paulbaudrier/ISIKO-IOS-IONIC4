@@ -87,9 +87,7 @@ export class RestProvider {
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     //let options = new RequestOptions({ headers: headers });
-    
-    
-    let data={"id_Expo":["9999999"],"id_Users":["88888888"] };
+    let data={"id_Expo":["f4407900-1679-11e8-a774-0bda78ba5176"],"id_Users":["zqhtGgUakITOzp2UjcNKn3x4L9v2"] };
     this.http.post("https://isiko.restlet.net/v2/getUser_Favoriteses/",data, { headers: headers })
     // .map(res => res.json(data))
     .subscribe(res => {
@@ -100,7 +98,17 @@ export class RestProvider {
 
   deleteUserfavorit()
   {
-
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
+    //let options = new RequestOptions({ headers: headers });
+    this.http.delete("https://isiko.restlet.net/v2/getUser_Favoriteses/8ddaafd1-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+    // .map(res => res.json(data))
+    .subscribe(res => {
+    }, (err) => {
+    alert("Il y'a eu un problème durant la suppression du Favoris ! Merci de réessayer plus tard");
+  });
   }
 
 
@@ -114,10 +122,10 @@ export class RestProvider {
     let data={
       "id": "sample id",
       "userID": [
-        "9999999999"
+        "zqhtGgUakITOzp2UjcNKn3x4L9v2"
       ],
       "exhibitionID": [
-        "888888888888888888"
+        "f4407900-1679-11e8-a774-0bda78ba5176"
       ],
       "content": [
         "TEST PAUL IOS"
@@ -136,7 +144,17 @@ export class RestProvider {
 
   deleteComment()
   {
-
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
+    //let options = new RequestOptions({ headers: headers });
+    this.http.delete("https://isiko.restlet.net/v2/getCommentses/48629171-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+    // .map(res => res.json(data))
+    .subscribe(res => {
+    }, (err) => {
+    alert("Il y'a eu un problème durant la suppression du Commentaire ! Merci de réessayer plus tard");
+  });
   }
 
 

@@ -119,6 +119,17 @@ export class ExposDetailsPage {
     const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
   }
 
+  deletecomment()
+    {
+      this.restProvider.deleteComment();
+    }
+
+  deletefavorit()
+    {
+      this.restProvider.deleteUserfavorit();
+    }
+
+
 
   addcomment()
   {
