@@ -116,7 +116,9 @@ export class ExposDetailsPage {
       zoom: 'no'
     }
     // Opening a URL and returning an InAppBrowserObject
-    const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
+
+    // A UPDATE user.url_visite pas bon
+    // const browser = this.inAppBrowser.create('{{user.url_visite}}', '_self', options);
   }
 
   deletecomment()
