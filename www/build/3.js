@@ -1,14 +1,15 @@
 webpackJsonp([3],{
 
-/***/ 737:
+/***/ 739:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackPageModule", function() { return FeedbackPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(386);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +19,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MyFavoritesPageModule = /** @class */ (function () {
-    function MyFavoritesPageModule() {
+
+var FeedbackPageModule = /** @class */ (function () {
+    function FeedbackPageModule() {
     }
-    MyFavoritesPageModule = __decorate([
+    FeedbackPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */],
+                __WEBPACK_IMPORTED_MODULE_2__feedback__["a" /* FeedbackPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__my_favorites__["a" /* MyFavoritesPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__["a" /* StarRatingModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__feedback__["a" /* FeedbackPage */]),
             ],
         })
-    ], MyFavoritesPageModule);
-    return MyFavoritesPageModule;
+    ], FeedbackPageModule);
+    return FeedbackPageModule;
 }());
 
-//# sourceMappingURL=my-favorites.module.js.map
+//# sourceMappingURL=feedback.module.js.map
 
 /***/ }),
 
-/***/ 746:
+/***/ 748:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyFavoritesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedbackPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_service__ = __webpack_require__(387);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_auth_service__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_user_model__ = __webpack_require__(388);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,64 +59,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
 /**
- * Generated class for the MyFavoritesPage page.
+ * Generated class for the FeedbackPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var MyFavoritesPage = /** @class */ (function () {
-    function MyFavoritesPage(navCtrl, navParams, restProvider, userService, authService) {
+var FeedbackPage = /** @class */ (function () {
+    function FeedbackPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.restProvider = restProvider;
-        this.userService = userService;
-        this.authService = authService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_5__core_user_model__["a" /* FirebaseUserModel */]();
-        this.getUserFavorit();
     }
-    MyFavoritesPage.prototype.getUsers = function () {
-        var _this = this;
-        this.restProvider.getUsers()
-            .then(function (data) {
-            _this.expos = data;
-            console.log(_this.expos);
-        });
+    FeedbackPage.prototype.thankyou = function () {
+        this.navCtrl.push('ThankyouPage');
     };
-    MyFavoritesPage.prototype.ionViewWillLoad = function () {
-        var _this = this;
-        this.userService.getCurrentUser()
-            .then(function (user) {
-            _this.user = user;
-            console.log("UID" + user.uid);
-        }, function (err) { return console.log(err); });
+    FeedbackPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FeedbackPage');
     };
-    MyFavoritesPage.prototype.getUserFavorit = function () {
-        var _this = this;
-        this.restProvider.getUserFavorit()
-            .then(function (data) {
-            _this.favorits = data;
-            console.log(_this.favorits);
-        });
-    };
-    MyFavoritesPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MyFavoritesPage');
-    };
-    MyFavoritesPage = __decorate([
+    FeedbackPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-favorites',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-content>\n\n    <button ion-button [menuToggle]>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n  <ion-list inset>\n\n      <ng-container *ngFor="let expo of expos">\n\n          <p>{{expo.name}}</p>\n\n          </ng-container>\n\n      <ng-container *ngFor="let favorit of favorits">\n\n          <ion-option *ngIf="user.uid == favorit.id_Users" >\n\n              \n\n          <h2>{{favorit.id_Expo}}</h2>\n\n          <p>{{favorit.id_Users}}</p>\n\n          </ion-option>\n\n          \n\n        </ng-container>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
+            selector: 'page-feedback',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/'<!--\n\n  Generated template for the FeedbackPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content>\n\n    <button ion-button [menuToggle]>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <div class="title" textalign="center">\n\n        <h1>Feedback</h1>\n\n    </div>\n\n    <ion-list inset> \n\n        <p>Quelle note donnez vous a la page d\'acceuil ?</p>\n\n        <ionic3-star-rating \n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="3">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la page d\'éxposition ?</p>\n\n        <ionic3-star-rating \n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="4">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la visite virtuel ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="2">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à l\'ambiance des visites ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="1">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous au design de l\'application ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="5">\n\n        </ionic3-star-rating>\n\n        <br/>\n\n        <br/>\n\n\n\n        <textarea #myInput id="myInput" rows="5" maxLength="500" [(ngModel)]="myStuff" placeholder="Laissez nous un commentaire"></textarea>\n\n        <button ion-button block (click)="thankyou()">{{ \'Envoyer\'}}</button>\n\n      </ion-list>\n\n  </ion-content>\n\n\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__core_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_4__core_auth_service__["a" /* AuthService */]])
-    ], MyFavoritesPage);
-    return MyFavoritesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+    ], FeedbackPage);
+    return FeedbackPage;
 }());
 
-//# sourceMappingURL=my-favorites.js.map
+//# sourceMappingURL=feedback.js.map
 
 /***/ })
 

@@ -1,3 +1,4 @@
+import { FirstRunPage } from './../pages/index';
 import { SmartAudioProvider } from './../providers/smart-audio/smart-audio';
 import { HomePage } from './../pages/home/home';
 import { WelcomePage } from './../pages/welcome/welcome';
@@ -10,9 +11,8 @@ import { timer } from 'rxjs/observable/timer';
 import { MenuController } from 'ionic-angular';
 import { NativeAudio } from '@ionic-native/native-audio';
 
-
-import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
+import { SplashscreenPage } from '../pages/splashscreen/splashscreen';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -35,6 +35,7 @@ import { Settings } from '../providers';
 })
 export class MyApp {
   rootPage:any = WelcomePage;
+  FirstRunPage:any = SplashscreenPage;
   showSplash = true; // <-- show animation
 
 

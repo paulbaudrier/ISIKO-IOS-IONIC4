@@ -5,10 +5,11 @@ webpackJsonp([6],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CorePageModule", function() { return CorePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllcommentPageModule", function() { return AllcommentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core__ = __webpack_require__(743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(386);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +19,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CorePageModule = /** @class */ (function () {
-    function CorePageModule() {
+
+var AllcommentPageModule = /** @class */ (function () {
+    function AllcommentPageModule() {
     }
-    CorePageModule = __decorate([
+    AllcommentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__core__["a" /* CorePage */],
+                __WEBPACK_IMPORTED_MODULE_2__allcomment__["a" /* AllcommentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__core__["a" /* CorePage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__["a" /* StarRatingModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__allcomment__["a" /* AllcommentPage */]),
             ],
         })
-    ], CorePageModule);
-    return CorePageModule;
+    ], AllcommentPageModule);
+    return AllcommentPageModule;
 }());
 
-//# sourceMappingURL=core.module.js.map
+//# sourceMappingURL=allcomment.module.js.map
 
 /***/ }),
 
@@ -42,9 +45,10 @@ var CorePageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllcommentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(173);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +60,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Generated class for the CorePage page.
+ * Generated class for the AllcommentPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var CorePage = /** @class */ (function () {
-    function CorePage(navCtrl, navParams) {
+var AllcommentPage = /** @class */ (function () {
+    function AllcommentPage(navCtrl, navParams, restProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.restProvider = restProvider;
+        this.getComment();
+        this.value = navParams.get('expos');
     }
-    CorePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CorePage');
+    AllcommentPage.prototype.getComment = function () {
+        var _this = this;
+        this.restProvider.getComment()
+            .then(function (data) {
+            _this.comments = data;
+            console.log("COMMMENT :" + _this.comments);
+        });
     };
-    CorePage = __decorate([
+    AllcommentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AllcommentPage');
+        console.log("Ma valeur " + this.value);
+    };
+    AllcommentPage.prototype.backvisit = function () {
+        this.navCtrl.push('AddcommentPage');
+    };
+    AllcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\core\core.html"*/'<!--\n\n  Generated template for the CorePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>core</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\core\core.html"*/,
+            selector: 'page-allcomment',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/'<!--\n\n  Generated template for the AllcommentPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Commentaires Disponible</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n<ng-container *ngFor="let comment of comments" class="zeubilamouche">\n\n\n\n  <ion-option *ngIf="value == comment.exhibitionID" >\n\n    <div class="commentsection">\n\n    <p class="commentaire username">{{comment.userID}}</p>\n\n    <ionic3-star-rating\n\n    activeIcon = "ios-star"\n\n    defaultIcon = "ios-star-outline"\n\n    activeColor = "#488aff"\n\n    defaultColor = "#f4f4f4"\n\n    readonly="true"\n\n    [rating]="comment.stars">\n\n    </ionic3-star-rating>\n\n   <p class="commentaire description"><br>{{comment.content}}</p>\n\n </div>\n\n\n\n  </ion-option>\n\n\n\n</ng-container>\n\n<br>\n\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
-    ], CorePage);
-    return CorePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
+    ], AllcommentPage);
+    return AllcommentPage;
 }());
 
-//# sourceMappingURL=core.js.map
+//# sourceMappingURL=allcomment.js.map
 
 /***/ })
 

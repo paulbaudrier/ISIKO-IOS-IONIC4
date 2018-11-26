@@ -1,31 +1,20 @@
-<!--
-  Generated template for the SplashscreenPage page.
+<div *ngIf="showSplash" class="splash">
+  <ion-content>
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+    <div class="titre" textalign="center">
+        <h1>Chargement en cours...</h1>
+    </div>
+    <img class="fullscreen" class="bounce1" src="../assets/img/isiko-SplashScreen.png">
+  </ion-content>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-</ion-header>
-<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
-  <div class="flb">
-    <div class="Aligner-item Aligner-item--top"></div>
-    <img src="assets/logo.svg">
-    <div class="Aligner-item Aligner-item--bottom"></div>
-  </div>
-</div> -->
-
-Netflixsound()
-
-<ion-content>
- 
-  <div class="spinner">
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
-  </div>
-</ion-content>
-
-
-
-
-<button ion-button icon-left block clear (click)="back()"> BACK</button>
+</div>
