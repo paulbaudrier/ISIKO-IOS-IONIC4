@@ -48,7 +48,7 @@ export class WelcomePage {
       menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
       this.showSplash = true;
-      timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      timer(2500).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       console.log("AVANT:" + this.cpt);
       // if (this.cpt = 0)
       // {
