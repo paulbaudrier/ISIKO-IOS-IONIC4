@@ -45,7 +45,6 @@ export class WelcomePage {
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
     public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio) { 
       this.statusBar.styleDefault();
-      splashScreen.hide();  // <-- hide static image
       smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
       timer(2000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       menuCtrl.swipeEnable(false);
