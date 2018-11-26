@@ -25,6 +25,8 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log('Hello API Provider');
   }
+
+
   
   getUsers() {
     return new Promise(resolve => {
@@ -79,16 +81,64 @@ export class RestProvider {
 
   postUerfavorit(commentData)
   {
-    return new Promise((resolve, reject) => {
-      this.http.post(this.apiUrl_two, JSON.stringify(commentData))
-        .subscribe(res => {
-          resolve(res);
-        }, (err) => {
-          reject(err);
-        });
-    });
+
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    //let options = new RequestOptions({ headers: headers });
+    
+    
+    let data={"id_Expo":["9999999"],"id_Users":["88888888"] };
+    this.http.post("https://isiko.restlet.net/v2/getUser_Favoriteses/",data, { headers: headers })
+    // .map(res => res.json(data))
+    .subscribe(res => {
+    }, (err) => {
+    alert("Il y'a eu un problème durant l'ajout au Favoris ! Merci de réessayer plus tard");
+  });
+  }
+
+  deleteUserfavorit()
+  {
 
   }
+
+
+  addComment()
+  {
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    //let options = new RequestOptions({ headers: headers });
+    let data={
+      "id": "sample id",
+      "userID": [
+        "9999999999"
+      ],
+      "exhibitionID": [
+        "888888888888888888"
+      ],
+      "content": [
+        "TEST PAUL IOS"
+      ],
+      "stars": "4",
+      "title": "TEST PAUL IOS",
+      "date_post": "26 Novembre 2018"
+    };
+    this.http.post("https://isiko.restlet.net/v2/getCommentses/",data, { headers: headers })
+    // .map(res => res.json(data))
+    .subscribe(res => {
+    }, (err) => {
+    alert("Il y'a eu un problème durant l'ajout de votre commentaire ! Merci de réessayer plus tard");
+  });
+  }
+
+  deleteComment()
+  {
+
+  }
+
 
   getProfile() {
     return new Promise(resolve => {

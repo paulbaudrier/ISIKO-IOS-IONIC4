@@ -66,6 +66,11 @@ export class ExposDetailsPage {
   btn_txt = 'Ajouter à mes favoris';
   addtomyfavorit(commentData)
   {
+    commentData= {
+      id_Expo: 999999,
+      id_Users: 9999999
+    };
+    this.restProvider.postUerfavorit(commentData);
     if (this.btn_txt == 'Ajouter à mes favoris') {
       this.popupaddtomyfavorit();
       this.btn_txt = 'Supprimé de mes favoris';
