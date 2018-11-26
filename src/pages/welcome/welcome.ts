@@ -40,15 +40,32 @@ export class WelcomePage {
   showSplash = true; // <-- show animation
   loginForm: FormGroup;
   errorMessage: string = '';
-  
+  cpt = 0;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
     public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio) { 
       this.statusBar.styleDefault();
-      smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
-      timer(2000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
+      this.showSplash = true;
+      timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      console.log("AVANT:" + this.cpt);
+      // if (this.cpt = 0)
+      // {
+      //   this.showSplash = true;
+      //   smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
+      //   this.Netflix();
+      //   this.Netflixsound();
+      //   timer(3000).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      //   this.cpt++;
+      //   console.log("APRESS:" + this.cpt);
+      // }
+      // if (this.cpt = 1)
+      // {
+      //   console.log("IF CPT = 1:" + this.cpt);
+      //   this.showSplash = false;
+      //   this.cpt++;
+      // }
     }
 
   login() {
@@ -108,8 +125,6 @@ export class WelcomePage {
   }
 
   ionViewDidLoad() {
-    this.Netflixsound();
-    this.Netflix();
     this.menuCtrl.swipeEnable(false);
     this.menuCtrl.enable(false);
   }
