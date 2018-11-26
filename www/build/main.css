@@ -25775,6 +25775,30 @@ ion-navbar.toolbar {
   }
 }
 
+page-allcomment p.commentaire {
+  text-align: center;
+}
+
+page-allcomment ionic3-star-rating {
+  text-align: center;
+}
+
+page-allcomment .commentsection {
+  border: 1px solid #f7c032;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+page-allcomment p.commentaire.username {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7c032;
+  border-radius: 5px;
+}
+
+page-allcomment ion-icon.icon.icon-md.ion-ios-star {
+  color: #f7c032 !important;
+}
+
 page-expos-details * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

@@ -3,6 +3,7 @@ import { HomePage } from './../home/home';
 import { ExposDetailsPage } from './../expos-details/expos-details';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { StarRatingModule } from 'ionic3-star-rating';
 
 import { RestProvider } from '../../providers/rest/rest';
 
@@ -20,18 +21,19 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'allcomment.html',
 })
 export class AllcommentPage {
-
-  value:any
+  value:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public restProvider: RestProvider) {
     this.getComment();
     this.value = navParams.get('expos');
   }
 
+  myrating:any;
   comments: any;
   getComment() {
     this.restProvider.getComment()
     .then(data => {
       this.comments = data;
+
       console.log("COMMMENT :" + this.comments);
     });
   }

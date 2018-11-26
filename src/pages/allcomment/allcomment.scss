@@ -1,3 +1,27 @@
 page-allcomment {
 
+  p.commentaire {
+    text-align: center;
+}
+
+ionic3-star-rating {
+    text-align: center;
+}
+
+.commentsection{
+  border: 1px solid #f7c032;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}
+p.commentaire.username {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f7c032;
+    border-radius: 5px;
+}
+
+ion-icon.icon.icon-md.ion-ios-star {
+    color: rgb(247, 192, 50) !important;
+}
+
 }

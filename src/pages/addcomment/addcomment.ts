@@ -26,7 +26,7 @@ export class AddcommentPage {
 
   }
 
-  // ALERT POP UP 
+  // ALERT POP UP
   thankyou()
   {
     let alert = this.alertCtrl.create({

@@ -12,15 +12,25 @@
 
 </ion-header>
 <ion-content padding>
- 
 
 <ng-container *ngFor="let comment of comments" class="zeubilamouche">
+
   <ion-option *ngIf="value == comment.exhibitionID" >
-   <p class="commentaire">{{comment.content}}</p>
-   <p class="commentaire">{{comment.stars}}</p>
-   <p class="commentaire">{{comment.userID}}</p>
+    <div class="commentsection">
+    <p class="commentaire username">{{comment.userID}}</p>
+    <ionic3-star-rating
+    activeIcon = "ios-star"
+    defaultIcon = "ios-star-outline"
+    activeColor = "#488aff"
+    defaultColor = "#f4f4f4"
+    readonly="true"
+    [rating]="comment.stars">
+    </ionic3-star-rating>
+   <p class="commentaire description"><br>{{comment.content}}</p>
+ </div>
+
   </ion-option>
-  
+
 </ng-container>
 <br>
 <button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>
