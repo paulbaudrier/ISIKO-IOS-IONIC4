@@ -25775,6 +25775,13 @@ ion-navbar.toolbar {
   }
 }
 
+page-addcomment .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 page-allcomment p.commentaire {
   text-align: center;
 }
@@ -25787,6 +25794,13 @@ page-allcomment .commentsection {
   border: 1px solid #f7c032;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+page-allcomment .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-allcomment p.commentaire.username {
@@ -26063,6 +26077,13 @@ page-feedback .title {
 
 page-home page-home .list-md .item-block .item-inner {
   border-bottom: 2px solid #f5a54d;
+}
+
+page-home .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-home .texthomepage p {

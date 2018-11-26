@@ -3,6 +3,16 @@ page-home {
     page-home .list-md .item-block .item-inner {
         border-bottom: 2px solid #f5a54d;
     }
+
+
+        .button-md {
+            color: rgb(246, 174, 86) !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+
+        }
+
+        
     .texthomepage p {
         color: #ffaf57;
         font-weight: 500;
@@ -17,7 +27,7 @@ page-home {
     img.listemenuimage {
         z-index: -1;
     }
-    
+
     .texthomepage {
         z-index: 999;
         position: absolute;
@@ -36,7 +46,7 @@ page-home {
         // padding-right: 311px;
         // padding-bottom: 467px;
     }
-    
+
     img.listemenuimage {
         z-index: -1;
         width: 100%
@@ -50,23 +60,23 @@ page-home {
      text-shadow: 2px 2px 12px #f5a54d;
     }
     .titleexpo h2 {
-    
+
         font-size: 30px !important;
         text-align: center !important;
     }
-    
+
     .item-md p {
         margin: 0 0 2px;
         overflow: inherit;
         line-height: normal;
         text-overflow: inherit;
     }
-    
+
     h1 {
         font-size: 22px;
         text-align: center;
     }
-    
+
     .title {
         position: sticky;
         top: 0px;
@@ -76,5 +86,5 @@ page-home {
         color: #f5a54d;
         text-shadow: 3px 3px 16px black;
     }
-    
+
 }

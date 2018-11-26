@@ -12,8 +12,14 @@ ionic3-star-rating {
   border: 1px solid #f7c032;
   border-radius: 5px;
   margin-bottom: 10px;
-
 }
+
+    .button-md {
+        color: rgb(246, 174, 86) !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
 p.commentaire.username {
     padding-bottom: 5px;
     border-bottom: 1px solid #f7c032;
