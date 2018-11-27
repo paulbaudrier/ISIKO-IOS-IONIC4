@@ -1,3 +1,42 @@
 page-my-profile {
 
+  ion-card {
+    text-align: center;
+}
+
+.profilecontent {
+    border: 1px solid #00000085;
+    -webkit-box-shadow: 1px 1px 13px #0000007a;
+    box-shadow: 1px 1px 13px #0000007a;
+    border-radius: 10px;
+}
+
+ion-card img {
+    display: block;
+    width: 60%;
+    border-radius: 200px;
+    left: 20%;
+    position: relative;
+}
+
+
+.profilecontent p {
+    color:white !important;
+}
+
+.buttonmenu {
+    color: rgb(246, 174, 86) !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+}
+
+ .card-title-md {
+    color: white !important;
+    border: #f3c046 solid 3px;
+    border-radius: 12px;
+    position: relative;
+    top: -3px;
+}
+
 }

@@ -26165,6 +26165,44 @@ page-my-favorites img.listemenuimage {
   width: 100%;
 }
 
+page-my-profile ion-card {
+  text-align: center;
+}
+
+page-my-profile .profilecontent {
+  border: 1px solid #00000085;
+  -webkit-box-shadow: 1px 1px 13px #0000007a;
+  box-shadow: 1px 1px 13px #0000007a;
+  border-radius: 10px;
+}
+
+page-my-profile ion-card img {
+  display: block;
+  width: 60%;
+  border-radius: 200px;
+  left: 20%;
+  position: relative;
+}
+
+page-my-profile .profilecontent p {
+  color: white !important;
+}
+
+page-my-profile .buttonmenu {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-my-profile .card-title-md {
+  color: white !important;
+  border: #f3c046 solid 3px;
+  border-radius: 12px;
+  position: relative;
+  top: -3px;
+}
+
 .ionicsignup {
   color: white !important;
 }

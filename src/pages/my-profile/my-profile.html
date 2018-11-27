@@ -1,29 +1,35 @@
 <ion-header>
     <ion-title>Mon Profil</ion-title>
-    <button ion-button [menuToggle]>
+    <button class="buttonmenu" ion-button [menuToggle]>
       <ion-icon name="menu"></ion-icon>
     </button>
 </ion-header>
 <ion-content padding>
   <ion-card>
+    <div class="imgprofile">
     <img [src]="user.image"/>
+  </div>
     <ion-card-content>
+      <div class="profilecontent">
       <ion-card-title>
+        <ion-option *ngIf="user.name != NULL">
         {{user.name}}
+        </ion-option>
+        <ion-option *ngIf="user.name == NULL">
+        {{user.email}}
+
+        </ion-option>
       </ion-card-title>
-      <p>
-        Bonjour, {{user.name}}.
-        <br>
-        <br>
+      <p class="messageprofile">
         Vous trouverez ici les informations de votre profil !
       </p>
-      <br>
-      <p>
-        Mon email : {{user.email}}
-      </p>
-      <br>
-      Mon ID : {{user.uid}}
+      <p class="email">
+        <ion-option *ngIf="user.name != NULL">
+        Email : {{user.email}}
+      </ion-option>
 
+      </p>
+    </div>
     </ion-card-content>
     <br>
     <button ion-button block type="button" (click)='logout()'>Se déconnecter</button>
