@@ -26,12 +26,10 @@ export class RestProvider {
     console.log('Hello API Provider');
   }
 
-
-  
   getUsers() {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl).subscribe(data => {
-        resolve(data);
+      this.http.get(this.apiUrl).subscribe(dataexpo => {
+        resolve(dataexpo);
       }, err => {
         console.log(err);
       });

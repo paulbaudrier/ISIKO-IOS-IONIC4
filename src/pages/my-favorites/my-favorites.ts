@@ -6,6 +6,7 @@ import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { FirebaseUserModel } from '../core/user.model';
 
+
 /**
  * Generated class for the MyFavoritesPage page.
  *
@@ -27,16 +28,17 @@ export class MyFavoritesPage {
   }
 
   expos: any;
-  getUsers() {
+  getExposImg() {
     this.restProvider.getUsers()
-    .then(data => {
-      this.expos = data;
+    .then(dataexpo => {
+      this.expos = dataexpo;
 
-    console.log(this.expos);
+    console.log("laaaaaaa expo : "+ this.expos);
     });
   }
 
   ionViewWillLoad(){
+    this.getExposImg();
     this.userService.getCurrentUser()
     .then(user => {
       this.user = user;

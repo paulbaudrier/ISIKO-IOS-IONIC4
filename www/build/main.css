@@ -26160,6 +26160,11 @@ page-home .title {
   text-shadow: 3px 3px 16px black;
 }
 
+page-my-favorites img.listemenuimage {
+  z-index: -1;
+  width: 100%;
+}
+
 .ionicsignup {
   color: white !important;
 }

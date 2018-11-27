@@ -262,8 +262,8 @@ var RestProvider = /** @class */ (function () {
     RestProvider.prototype.getUsers = function () {
         var _this = this;
         return new Promise(function (resolve) {
-            _this.http.get(_this.apiUrl).subscribe(function (data) {
-                resolve(data);
+            _this.http.get(_this.apiUrl).subscribe(function (dataexpo) {
+                resolve(dataexpo);
             }, function (err) {
                 console.log(err);
             });
@@ -385,9 +385,10 @@ var RestProvider = /** @class */ (function () {
     };
     RestProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], RestProvider);
     return RestProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=rest.js.map
