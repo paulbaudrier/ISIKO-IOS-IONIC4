@@ -28,7 +28,9 @@ export class ExposDetailsPage {
   userID: FirebaseUserModel = new FirebaseUserModel();
   UserID: any;
   url: string;
-  value:any
+  value:any;
+  ExpoUniqueID: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController, public menuCtrl: MenuController,public userService: UserService,
     public authService: AuthService) {
     menuCtrl.swipeEnable(false);
@@ -72,11 +74,13 @@ export class ExposDetailsPage {
 
   btn_txt = 'Ajouter à mes favoris';
   addtomyfavorit(AddUserFavoritData, DeleteUserFavoritData)
-  
   {
     AddUserFavoritData= {
       "id_Expo":[this.value],"id_Users":[this.UserID.uid]
     };
+    // DeleteUserFavoritData= {
+
+    // };
     // DeleteUserFavoritData= {
     //   [this.comments.]
     // };
@@ -92,12 +96,26 @@ export class ExposDetailsPage {
    }
     else {
       if (this.btn_txt == 'Supprimé de mes favoris') {
-          this.restProvider.deleteUserfavorit(DeleteUserFavoritData)
+          this.deletetomyfavorit(DeleteUserFavoritData);
           this.popupdeletetomyfavorit();
           this.btn_txt = 'Ajouter à mes favoris';
      }
    }
   }
+
+  deletetomyfavorit(DeleteUserFavoritData)
+    {
+      this.restProvider.getUserFavorit()
+      .then(data => {
+        this.ExpoUniqueID = data;
+        console.log("ID UNIQUE EXPO API : " + this.ExpoUniqueID);
+      });
+      DeleteUserFavoritData= {
+        // this.ExpoUniqueID
+      };
+      this.restProvider.deleteUserfavorit(DeleteUserFavoritData)
+    }
+
 
   popupdeletetomyfavorit()
   {
@@ -135,7 +153,6 @@ export class ExposDetailsPage {
     }
     // Opening a URL and returning an InAppBrowserObject
 
-    // A UPDATE user.url_visite pas bon
     const browser = this.inAppBrowser.create(url, '_self', options);
   }
 
@@ -148,23 +165,6 @@ export class ExposDetailsPage {
   {
     this.navCtrl.push("AllcommentPage", {expos:id});
   }
-
-  // LECTEUR VISITE LINK ALGO
-  //
-
-  // lecteuralgo(url: string)
-  // {
-  //   const options: InAppBrowserOptions = {
-  //     zoom: 'no'
-  //   }
-  //   IF ID = PREMIERE_EXPO
-  //   const browser = this.inAppBrowser.create('http://player.isiko.io/360Player/?exhibition=Iletaitunefois', '_self', options);
-  //   IF ID = DEUXIEME_EXPO
-  //   const browser = this.inAppBrowser.create('http://player.isiko.io/MobileVersion/?exhibition=Montagnes', '_self', options);
-  //   IF ID = TROISIEME_EXPO
-  //   const browser = this.inAppBrowser.create('http://player.isiko.io/MobileVersion/?exhibition=Alearand', '_self', options);
-
-  // }
 
   ionViewDidLoad() {
     this.userService.getCurrentUser()
