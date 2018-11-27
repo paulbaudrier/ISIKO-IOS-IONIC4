@@ -48,9 +48,9 @@ export class SignupPage {
     this.authService.doRegister(value)
      .then(res => {
        this.errorMessage = "";
-       this.successMessage = "Your account has been created. Please log in now.";
+       this.successMessage = "Votre compte a bien été créé ! Merci de vous connecter.";
      }, err => {
-       this.errorMessage = err.message;
+      this.errorMessage = "Une erreur est survenue durant votre inscription sur ISIKO ! Merci de vérifier les champs renseignés.";
        this.successMessage = "";
      })
   }

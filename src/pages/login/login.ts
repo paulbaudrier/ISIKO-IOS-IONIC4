@@ -64,7 +64,7 @@ export class LoginPage {
       this.navCtrl.push(HomePage);
     }, err => {
       console.log(err);
-      this.errorMessage = err.message;
+      this.errorMessage = "Une erreur est survenue durant votre connexion ! Merci de vérifier les champs renseignés.";
     })
   }
 
@@ -75,7 +75,7 @@ export class LoginPage {
     .then((res) => {
       this.navCtrl.push(HomePage);
     }, (err) => {
-      this.errorMessage = err.message;
+      this.errorMessage = "Une erreur est survenue durant votre connexion ! Merci de vérifier les champs renseignés.";
     });
   }
 
