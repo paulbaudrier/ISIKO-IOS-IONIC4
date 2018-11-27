@@ -3,7 +3,13 @@ page-my-profile {
   ion-card {
     text-align: center;
 }
-
+ion-header {
+    padding: 10px;
+}
+.toolbar-title.toolbar-title-md {
+    position: absolute;
+    top: 10px;
+}
 .profilecontent {
     border: 1px solid #00000085;
     -webkit-box-shadow: 1px 1px 13px #0000007a;

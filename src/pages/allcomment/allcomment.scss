@@ -19,6 +19,10 @@ color: black !important;
 transition: 0.5s linear !important;
 }
 
+ion-header {
+    padding: 10px;
+}
+
 ionic3-star-rating {
     text-align: center;
 }

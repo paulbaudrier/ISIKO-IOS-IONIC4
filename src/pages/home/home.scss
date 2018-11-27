@@ -20,6 +20,9 @@ page-home {
     transition: 0.5s linear !important;
   }
 
+  ion-header {
+      padding: 10px;
+  }
     .texthomepage p {
         color: #ffaf57;
         font-weight: 500;
@@ -33,6 +36,12 @@ page-home {
     }
     img.listemenuimage {
         z-index: -1;
+    }
+
+    .toolbar-title.toolbar-title-md{
+      color: white;
+      font-family: 'Cinzel', sans-serif;
+      text-shadow: none !important;
     }
 
     .texthomepage {
@@ -86,6 +95,11 @@ page-home {
     text-align: center;
 }
 
+ .toolbar-title.toolbar-title-md {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
   .subtitle h2 {
     margin-top: 1rem;
     font-size: 20px;
@@ -96,14 +110,5 @@ page-home {
         text-align: center;
     }
 
-    .title {
-        position: sticky;
-        top: 0px;
-        z-index: 9999999;
-        background: #3C3C3C;
-        border: 1px solid black;
-        color: #f5a54d;
-        text-shadow: 3px 3px 16px black;
-    }
 
 }

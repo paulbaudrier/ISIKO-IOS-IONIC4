@@ -4,7 +4,7 @@
       </button>
   <ion-list inset>
       <ng-container *ngFor="let expo of expos">
-        <img class="listemenuimage" src="{{expo.image_ios}}">
+        <!-- <img class="listemenuimage" src="{{expo.image_ios}}"> -->
           </ng-container>
       <ng-container *ngFor="let favorit of favorits">
           <ion-option *ngIf="user.uid == favorit.id_Users" >

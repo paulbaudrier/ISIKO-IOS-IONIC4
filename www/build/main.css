@@ -25791,6 +25791,10 @@ page-addcomment .button-md:hover {
   transition: 0.5s linear !important;
 }
 
+page-addcomment ion-header {
+  padding: 10px;
+}
+
 page-allcomment p.commentaire {
   text-align: center;
 }
@@ -25809,6 +25813,10 @@ page-allcomment .button-md:hover {
   color: black !important;
   -webkit-transition: 0.5s linear !important;
   transition: 0.5s linear !important;
+}
+
+page-allcomment ion-header {
+  padding: 10px;
 }
 
 page-allcomment ionic3-star-rating {
@@ -25834,6 +25842,10 @@ page-allcomment ion-icon.icon.icon-md.ion-ios-star {
 page-expos-details * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+page-expos-details ion-header {
+  padding: 10px;
 }
 
 page-expos-details .buttonreturn {
@@ -26088,6 +26100,10 @@ page-feedback ul.rating li ion-icon {
   font-size: 30px;
 }
 
+page-feedback ion-header {
+  padding: 10px;
+}
+
 page-feedback .button-md {
   color: #f6ae56 !important;
   background-color: transparent !important;
@@ -26143,6 +26159,10 @@ page-home .button-md:hover {
   transition: 0.5s linear !important;
 }
 
+page-home ion-header {
+  padding: 10px;
+}
+
 page-home .texthomepage p {
   color: #ffaf57;
   font-weight: 500;
@@ -26157,6 +26177,12 @@ page-home .list-md .item-block .item-inner {
 
 page-home img.listemenuimage {
   z-index: -1;
+}
+
+page-home .toolbar-title.toolbar-title-md {
+  color: white;
+  font-family: 'Cinzel', sans-serif;
+  text-shadow: none !important;
 }
 
 page-home .texthomepage {
@@ -26208,6 +26234,12 @@ page-home .subtitle {
   text-align: center;
 }
 
+page-home .toolbar-title.toolbar-title-md {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 page-home .subtitle h2 {
   margin-top: 1rem;
   font-size: 20px;
@@ -26216,17 +26248,6 @@ page-home .subtitle h2 {
 page-home h1 {
   font-size: 22px;
   text-align: center;
-}
-
-page-home .title {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 9999999;
-  background: #3C3C3C;
-  border: 1px solid black;
-  color: #f5a54d;
-  text-shadow: 3px 3px 16px black;
 }
 
 page-my-favorites img.listemenuimage {
@@ -26241,6 +26262,10 @@ page-my-favorites .button-md {
   box-shadow: none !important;
 }
 
+page-my-favorites ion-header {
+  padding: 10px;
+}
+
 page-my-favorites .button-md:hover {
   background: #f6ae56 !important;
   border-radius: 7px;
@@ -26252,6 +26277,15 @@ page-my-favorites .button-md:hover {
 
 page-my-profile ion-card {
   text-align: center;
+}
+
+page-my-profile ion-header {
+  padding: 10px;
+}
+
+page-my-profile .toolbar-title.toolbar-title-md {
+  position: absolute;
+  top: 10px;
 }
 
 page-my-profile .profilecontent {
