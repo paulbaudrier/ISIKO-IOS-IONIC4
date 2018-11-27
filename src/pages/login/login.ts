@@ -3,14 +3,13 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-
 import { User } from '../../providers';
 import { MainPage } from '../';
 import { HomePage } from '../home/home';
-
 import { UserPage } from '../user/user';
 import { AuthService } from '../core/auth.service';
 import { MenuController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 
 @Component({
@@ -38,7 +37,8 @@ export class LoginPage {
     public translateService: TranslateService,
     public authService: AuthService,
     public formBuilder: FormBuilder,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private alertCtrl: AlertController
     ) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
@@ -64,7 +64,7 @@ export class LoginPage {
       this.navCtrl.push(HomePage);
     }, err => {
       console.log(err);
-      this.errorMessage = "Une erreur est survenue durant votre connexion ! Merci de vérifier les champs renseignés.";
+      this.alerterrorconnexion();
     })
   }
 
@@ -75,9 +75,19 @@ export class LoginPage {
     .then((res) => {
       this.navCtrl.push(HomePage);
     }, (err) => {
-      this.errorMessage = "Une erreur est survenue durant votre connexion ! Merci de vérifier les champs renseignés.";
+      this.alerterrorconnexion();
     });
   }
+
+  alerterrorconnexion()
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Une erreur est survenue durant votre connexion ! Merci de vérifier les champs renseignés.',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+
 
   goRegisterPage(){
     this.menuCtrl.swipeEnable(false);
