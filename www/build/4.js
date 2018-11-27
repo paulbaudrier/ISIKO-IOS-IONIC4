@@ -51,6 +51,9 @@ var ExposDetailsPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(389);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_user_service__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_auth_service__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_user_model__ = __webpack_require__(388);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67,6 +70,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
  * Generated class for the ExposDetailsPage page.
  *
@@ -74,13 +80,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var ExposDetailsPage = /** @class */ (function () {
-    function ExposDetailsPage(navCtrl, navParams, restProvider, inAppBrowser, alertCtrl, menuCtrl) {
+    function ExposDetailsPage(navCtrl, navParams, restProvider, inAppBrowser, alertCtrl, menuCtrl, userService, authService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.restProvider = restProvider;
         this.inAppBrowser = inAppBrowser;
         this.alertCtrl = alertCtrl;
         this.menuCtrl = menuCtrl;
+        this.userService = userService;
+        this.authService = authService;
+        this.userID = new __WEBPACK_IMPORTED_MODULE_7__core_user_model__["a" /* FirebaseUserModel */]();
         this.btn_txt = 'Ajouter à mes favoris';
         menuCtrl.swipeEnable(false);
         this.value = navParams.get('user');
@@ -115,9 +124,9 @@ var ExposDetailsPage = /** @class */ (function () {
         });
         alert.present();
     };
-    ExposDetailsPage.prototype.addtomyfavorit = function (AddUserFavoritData, DeleteUserFavoritData, id) {
+    ExposDetailsPage.prototype.addtomyfavorit = function (AddUserFavoritData, DeleteUserFavoritData) {
         AddUserFavoritData = {
-            "id_Expo": ["ff151461-f1e0-11e8-96a2-632bdefa9a39"], "id_Users": ["qxGtYMMRBwfko7TFfHFqw5LMWzj1"]
+            "id_Expo": [this.value], "id_Users": [this.UserID.uid]
         };
         // commentData= {
         //   id_Expo: 999999,
@@ -189,6 +198,12 @@ var ExposDetailsPage = /** @class */ (function () {
     //   const browser = this.inAppBrowser.create('http://player.isiko.io/MobileVersion/?exhibition=Alearand', '_self', options);
     // }
     ExposDetailsPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.userService.getCurrentUser()
+            .then(function (UserID) {
+            _this.UserID = UserID;
+            console.log("USER IDDDDD" + UserID.uid);
+        }, function (err) { return console.log(err); });
         console.log("MY VALUE :" + this.value);
         console.log('ionViewDidLoad ExposDetailsPage');
     };
@@ -196,9 +211,10 @@ var ExposDetailsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-expos-details',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/'<ion-content>\n\n  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">\n\n  <div class="headerisiko">\n\n    <button ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <button class="buttonreturn" block clear (click)="backexpos()"><span>Retour à la liste</span></button>\n\n\n\n  </div>\n\n    <ion-list inset>\n\n      <ion-item *ngFor="let user of users">\n\n        <div class="mondivinchAllah" *ngIf="value == user.id">\n\n          <div class="imghome">\n\n            <img class="listemenuimage" src="{{user.image_ios}}">\n\n\n\n            <div class="details">\n\n              <div class="titleblackscreen"></div>\n\n                <div class="blackscreen"></div>\n\n              <div class="titleexpo">\n\n                <h2>{{user.name}}</h2>\n\n              </div>\n\n              <div class="texthomepage">\n\n                <p>{{user.artists}}</p>\n\n              </div>\n\n\n\n                  </div>\n\n          <!-- <h2>{{user.name}}</h2>\n\n        <p>{{user.id}}</p>\n\n        <p>{{user.artists}}</p>\n\n        <p>{{user.ending_exhibition_date}}</p>\n\n        <p>{{user.stars}}</p> -->\n\n      <div class="buttonscontainer">\n\n        <button  class=" btn-hover color-8" block clear (click)="openWebpage(user.url_visite)">Commencer la visite</button>\n\n        <!-- BUTTON ALGO LECTEUR FUNCTION -->\n\n        <!-- <button ion-button block clear (click)="lecteuralgo()">Commencer la visite</button> -->\n\n        <br>\n\n        <button class="btn-hover color-2" block clear (click)="addtomyfavorit()">{{btn_txt}}</button>\n\n        <br>\n\n        <button class="btn-hover color-2" block clear (click)="addcomment()">Ajouter mon commentaire</button>\n\n        <br>\n\n        <button class="btn-hover color-2" block clear (click)="allcomment(user.id)">Voir tout les commentaires</button>\n\n        <br>\n\n      </div>\n\n        </div>\n\n      </div>\n\n\n\n\n\n    </ion-item>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\expos-details\expos-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__core_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__core_user_service__["a" /* UserService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_6__core_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__core_auth_service__["a" /* AuthService */]) === "function" && _h || Object])
     ], ExposDetailsPage);
     return ExposDetailsPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
 //# sourceMappingURL=expos-details.js.map

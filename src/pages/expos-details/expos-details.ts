@@ -7,6 +7,10 @@ import { AlertController } from 'ionic-angular';
 import { AddcommentPage } from './../addcomment/addcomment';
 import { HomePage } from '../home/home';
 import { MenuController } from 'ionic-angular';
+import { UserService } from '../core/user.service';
+import { AuthService } from '../core/auth.service';
+import { FirebaseUserModel } from '../core/user.model';
+
 
 /**
  * Generated class for the ExposDetailsPage page.
@@ -21,9 +25,12 @@ import { MenuController } from 'ionic-angular';
   templateUrl: 'expos-details.html',
 })
 export class ExposDetailsPage {
+  userID: FirebaseUserModel = new FirebaseUserModel();
+  UserID: any;
   url: string;
   value:any
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider, private inAppBrowser: InAppBrowser,private alertCtrl: AlertController, public menuCtrl: MenuController,public userService: UserService,
+    public authService: AuthService) {
     menuCtrl.swipeEnable(false);
     this.value = navParams.get('user');
     this.getUsers();
@@ -64,10 +71,11 @@ export class ExposDetailsPage {
   }
 
   btn_txt = 'Ajouter à mes favoris';
-  addtomyfavorit(AddUserFavoritData, DeleteUserFavoritData, id)
+  addtomyfavorit(AddUserFavoritData, DeleteUserFavoritData)
+  
   {
     AddUserFavoritData= {
-      "id_Expo":["ff151461-f1e0-11e8-96a2-632bdefa9a39"],"id_Users":["qxGtYMMRBwfko7TFfHFqw5LMWzj1"]
+      "id_Expo":[this.value],"id_Users":[this.UserID.uid]
     };
     // commentData= {
     //   id_Expo: 999999,
@@ -156,7 +164,11 @@ export class ExposDetailsPage {
   // }
 
   ionViewDidLoad() {
-
+    this.userService.getCurrentUser()
+    .then(UserID => {
+      this.UserID = UserID;
+      console.log("USER IDDDDD" + UserID.uid);
+    }, err => console.log(err))
     console.log("MY VALUE :" + this.value);
     console.log('ionViewDidLoad ExposDetailsPage');
   }
