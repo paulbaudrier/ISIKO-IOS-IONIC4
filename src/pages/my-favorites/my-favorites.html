@@ -8,11 +8,11 @@
           </ng-container>
       <ng-container *ngFor="let favorit of favorits">
           <ion-option *ngIf="user.uid == favorit.id_Users" >
-              
+
           <h2>{{favorit.id_Expo}}</h2>
           <p>{{favorit.id_Users}}</p>
-          </ion-option>
-          
+            </ion-option>
+
         </ng-container>
     </ion-list>
 </ion-content>
