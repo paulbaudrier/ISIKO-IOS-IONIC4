@@ -49,7 +49,7 @@ export class SignupPage {
     this.authService.doRegister(value)
      .then(res => {
        this.errorMessage = "";
-       this.successMessage = "Votre compte a bien été créé ! Merci de vous connecter.";
+       this.PopupInscription();
      }, err => {
       this.alertinscription();
        this.successMessage = "";
@@ -64,6 +64,16 @@ export class SignupPage {
       this.alertinscription();
     });
   }
+
+  PopupInscription()
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Votre compte a bien été créé ! Merci de vous connecter !',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+  
 
   goLoginPage(){
     this.navCtrl.push(LoginPage);

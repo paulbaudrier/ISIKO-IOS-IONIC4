@@ -58,7 +58,7 @@ var SignupPage = /** @class */ (function () {
         this.authService.doRegister(value)
             .then(function (res) {
             _this.errorMessage = "";
-            _this.successMessage = "Votre compte a bien été créé ! Merci de vous connecter.";
+            _this.PopupInscription();
         }, function (err) {
             _this.alertinscription();
             _this.successMessage = "";
@@ -72,6 +72,13 @@ var SignupPage = /** @class */ (function () {
         }, function (err) {
             _this.alertinscription();
         });
+    };
+    SignupPage.prototype.PopupInscription = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Votre compte a bien été créé ! Merci de vous connecter !',
+            buttons: ['OK']
+        });
+        alert.present();
     };
     SignupPage.prototype.goLoginPage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__login_login__["a" /* LoginPage */]);
@@ -87,15 +94,10 @@ var SignupPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
             selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>S\'inscrire sur ISIKO</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="form-content">\n\n  <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">\n\n\n\n    <ion-item>\n\n      <ion-label floating>Email</ion-label>\n\n      <ion-input type="text" formControlName="email"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block class="submit-button" type="submit">S\'inscrire</button>\n\n    <label class="error-message">{{errorMessage}}</label>\n\n    <label class="success-message">{{successMessage}}</label>\n\n  </form>\n\n  <br>\n\n  <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">S\'inscrire avec Google</button>\n\n  <br>\n\n  <div>\n\n    <p>Déja un compte ? <a (click)="goLoginPage()">Essayer de vous connecter </a></p>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\signup\signup.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* User */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_6__core_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* User */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* User */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["n" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__core_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__core_auth_service__["a" /* AuthService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]) === "function" && _g || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=signup.js.map
@@ -443,23 +445,23 @@ var map = {
 		4
 	],
 	"../pages/feedback/feedback.module": [
-		738,
+		737,
 		3
 	],
 	"../pages/my-favorites/my-favorites.module": [
-		737,
+		738,
 		2
 	],
 	"../pages/my-profile/my-profile.module": [
-		741,
+		739,
 		1
 	],
 	"../pages/splashscreen/splashscreen.module": [
-		739,
+		740,
 		8
 	],
 	"../pages/thankyou/thankyou.module": [
-		740,
+		741,
 		0
 	]
 };
@@ -971,11 +973,11 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/allcomment/allcomment.module#AllcommentPageModule', name: 'AllcommentPage', segment: 'allcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/core/core.module#CorePageModule', name: 'CorePage', segment: 'core', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expos-details/expos-details.module#ExposDetailsPageModule', name: 'ExposDetailsPage', segment: 'expos-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/my-favorites/my-favorites.module#MyFavoritesPageModule', name: 'MyFavoritesPage', segment: 'my-favorites', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-favorites/my-favorites.module#MyFavoritesPageModule', name: 'MyFavoritesPage', segment: 'my-favorites', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/splashscreen/splashscreen.module#SplashscreenPageModule', name: 'SplashscreenPage', segment: 'splashscreen', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["a" /* IonicStorageModule */].forRoot()
