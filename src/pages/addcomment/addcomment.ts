@@ -23,15 +23,15 @@ export class AddcommentPage {
   }
 
   // POST COMMENT
-  DoAddComment()
+  DoAddComment(AddDataComment)
   {
-    this.restProvider.addComment();
+    this.restProvider.addComment(AddDataComment);
   }
 
   // ALERT POP UP
-  thankyou()
+  thankyou(AddDataComment)
   {
-    this.restProvider.addComment();
+    this.restProvider.addComment(AddDataComment);
     let alert = this.alertCtrl.create({
       title: 'Commentaire poster !',
       subTitle: 'Merci votre commentaire a bien était ajouter',

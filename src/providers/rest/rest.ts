@@ -77,7 +77,7 @@ export class RestProvider {
     });
   }
 
-  postUerfavorit(commentData)
+  postUerfavorit(AddUserFavoritData)
   {
 
     let headers = new HttpHeaders();
@@ -85,8 +85,8 @@ export class RestProvider {
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     //let options = new RequestOptions({ headers: headers });
-    let data={"id_Expo":["f4407900-1679-11e8-a774-0bda78ba5176"],"id_Users":["zqhtGgUakITOzp2UjcNKn3x4L9v2"] };
-    this.http.post("https://isiko.restlet.net/v2/getUser_Favoriteses/",data, { headers: headers })
+    // let data={"id_Expo":["ff151461-f1e0-11e8-96a2-632bdefa9a39"],"id_Users":["qxGtYMMRBwfko7TFfHFqw5LMWzj1"] };
+    this.http.post("https://isiko.restlet.net/v2/getUser_Favoriteses/",AddUserFavoritData, { headers: headers })
     // .map(res => res.json(data))
     .subscribe(res => {
     }, (err) => {
@@ -94,14 +94,14 @@ export class RestProvider {
   });
   }
 
-  deleteUserfavorit()
+  deleteUserfavorit(DeleteUserFavoritData)
   {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
     //let options = new RequestOptions({ headers: headers });
-    this.http.delete("https://isiko.restlet.net/v2/getUser_Favoriteses/8ddaafd1-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+    this.http.delete("https://isiko.restlet.net/v2/getUser_Favoriteses/{DeleteUserFavoritData}", { headers: headers })
     // .map(res => res.json(data))
     .subscribe(res => {
     }, (err) => {
@@ -110,29 +110,29 @@ export class RestProvider {
   }
 
 
-  addComment()
+  addComment(AddDataComment)
   {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
     //let options = new RequestOptions({ headers: headers });
-    let data={
-      "id": "sample id",
-      "userID": [
-        "zqhtGgUakITOzp2UjcNKn3x4L9v2"
-      ],
-      "exhibitionID": [
-        "f4407900-1679-11e8-a774-0bda78ba5176"
-      ],
-      "content": [
-        "TEST PAUL IOS"
-      ],
-      "stars": "4",
-      "title": "TEST PAUL IOS",
-      "date_post": "26 Novembre 2018"
-    };
-    this.http.post("https://isiko.restlet.net/v2/getCommentses/",data, { headers: headers })
+    // let data={
+    //   "id": "sample id",
+    //   "userID": [
+    //     "zqhtGgUakITOzp2UjcNKn3x4L9v2"
+    //   ],
+    //   "exhibitionID": [
+    //     "f4407900-1679-11e8-a774-0bda78ba5176"
+    //   ],
+    //   "content": [
+    //     "TEST PAUL IOS"
+    //   ],
+    //   "stars": "4",
+    //   "title": "TEST PAUL IOS",
+    //   "date_post": "26 Novembre 2018"
+    // };
+    this.http.post("https://isiko.restlet.net/v2/getCommentses/",AddDataComment, { headers: headers })
     // .map(res => res.json(data))
     .subscribe(res => {
     }, (err) => {
@@ -140,14 +140,14 @@ export class RestProvider {
   });
   }
 
-  deleteComment()
+  deleteComment(DeleteCommentData)
   {
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, DELETE, OPTIONS, PUT');
     //let options = new RequestOptions({ headers: headers });
-    this.http.delete("https://isiko.restlet.net/v2/getCommentses/48629171-f1a4-11e8-96a2-632bdefa9a39", { headers: headers })
+    this.http.delete("https://isiko.restlet.net/v2/getCommentses/{DeleteCommentData}", { headers: headers })
     // .map(res => res.json(data))
     .subscribe(res => {
     }, (err) => {

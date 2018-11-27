@@ -64,21 +64,28 @@ export class ExposDetailsPage {
   }
 
   btn_txt = 'Ajouter à mes favoris';
-  addtomyfavorit(commentData)
+  addtomyfavorit(AddUserFavoritData, DeleteUserFavoritData, id)
   {
-    commentData= {
-      id_Expo: 999999,
-      id_Users: 9999999
+    AddUserFavoritData= {
+      "id_Expo":["ff151461-f1e0-11e8-96a2-632bdefa9a39"],"id_Users":["qxGtYMMRBwfko7TFfHFqw5LMWzj1"]
     };
-    this.restProvider.postUerfavorit(commentData);
+    // commentData= {
+    //   id_Expo: 999999,
+    //   id_Users: 9999999
+    // };
+
     if (this.btn_txt == 'Ajouter à mes favoris') {
+      this.restProvider.postUerfavorit(AddUserFavoritData);
       this.popupaddtomyfavorit();
       this.btn_txt = 'Supprimé de mes favoris';
    }
     else {
-      console.log('go to next page');
+      if (this.btn_txt == 'Supprimé de mes favoris') {
+          this.restProvider.deleteUserfavorit(DeleteUserFavoritData)
+          this.popupdeletetomyfavorit();
+          this.btn_txt = 'Ajouter à mes favoris';
+     }
    }
-    // this.restProvider.postUerfavorit(commentData)
   }
 
   popupdeletetomyfavorit()
@@ -120,18 +127,6 @@ export class ExposDetailsPage {
     // A UPDATE user.url_visite pas bon
     const browser = this.inAppBrowser.create(url, '_self', options);
   }
-
-  deletecomment()
-    {
-      this.restProvider.deleteComment();
-    }
-
-  deletefavorit()
-    {
-      this.restProvider.deleteUserfavorit();
-    }
-
-
 
   addcomment()
   {
