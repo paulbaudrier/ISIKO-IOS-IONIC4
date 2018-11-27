@@ -14,6 +14,23 @@ page-my-favorites {
     ion-header {
         padding: 10px;
     }
+    ion-header {
+        padding: 10px;
+    }
+    ion-header.header.header-md {
+        background: #131313;
+        position: relative;
+    }
+
+        .toolbar-title.toolbar-title-md{
+          color: white;
+          font-family: 'Cinzel', sans-serif;
+          text-shadow: none !important;
+          font-size: 22px;
+          text-shadow: 1px 1px 20px #eeb06145;
+          position: absolute;
+          top: 10px;
+        }
 
     .button-md:hover {
     background: #f6ae56 !important;

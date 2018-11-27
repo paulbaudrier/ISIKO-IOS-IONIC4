@@ -1,7 +1,10 @@
+<ion-header>
+    <ion-title>Mes favoris</ion-title>
+    <button class="buttonmenu" ion-button [menuToggle]>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+</ion-header>
 <ion-content>
-    <button ion-button [menuToggle]>
-        <ion-icon name="menu"></ion-icon>
-      </button>
   <ion-list inset>
       <ng-container *ngFor="let expo of expos">
         <!-- <img class="listemenuimage" src="{{expo.image_ios}}"> -->

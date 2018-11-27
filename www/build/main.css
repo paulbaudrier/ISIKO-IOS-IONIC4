@@ -26276,6 +26276,25 @@ page-my-favorites ion-header {
   padding: 10px;
 }
 
+page-my-favorites ion-header {
+  padding: 10px;
+}
+
+page-my-favorites ion-header.header.header-md {
+  background: #131313;
+  position: relative;
+}
+
+page-my-favorites .toolbar-title.toolbar-title-md {
+  color: white;
+  font-family: 'Cinzel', sans-serif;
+  text-shadow: none !important;
+  font-size: 22px;
+  text-shadow: 1px 1px 20px #eeb06145;
+  position: absolute;
+  top: 10px;
+}
+
 page-my-favorites .button-md:hover {
   background: #f6ae56 !important;
   border-radius: 7px;
