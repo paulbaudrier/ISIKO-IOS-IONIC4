@@ -77,6 +77,9 @@ export class ExposDetailsPage {
     AddUserFavoritData= {
       "id_Expo":[this.value],"id_Users":[this.UserID.uid]
     };
+    // DeleteUserFavoritData= {
+    //   [this.comments.]
+    // };
     // commentData= {
     //   id_Expo: 999999,
     //   id_Users: 9999999
@@ -136,9 +139,9 @@ export class ExposDetailsPage {
     const browser = this.inAppBrowser.create(url, '_self', options);
   }
 
-  addcomment()
+  addcomment(id, uid)
   {
-    this.navCtrl.push('AddcommentPage');
+    this.navCtrl.push('AddcommentPage', {expos:id});
   }
 
   allcomment(id)
