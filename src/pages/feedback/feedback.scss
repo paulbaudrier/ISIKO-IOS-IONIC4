@@ -16,13 +16,30 @@ page-feedback {
       ion-header {
           padding: 10px;
       }
+
       .button-md {
           color: rgb(246, 174, 86) !important;
           background-color: transparent !important;
           box-shadow: none !important;
 
       }
+      ion-header {
+          padding: 10px;
+      }
+      ion-header.header.header-md {
+          background: #131313;
+          position: relative;
+      }
 
+          .toolbar-title.toolbar-title-md{
+            color: white;
+            font-family: 'Cinzel', sans-serif;
+            text-shadow: none !important;
+            font-size: 22px;
+            text-shadow: 1px 1px 20px #eeb06145;
+            position: absolute;
+            top: 10px;
+          }
       .button-md:hover {
       background: #f6ae56 !important;
       border-radius: 7px;
@@ -38,15 +55,6 @@ page-feedback {
         background: transparent;
     }
 
-      .title {
-        position: sticky;
-        top: 0px;
-        text-align: center;
-        z-index: 9999999;
-        background: #3C3C3C;
-        border: 1px solid black;
-        color: #f5a54d;
-        text-shadow: 3px 3px 16px black;
-    }
+
 
 }

@@ -26111,6 +26111,25 @@ page-feedback .button-md {
   box-shadow: none !important;
 }
 
+page-feedback ion-header {
+  padding: 10px;
+}
+
+page-feedback ion-header.header.header-md {
+  background: #131313;
+  position: relative;
+}
+
+page-feedback .toolbar-title.toolbar-title-md {
+  color: white;
+  font-family: 'Cinzel', sans-serif;
+  text-shadow: none !important;
+  font-size: 22px;
+  text-shadow: 1px 1px 20px #eeb06145;
+  position: absolute;
+  top: 10px;
+}
+
 page-feedback .button-md:hover {
   background: #f6ae56 !important;
   border-radius: 7px;
@@ -26125,18 +26144,6 @@ page-feedback #myInput {
   border: 0;
   border-radius: 0;
   background: transparent;
-}
-
-page-feedback .title {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  text-align: center;
-  z-index: 9999999;
-  background: #3C3C3C;
-  border: 1px solid black;
-  color: #f5a54d;
-  text-shadow: 3px 3px 16px black;
 }
 
 page-home page-home .list-md .item-block .item-inner {
@@ -26163,6 +26170,11 @@ page-home ion-header {
   padding: 10px;
 }
 
+page-home ion-header.header.header-md {
+  background: #131313;
+  position: relative;
+}
+
 page-home .texthomepage p {
   color: #ffaf57;
   font-weight: 500;
@@ -26183,6 +26195,10 @@ page-home .toolbar-title.toolbar-title-md {
   color: white;
   font-family: 'Cinzel', sans-serif;
   text-shadow: none !important;
+  font-size: 22px;
+  text-shadow: 1px 1px 20px #eeb06145;
+  position: absolute;
+  top: 10px;
 }
 
 page-home .texthomepage {
@@ -26234,12 +26250,6 @@ page-home .subtitle {
   text-align: center;
 }
 
-page-home .toolbar-title.toolbar-title-md {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
 page-home .subtitle h2 {
   margin-top: 1rem;
   font-size: 20px;
@@ -26283,7 +26293,17 @@ page-my-profile ion-header {
   padding: 10px;
 }
 
+page-my-profile ion-header.header.header-md {
+  background: #131313;
+  position: relative;
+}
+
 page-my-profile .toolbar-title.toolbar-title-md {
+  color: white;
+  font-family: 'Cinzel', sans-serif;
+  text-shadow: none !important;
+  font-size: 22px;
+  text-shadow: 1px 1px 20px #eeb06145;
   position: absolute;
   top: 10px;
 }

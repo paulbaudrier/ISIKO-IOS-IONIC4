@@ -23,6 +23,11 @@ page-home {
   ion-header {
       padding: 10px;
   }
+
+  ion-header.header.header-md {
+    background: #131313;
+    position: relative;
+}
     .texthomepage p {
         color: #ffaf57;
         font-weight: 500;
@@ -42,6 +47,10 @@ page-home {
       color: white;
       font-family: 'Cinzel', sans-serif;
       text-shadow: none !important;
+      font-size: 22px;
+      text-shadow: 1px 1px 20px #eeb06145;
+      position: absolute;
+      top: 10px;
     }
 
     .texthomepage {
@@ -95,11 +104,6 @@ page-home {
     text-align: center;
 }
 
- .toolbar-title.toolbar-title-md {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
   .subtitle h2 {
     margin-top: 1rem;
     font-size: 20px;

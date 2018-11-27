@@ -6,10 +6,21 @@ page-my-profile {
 ion-header {
     padding: 10px;
 }
-.toolbar-title.toolbar-title-md {
-    position: absolute;
-    top: 10px;
+ion-header.header.header-md {
+    background: #131313;
+    position: relative;
 }
+
+    .toolbar-title.toolbar-title-md{
+      color: white;
+      font-family: 'Cinzel', sans-serif;
+      text-shadow: none !important;
+      font-size: 22px;
+      text-shadow: 1px 1px 20px #eeb06145;
+      position: absolute;
+      top: 10px;
+    }
+
 .profilecontent {
     border: 1px solid #00000085;
     -webkit-box-shadow: 1px 1px 13px #0000007a;
