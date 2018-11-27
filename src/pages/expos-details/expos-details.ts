@@ -74,7 +74,7 @@ export class ExposDetailsPage {
     if (this.btn_txt == 'Ajouter à mes favoris') {
       this.popupaddtomyfavorit();
       this.btn_txt = 'Supprimé de mes favoris';
-   } 
+   }
     else {
       console.log('go to next page');
    }
@@ -93,7 +93,7 @@ export class ExposDetailsPage {
 
   popupaddtomyfavorit()
   {
-    
+
     let alert = this.alertCtrl.create({
       title: 'Exposition ajouter à vos favoris !',
       subTitle: 'Exposition ajouter à vos favoris',
@@ -118,7 +118,7 @@ export class ExposDetailsPage {
     // Opening a URL and returning an InAppBrowserObject
 
     // A UPDATE user.url_visite pas bon
-    // const browser = this.inAppBrowser.create('{{user.url_visite}}', '_self', options);
+    const browser = this.inAppBrowser.create(url, '_self', options);
   }
 
   deletecomment()

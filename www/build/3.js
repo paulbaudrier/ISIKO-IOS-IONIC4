@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 739:
+/***/ 736:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackPageModule", function() { return FeedbackPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback__ = __webpack_require__(745);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(386);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var FeedbackPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 748:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78,7 +78,7 @@ var FeedbackPage = /** @class */ (function () {
     };
     FeedbackPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-feedback',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/'<!--\n\n  Generated template for the FeedbackPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content>\n\n    <button ion-button [menuToggle]>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <div class="title" textalign="center">\n\n        <h1>Feedback</h1>\n\n    </div>\n\n    <ion-list inset> \n\n        <p>Quelle note donnez vous a la page d\'acceuil ?</p>\n\n        <ionic3-star-rating \n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="3">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la page d\'éxposition ?</p>\n\n        <ionic3-star-rating \n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="4">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la visite virtuel ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="2">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à l\'ambiance des visites ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="1">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous au design de l\'application ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff" \n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="5">\n\n        </ionic3-star-rating>\n\n        <br/>\n\n        <br/>\n\n\n\n        <textarea #myInput id="myInput" rows="5" maxLength="500" [(ngModel)]="myStuff" placeholder="Laissez nous un commentaire"></textarea>\n\n        <button ion-button block (click)="thankyou()">{{ \'Envoyer\'}}</button>\n\n      </ion-list>\n\n  </ion-content>\n\n\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/,
+            selector: 'page-feedback',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/feedback/feedback.html"*/'<!--\n  Generated template for the FeedbackPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content>\n    <button ion-button [menuToggle]>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    <div class="title" textalign="center">\n        <h1>Feedback</h1>\n    </div>\n    <ion-list inset> \n        <p>Quelle note donnez vous a la page d\'acceuil ?</p>\n        <ionic3-star-rating \n        activeIcon = "ios-star"\n        defaultIcon = "ios-star-outline"\n        activeColor = "#488aff" \n        defaultColor = "#f4f4f4"\n        readonly="false"\n        [rating]="3">\n        </ionic3-star-rating>\n        <p>Quelle note donnez vous à la page d\'éxposition ?</p>\n        <ionic3-star-rating \n        activeIcon = "ios-star"\n        defaultIcon = "ios-star-outline"\n        activeColor = "#488aff" \n        defaultColor = "#f4f4f4"\n        readonly="false"\n        [rating]="4">\n        </ionic3-star-rating>\n        <p>Quelle note donnez vous à la visite virtuel ?</p>\n        <ionic3-star-rating\n        activeIcon = "ios-star"\n        defaultIcon = "ios-star-outline"\n        activeColor = "#488aff" \n        defaultColor = "#f4f4f4"\n        readonly="false"\n        [rating]="2">\n        </ionic3-star-rating>\n        <p>Quelle note donnez vous à l\'ambiance des visites ?</p>\n        <ionic3-star-rating\n        activeIcon = "ios-star"\n        defaultIcon = "ios-star-outline"\n        activeColor = "#488aff" \n        defaultColor = "#f4f4f4"\n        readonly="false"\n        [rating]="1">\n        </ionic3-star-rating>\n        <p>Quelle note donnez vous au design de l\'application ?</p>\n        <ionic3-star-rating\n        activeIcon = "ios-star"\n        defaultIcon = "ios-star-outline"\n        activeColor = "#488aff" \n        defaultColor = "#f4f4f4"\n        readonly="false"\n        [rating]="5">\n        </ionic3-star-rating>\n        <br/>\n        <br/>\n\n        <textarea #myInput id="myInput" rows="5" maxLength="500" [(ngModel)]="myStuff" placeholder="Laissez nous un commentaire"></textarea>\n        <button ion-button block (click)="thankyou()">{{ \'Envoyer\'}}</button>\n      </ion-list>\n  </ion-content>\n\n\n\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/feedback/feedback.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
     ], FeedbackPage);
