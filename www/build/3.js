@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 737:
+/***/ 738:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackPageModule", function() { return FeedbackPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback__ = __webpack_require__(746);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(388);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var FeedbackPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 746:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,10 +80,9 @@ var FeedbackPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-feedback',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/'<!--\n\n  Generated template for the FeedbackPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    <ion-title>Donnez votre avis</ion-title>\n\n    <button class="buttonmenu" ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n</ion-header>\n\n<ion-content>\n\n    <ion-list inset>\n\n        <p>Quelle note donnez vous a la page d\'acceuil ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff"\n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="3">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la page d\'éxposition ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff"\n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="4">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à la visite virtuel ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff"\n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="2">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous à l\'ambiance des visites ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff"\n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="1">\n\n        </ionic3-star-rating>\n\n        <p>Quelle note donnez vous au design de l\'application ?</p>\n\n        <ionic3-star-rating\n\n        activeIcon = "ios-star"\n\n        defaultIcon = "ios-star-outline"\n\n        activeColor = "#488aff"\n\n        defaultColor = "#f4f4f4"\n\n        readonly="false"\n\n        [rating]="5">\n\n        </ionic3-star-rating>\n\n        <br/>\n\n        <br/>\n\n\n\n        <textarea #myInput id="myInput" rows="5" maxLength="500" [(ngModel)]="myStuff" placeholder="Laissez nous un commentaire"></textarea>\n\n        <button ion-button block (click)="thankyou()">{{ \'Envoyer\'}}</button>\n\n      </ion-list>\n\n  </ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\feedback\feedback.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
     ], FeedbackPage);
     return FeedbackPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=feedback.js.map

@@ -21,8 +21,14 @@ import { FirebaseUserModel } from '../core/user.model';
   selector: 'page-addcomment',
   templateUrl: 'addcomment.html',
 })
+
+
+
 export class AddcommentPage {
 
+  currentDate;
+  formattedDate;
+  formattedDateObj;
   userID: FirebaseUserModel = new FirebaseUserModel();
   UserID: any;
   CommentContent: any;
@@ -31,7 +37,23 @@ export class AddcommentPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController,public restProvider: RestProvider, public userService: UserService,
     public authService: AuthService) {
+    this.currentDate = new Date();
+    this.getFormattedDate()
     this.ExposID = navParams.get('expos');
+  }
+
+  getFormattedDate()
+  {
+    var dateObj = new Date()
+    var year = dateObj.getFullYear().toString()
+    var month = dateObj.getMonth().toString()
+    var date = dateObj.getDate().toString()
+
+    var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+    this.formattedDate = date + '-' + monthArray[month] + '-' + year;
+    this.formattedDateObj = new Date(this.formattedDate)
+
   }
 
   // POST COMMENT
@@ -62,7 +84,7 @@ export class AddcommentPage {
     AddDataComment= {
       "userID": [this.UserID.uid],"exhibitionID": [this.ExposID],"content": [this.CommentContent],"stars": "4",
         "title": this.TitleComment,
-        "date_post": "27 Novembre 2018"
+        "date_post": this.formattedDate
     };
 
     
@@ -82,6 +104,7 @@ export class AddcommentPage {
   }
 
   ionViewDidLoad() {
+    console.log("DATE FORMATTED" + this.formattedDate);
     this.userService.getCurrentUser()
     .then(UserID => {
       this.UserID = UserID;

@@ -141,12 +141,12 @@ export class ExposDetailsPage {
 
   addcomment(id, uid)
   {
-    this.navCtrl.push('AddcommentPage', {expos:id});
+    this.navCtrl.push("AddcommentPage", {expos:id});
   }
 
   allcomment(id)
   {
-    this.navCtrl.push('AllcommentPage', {expos:id});
+    this.navCtrl.push("AllcommentPage", {expos:id});
   }
 
   // LECTEUR VISITE LINK ALGO
