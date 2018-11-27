@@ -4,11 +4,11 @@ import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
-
 import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { FirebaseUserModel } from '../core/user.model';
 import { MenuController } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 /**
  * Generated class for the MyProfilePage page.
@@ -25,10 +25,12 @@ import { MenuController } from 'ionic-angular';
   templateUrl: 'my-profile.html',
 })
 export class MyProfilePage {
+  showSplash = false; // <-- show animation
   user: FirebaseUserModel = new FirebaseUserModel();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,public userService: UserService,
-    public authService: AuthService, public menuCtrl: MenuController) {
+    public authService: AuthService, public menuCtrl: MenuController,splashScreen: SplashScreen) {
+      this.showSplash = false;
     // this.getProfile();
   }
 
