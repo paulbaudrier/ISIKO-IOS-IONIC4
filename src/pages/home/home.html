@@ -4,6 +4,10 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </div>
+    <div ion-fixed class="subtitle">
+    <h2 class="titlehomepage">Liste des expositions</h2>
+  </div>
+
   <ion-list inset>
     <ion-item *ngFor="let user of users" (click)="expo_detail(user.id)">
       <div class="row">

@@ -7,9 +7,9 @@ page-expos-details {
     box-sizing: border-box;
 }
 
-.buttonreturn {
+ .buttonreturn {
     border-radius: 4px;
-    background-color: #474747;
+    background-color: #0c0c0cd6;
     border: none;
     color: #f6ae56;
     text-align: center;
@@ -20,7 +20,9 @@ page-expos-details {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    position: relative;
     border: 1px solid;
+    top: 5px;
 }
 
 .headerisiko {
@@ -83,6 +85,7 @@ content:"\00ab";
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+    color: white !important;
 }
 
 .btn-hover:focus {
@@ -90,12 +93,13 @@ content:"\00ab";
 }
 
 .btn-hover.color-2 {
-  background-image: linear-gradient(to right, #29323c,  #485563, #f6ae56, #e08f2d);
-    // box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+
+  color: #e08f2d;
+  background-image: linear-gradient(to right, #000000, #2d2d2d, #f6ae56, #e08f2d);
 }
 .btn-hover.color-8 {
-  background-image: linear-gradient(to right, #29323c,  #485563, #f6ae56, #e08f2d);
-    // box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+  color: #e08f2d;
+background-image: linear-gradient(to right, #000000, #2d2d2d, #f6ae56, #e08f2d);
 }
 ////////////////
 
@@ -227,6 +231,14 @@ content:"\00ab";
         box-shadow: none !important;
 
     }
+
+    .button-md:hover {
+    background: #f6ae56 !important;
+    border-radius: 7px;
+    /* width: 1%; */
+    color: black !important;
+    transition: 0.5s linear !important;
+}
 
     span.button-inner {
         font-size: 19px;

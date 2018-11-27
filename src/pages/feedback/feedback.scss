@@ -1,17 +1,32 @@
 page-feedback {
      ul {
         padding: 0px;
-      
+
         &.rating li {
           padding: 5px 10px !important;
           background: none;
           color: #ffb400;
-      
+
           ion-icon {
             font-size: 30px;
           }
         }
       }
+
+      .button-md {
+          color: rgb(246, 174, 86) !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+
+      }
+
+      .button-md:hover {
+      background: #f6ae56 !important;
+      border-radius: 7px;
+      /* width: 1%; */
+      color: black !important;
+      transition: 0.5s linear !important;
+    }
 
       #myInput {
         width: calc(100% - 10px);

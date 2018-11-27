@@ -25782,8 +25782,33 @@ page-addcomment .button-md {
   box-shadow: none !important;
 }
 
+page-addcomment .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
+}
+
 page-allcomment p.commentaire {
   text-align: center;
+}
+
+page-allcomment .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-allcomment .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
 }
 
 page-allcomment ionic3-star-rating {
@@ -25794,13 +25819,6 @@ page-allcomment .commentsection {
   border: 1px solid #f7c032;
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-page-allcomment .button-md {
-  color: #f6ae56 !important;
-  background-color: transparent !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 page-allcomment p.commentaire.username {
@@ -25820,7 +25838,7 @@ page-expos-details * {
 
 page-expos-details .buttonreturn {
   border-radius: 4px;
-  background-color: #474747;
+  background-color: #0c0c0cd6;
   border: none;
   color: #f6ae56;
   text-align: center;
@@ -25831,7 +25849,9 @@ page-expos-details .buttonreturn {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  position: relative;
   border: 1px solid;
+  top: 5px;
 }
 
 page-expos-details .headerisiko {
@@ -25893,6 +25913,7 @@ page-expos-details .btn-hover:hover {
   moz-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  color: white !important;
 }
 
 page-expos-details .btn-hover:focus {
@@ -25900,13 +25921,15 @@ page-expos-details .btn-hover:focus {
 }
 
 page-expos-details .btn-hover.color-2 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#f6ae56), to(#e08f2d));
-  background-image: linear-gradient(to right, #29323c, #485563, #f6ae56, #e08f2d);
+  color: #e08f2d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(#2d2d2d), color-stop(#f6ae56), to(#e08f2d));
+  background-image: linear-gradient(to right, #000000, #2d2d2d, #f6ae56, #e08f2d);
 }
 
 page-expos-details .btn-hover.color-8 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#f6ae56), to(#e08f2d));
-  background-image: linear-gradient(to right, #29323c, #485563, #f6ae56, #e08f2d);
+  color: #e08f2d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(#2d2d2d), color-stop(#f6ae56), to(#e08f2d));
+  background-image: linear-gradient(to right, #000000, #2d2d2d, #f6ae56, #e08f2d);
 }
 
 page-expos-details .texthomepage p {
@@ -26032,6 +26055,15 @@ page-expos-details .button-md {
   box-shadow: none !important;
 }
 
+page-expos-details .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
+}
+
 page-expos-details span.button-inner {
   font-size: 19px;
   border-radius: 6px;
@@ -26054,6 +26086,22 @@ page-feedback ul.rating li {
 
 page-feedback ul.rating li ion-icon {
   font-size: 30px;
+}
+
+page-feedback .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-feedback .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
 }
 
 page-feedback #myInput {
@@ -26084,6 +26132,15 @@ page-home .button-md {
   background-color: transparent !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+
+page-home .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
 }
 
 page-home .texthomepage p {
@@ -26144,6 +26201,18 @@ page-home .item-md p {
   text-overflow: inherit;
 }
 
+page-home .subtitle {
+  top: 40px;
+  background: #000000ad;
+  width: 100%;
+  text-align: center;
+}
+
+page-home .subtitle h2 {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
 page-home h1 {
   font-size: 22px;
   text-align: center;
@@ -26163,6 +26232,22 @@ page-home .title {
 page-my-favorites img.listemenuimage {
   z-index: -1;
   width: 100%;
+}
+
+page-my-favorites .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-my-favorites .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
 }
 
 page-my-profile ion-card {
@@ -26186,6 +26271,22 @@ page-my-profile ion-card img {
 
 page-my-profile .profilecontent p {
   color: white !important;
+}
+
+page-my-profile .button-md {
+  color: #f6ae56 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-my-profile .button-md:hover {
+  background: #f6ae56 !important;
+  border-radius: 7px;
+  /* width: 1%; */
+  color: black !important;
+  -webkit-transition: 0.5s linear !important;
+  transition: 0.5s linear !important;
 }
 
 page-my-profile .buttonmenu {
