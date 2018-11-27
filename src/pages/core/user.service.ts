@@ -16,7 +16,7 @@ export class UserService {
         if (user) {
           if(user.providerData[0].providerId == 'password'){
             //use a default image
-            userModel.image = 'http://dsi-vd.github.io/patternlab-vd/images/fpo_avatar.png';
+            userModel.image = 'http://web.isiko.io/image/ios/default-icon.jpg';
             userModel.name = user.displayName;
             userModel.email = user.email;
             userModel.uid = user.uid;
