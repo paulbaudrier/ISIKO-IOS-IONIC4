@@ -104,6 +104,7 @@ var AddcommentPage = /** @class */ (function () {
     };
     // ALERT POP UP
     AddcommentPage.prototype.thankyou = function (AddDataComment, ExposID) {
+        // console.log("MY RATING : " + this.StarRatingModule.rating);
         // let data={
         //   "id": "sample id",
         //   "userID": [
@@ -120,7 +121,7 @@ var AddcommentPage = /** @class */ (function () {
         //   "date_post": "26 Novembre 2018"
         // };
         AddDataComment = {
-            "userID": [this.UserID.uid], "exhibitionID": [this.ExposID], "content": [this.CommentContent], "stars": "4",
+            "userID": [this.UserID.uid], "exhibitionID": [this.ExposID], "content": [this.CommentContent], "stars": "1",
             "title": this.TitleComment,
             "date_post": this.formattedDate
         };
@@ -150,12 +151,12 @@ var AddcommentPage = /** @class */ (function () {
     };
     AddcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'page-addcomment',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\addcomment\addcomment.html"*/'<!--\n\n  Generated template for the FeedbackPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-header>\n\n  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">\n\n  <ion-title>Ajouter mon commentaire</ion-title>\n\n      <button ion-button [menuToggle]>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n  </ion-header>\n\n\n\n<ion-content>\n\n  <ion-list inset>\n\n      <p>Quelle note donnez vous à cette éxposition ?</p>\n\n      <ionic3-star-rating\n\n      activeIcon = "ios-star"\n\n      defaultIcon = "ios-star-outline"\n\n      activeColor = "#488aff"\n\n      defaultColor = "#f4f4f4"\n\n      readonly="false"\n\n      [rating]="0">\n\n      </ionic3-star-rating>\n\n      <br/>\n\n      <textarea #myInput id="myInput" rows="2" maxLength="200" [(ngModel)]="TitleComment" placeholder="Titre de votre commentaire"></textarea>\n\n      <br/>\n\n      <textarea #myInput id="myInput" rows="9" maxLength="800" [(ngModel)]="CommentContent" placeholder="Contenu de votre commentaire"></textarea>\n\n      <br/>\n\n      <br/>\n\n      <button ion-button block (click)="thankyou()">{{ \'Envoyer mon commentaire\'}}</button>\n\n      <br />\n\n      <button ion-button block (click)="backvisit()">{{ \'Revenir à la liste des expositions\'}}</button>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\addcomment\addcomment.html"*/,
+            selector: 'page-addcomment',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/addcomment/addcomment.html"*/'<!--\n  Generated template for the FeedbackPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">\n  <ion-title>Liste des expositions</ion-title>\n      <button ion-button [menuToggle]>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n  </ion-header>\n\n<ion-content>\n  <ion-list inset>\n      <p>Quelle note donnez vous à cette éxposition ?</p>\n      <ionic3-star-rating\n      activeIcon = "ios-star"\n      defaultIcon = "ios-star-outline"\n      activeColor = "#488aff"\n      defaultColor = "#f4f4f4"\n      readonly="false"\n      [rating]="0">\n      </ionic3-star-rating>\n      <br/>\n      <textarea #myInput id="myInput" rows="2" maxLength="200" [(ngModel)]="TitleComment" placeholder="Titre de votre commentaire"></textarea>\n      <br/>\n      <textarea #myInput id="myInput" rows="9" maxLength="800" [(ngModel)]="CommentContent" placeholder="Contenu de votre commentaire"></textarea>\n      <br/>\n      <br/>\n      <button ion-button block (click)="thankyou()">{{ \'Envoyer mon commentaire\'}}</button>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/addcomment/addcomment.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */]])
     ], AddcommentPage);
     return AddcommentPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=addcomment.js.map

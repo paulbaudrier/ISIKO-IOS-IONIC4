@@ -113,15 +113,15 @@ export class ExposDetailsPage {
       DeleteUserFavoritData= {
         // this.ExpoUniqueID
       };
-      this.restProvider.deleteUserfavorit(DeleteUserFavoritData)
+      this.restProvider.deleteUserfavorit(DeleteUserFavoritData);
     }
 
 
   popupdeletetomyfavorit()
   {
     let alert = this.alertCtrl.create({
-      title: 'Exposition supprimé de vos favoris !',
-      subTitle: 'Exposition supprimé de vos favoris',
+      title: 'Exposition supprimée de vos favoris !',
+      subTitle: 'Exposition supprimée de vos favoris',
       buttons: ['OK']
     });
     alert.present();
@@ -131,8 +131,8 @@ export class ExposDetailsPage {
   {
 
     let alert = this.alertCtrl.create({
-      title: 'Exposition ajouter à vos favoris !',
-      subTitle: 'Exposition ajouter à vos favoris',
+      title: 'Exposition ajoutée à vos favoris !',
+      subTitle: 'Exposition ajoutée à vos favoris',
       buttons: ['OK']
     });
     alert.present();

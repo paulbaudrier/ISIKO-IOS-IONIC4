@@ -54,7 +54,6 @@ export class AddcommentPage {
 
     this.formattedDate = date + '-' + monthArray[month] + '-' + year;
     this.formattedDateObj = new Date(this.formattedDate)
-
   }
 
   // POST COMMENT
@@ -66,6 +65,7 @@ export class AddcommentPage {
   // ALERT POP UP
   thankyou(AddDataComment, ExposID)
   {
+    // console.log("MY RATING : " + this.StarRatingModule.rating);
      // let data={
     //   "id": "sample id",
     //   "userID": [
@@ -81,14 +81,14 @@ export class AddcommentPage {
     //   "title": "TEST PAUL IOS",
     //   "date_post": "26 Novembre 2018"
     // };
-    
+
     AddDataComment= {
-      "userID": [this.UserID.uid],"exhibitionID": [this.ExposID],"content": [this.CommentContent],"stars": "4",
+      "userID": [this.UserID.uid],"exhibitionID": [this.ExposID],"content": [this.CommentContent],"stars": "1",
         "title": this.TitleComment,
         "date_post": this.formattedDate
     };
 
-    
+
     let alert = this.alertCtrl.create({
       title: 'Commentaire poster !',
       subTitle: 'Merci votre commentaire a bien était ajouter',

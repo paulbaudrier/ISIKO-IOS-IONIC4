@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 734:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllcommentPageModule", function() { return AllcommentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allcomment__ = __webpack_require__(744);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic3_star_rating__ = __webpack_require__(387);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var AllcommentPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 743:
+/***/ 744:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92,7 +92,7 @@ var AllcommentPage = /** @class */ (function () {
     };
     AllcommentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-allcomment',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/'<!--\n\n  Generated template for the AllcommentPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Commentaires Disponible</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n<ng-container *ngFor="let comment of comments" class="zeubilamouche">\n\n\n\n  <ion-option *ngIf="value == comment.exhibitionID" >\n\n    <div class="commentsection">\n\n    <!-- <p class="commentaire username">{{comment.userID}}</p> -->\n\n    <p class="commentaire username">{{comment.date_post}}</p>\n\n    <p class="commentaire description"><br>{{comment.title}}</p>\n\n    <ionic3-star-rating\n\n    activeIcon = "ios-star"\n\n    defaultIcon = "ios-star-outline"\n\n    activeColor = "#488aff"\n\n    defaultColor = "#f4f4f4"\n\n    readonly="true"\n\n    [rating]="comment.stars">\n\n    </ionic3-star-rating>\n\n    \n\n   <p class="commentaire description"><br>{{comment.content}}</p>\n\n </div>\n\n\n\n  </ion-option>\n\n\n\n</ng-container>\n\n<br>\n\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\allcomment\allcomment.html"*/,
+            selector: 'page-allcomment',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/'<!--\n  Generated template for the AllcommentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Commentaires Disponible</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n<ng-container *ngFor="let comment of comments" class="zeubilamouche">\n\n  <ion-option *ngIf="value == comment.exhibitionID" >\n    <div class="commentsection">\n    <!-- <p class="commentaire username">{{comment.userID}}</p> -->\n    <p class="commentaire username">{{comment.date_post}}</p>\n    <p class="commentaire description"><br>{{comment.title}}</p>\n    <ionic3-star-rating\n    activeIcon = "ios-star"\n    defaultIcon = "ios-star-outline"\n    activeColor = "#488aff"\n    defaultColor = "#f4f4f4"\n    readonly="true"\n    [rating]="comment.stars">\n    </ionic3-star-rating>\n    \n   <p class="commentaire description"><br>{{comment.content}}</p>\n </div>\n\n  </ion-option>\n\n</ng-container>\n<br>\n<button ion-button block clear (click)="backvisit()">Ajouter mon commentaire !</button>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/allcomment/allcomment.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
     ], AllcommentPage);
