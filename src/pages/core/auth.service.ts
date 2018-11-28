@@ -57,7 +57,7 @@ export class AuthService {
          this.googlePlus.login({
           //  'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
           //  'webClientId': environment.googleWebClientId, // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
-           'offline': true
+           'offline': false
          }).then((response) => {
            const googleCredential = firebase.auth.GoogleAuthProvider.credential(response.idToken);
            firebase.auth().signInWithCredential(googleCredential)
@@ -77,7 +77,24 @@ export class AuthService {
           reject(err);
         })
        }
+          // TRY DEBUG GOOGLE CO BACKUP
+      //  if (this.platform.is('cordova')) {
+      //   this.googlePlus.login({
+      //    //  'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+      //    //  'webClientId': environment.googleWebClientId, // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+      //     'offline': false
+      //   }).then((response) => {
+      //     const googleCredential = firebase.auth.GoogleAuthProvider.credential(response.idToken);
+      //     firebase.auth().signInWithCredential(googleCredential)
+      //     .then((user) => {
+      //       resolve();
+      //     });
+      //   },(err) => {
+      //     reject(err);
+      //   });
+      // }
      })
+     
    }
 
   doFacebookLogin(){
