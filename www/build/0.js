@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 740:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77,7 +77,7 @@ var ThankyouPage = /** @class */ (function () {
     };
     ThankyouPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-thankyou',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\thankyou\thankyou.html"*/'<!--\n\n  Generated template for the ThankyouPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content >\n\n    <div class="title" textalign="center">\n\n        <h1>Merci pour votre retour !</h1>\n\n    </div>\n\n<br/>\n\n<br/> \n\n    <img class="fullscreen" src="../assets/img/thank-you.jpg">\n\n<br/>\n\n<br/>\n\n<button ion-button block (click)="home()">{{ \'Revenir à liste des expositions\'}}</button>\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\thankyou\thankyou.html"*/,
+            selector: 'page-thankyou',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/thankyou/thankyou.html"*/'<!--\n  Generated template for the ThankyouPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content >\n    <div class="title" textalign="center">\n        <h1>Merci pour votre retour !</h1>\n    </div>\n<br/>\n<br/> \n    <img class="fullscreen" src="../assets/img/thank-you.jpg">\n<br/>\n<br/>\n<button ion-button block (click)="home()">{{ \'Revenir à liste des expositions\'}}</button>\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/thankyou/thankyou.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavParams */]])
     ], ThankyouPage);

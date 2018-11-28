@@ -44,7 +44,7 @@ export class MyProfilePage {
     }, err => console.log(err))
   }
 
-
+counter:any;
 
   logout(){
     this.counter = 1;

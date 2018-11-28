@@ -41,6 +41,7 @@ export class WelcomePage {
   errorMessage: string = '';
   cpt = 0;
   splashcpt = 0;
+  showSplash:false;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
     public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio, public navParams: NavParams) {
