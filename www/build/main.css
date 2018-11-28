@@ -26224,8 +26224,8 @@ page-home img.listemenuimage {
   z-index: -1;
 }
 
-page-home ion-title {
-  color: white !important;
+page-home .toolbar-title.toolbar-title-md {
+  color: white;
   font-family: 'Cinzel', sans-serif;
   text-shadow: none !important;
   font-size: 22px;

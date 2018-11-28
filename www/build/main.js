@@ -92,7 +92,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/signup/signup.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>S\'inscrire sur ISIKO</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="form-content">\n  <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">\n\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type="text" formControlName="email"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>\n    </ion-item>\n\n    <button ion-button block class="submit-button" type="submit">S\'inscrire</button>\n    <label class="error-message">{{errorMessage}}</label>\n    <label class="success-message">{{successMessage}}</label>\n  </form>\n  <br>\n  <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">S\'inscrire avec Google</button>\n  <br>\n  <div>\n    <p>Déja un compte ? <a (click)="goLoginPage()">Essayer de vous connecter </a></p>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/signup/signup.html"*/
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>S\'inscrire sur ISIKO</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="form-content">\n\n  <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">\n\n\n\n    <ion-item>\n\n      <ion-label floating>Email</ion-label>\n\n      <ion-input type="text" formControlName="email"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button block class="submit-button" type="submit">S\'inscrire</button>\n\n    <label class="error-message">{{errorMessage}}</label>\n\n    <label class="success-message">{{successMessage}}</label>\n\n  </form>\n\n  <br>\n\n  <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">S\'inscrire avec Google</button>\n\n  <br>\n\n  <div>\n\n    <p>Déja un compte ? <a (click)="goLoginPage()">Essayer de vous connecter </a></p>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\signup\signup.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_4__providers__["c" /* User */],
@@ -218,7 +218,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Se connecter à ISIKO</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="form-content">\n  <form class="form" [formGroup]="loginForm" (ngSubmit)="tryLogin(loginForm.value)">\n\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type="text" formControlName="email"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>\n    </ion-item>\n\n    <button ion-button full class="submit-button" type="submit">\n      Se connecter\n    </button>\n    <label class="error-message">{{errorMessage}}</label>\n\n    <br>\n    <button ion-button full type="submit" class="google-button"  (click)="tryGoogleLogin()">Se connecter avec Google</button>\n    <br>\n    <div>\n      <p>Pas encore de compte ? <a (click)="goRegisterPage()">Créee un compte</a></p>\n    </div>\n   \n  </form>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/login/login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Se connecter à ISIKO</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding class="form-content">\n\n  <form class="form" [formGroup]="loginForm" (ngSubmit)="tryLogin(loginForm.value)">\n\n\n\n    <ion-item>\n\n      <ion-label floating>Email</ion-label>\n\n      <ion-input type="text" formControlName="email"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Password</ion-label>\n\n      <ion-input type="password" formControlName="password" class="form-controll"></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button full class="submit-button" type="submit">\n\n      Se connecter\n\n    </button>\n\n    <label class="error-message">{{errorMessage}}</label>\n\n\n\n    <br>\n\n    <button ion-button full type="submit" class="google-button"  (click)="tryGoogleLogin()">Se connecter avec Google</button>\n\n    <br>\n\n    <div>\n\n      <p>Pas encore de compte ? <a (click)="goRegisterPage()">Créee un compte</a></p>\n\n    </div>\n\n   \n\n  </form>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\login\login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_5__providers__["c" /* User */],
@@ -442,15 +442,15 @@ var map = {
 		6
 	],
 	"../pages/core/core.module": [
-		735,
+		737,
 		5
 	],
 	"../pages/expos-details/expos-details.module": [
-		736,
+		735,
 		4
 	],
 	"../pages/feedback/feedback.module": [
-		737,
+		736,
 		3
 	],
 	"../pages/my-favorites/my-favorites.module": [
@@ -462,11 +462,11 @@ var map = {
 		1
 	],
 	"../pages/splashscreen/splashscreen.module": [
-		740,
+		741,
 		8
 	],
 	"../pages/thankyou/thankyou.module": [
-		741,
+		740,
 		0
 	]
 };
@@ -800,7 +800,7 @@ var SplashscreenPage = /** @class */ (function () {
     };
     SplashscreenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'page-splashscreen',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/splashscreen/splashscreen.html"*/'<div *ngIf="showSplash" class="splash">\n  <ion-content>\n    <div class="sk-cube-grid">\n      <div class="sk-cube sk-cube1"></div>\n      <div class="sk-cube sk-cube2"></div>\n      <div class="sk-cube sk-cube3"></div>\n      <div class="sk-cube sk-cube4"></div>\n      <div class="sk-cube sk-cube5"></div>\n      <div class="sk-cube sk-cube6"></div>\n      <div class="sk-cube sk-cube7"></div>\n      <div class="sk-cube sk-cube8"></div>\n      <div class="sk-cube sk-cube9"></div>\n    </div>\n    <div class="titre" textalign="center">\n        <h1>Chargement en cours...</h1>\n    </div>\n    <img class="fullscreen" class="bounce1" src="../assets/img/isiko-SplashScreen.png">\n  </ion-content>\n\n</div>'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/splashscreen/splashscreen.html"*/,
+            selector: 'page-splashscreen',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/'<div *ngIf="showSplash" class="splash">\n\n  <ion-content>\n\n    <div class="sk-cube-grid">\n\n      <div class="sk-cube sk-cube1"></div>\n\n      <div class="sk-cube sk-cube2"></div>\n\n      <div class="sk-cube sk-cube3"></div>\n\n      <div class="sk-cube sk-cube4"></div>\n\n      <div class="sk-cube sk-cube5"></div>\n\n      <div class="sk-cube sk-cube6"></div>\n\n      <div class="sk-cube sk-cube7"></div>\n\n      <div class="sk-cube sk-cube8"></div>\n\n      <div class="sk-cube sk-cube9"></div>\n\n    </div>\n\n    <div class="titre" textalign="center">\n\n        <h1>Chargement en cours...</h1>\n\n    </div>\n\n    <img class="fullscreen" class="bounce1" src="../assets/img/isiko-SplashScreen.png">\n\n  </ion-content>\n\n\n\n</div>'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\splashscreen\splashscreen.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_audio__["a" /* NativeAudio */], __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], SplashscreenPage);
@@ -954,13 +954,13 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/addcomment/addcomment.module#AddcommentPageModule', name: 'AddcommentPage', segment: 'addcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/allcomment/allcomment.module#AllcommentPageModule', name: 'AllcommentPage', segment: 'allcomment', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/core/core.module#CorePageModule', name: 'CorePage', segment: 'core', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expos-details/expos-details.module#ExposDetailsPageModule', name: 'ExposDetailsPage', segment: 'expos-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/core/core.module#CorePageModule', name: 'CorePage', segment: 'core', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-favorites/my-favorites.module#MyFavoritesPageModule', name: 'MyFavoritesPage', segment: 'my-favorites', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/splashscreen/splashscreen.module#SplashscreenPageModule', name: 'SplashscreenPage', segment: 'splashscreen', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/splashscreen/splashscreen.module#SplashscreenPageModule', name: 'SplashscreenPage', segment: 'splashscreen', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -1147,7 +1147,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/home/home.html"*/'\n<ion-header>\n  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">\n  <ion-title>Liste des expositions</ion-title>\n      <button ion-button [menuToggle]>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n  </ion-header>\n\n<ion-content>\n\n  <ion-list inset>\n    <ion-item *ngFor="let user of users" (click)="expo_detail(user.id)">\n      <div class="row">\n      <div class="blackscreen"></div>\n    <div class="titleexpo">\n      <h2>{{user.name}}</h2>\n    </div>\n    <div class="texthomepage">\n      <p>{{user.artists}}</p>\n    </div>\n\n    <div class="imghome">\n      <img class="listemenuimage" src="{{user.image_ios}}">\n    </div>\n    </div>\n    </ion-item>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/home/home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\home\home.html"*/'\n\n<ion-header>\n\n  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">\n\n  <ion-title>Liste des expositions</ion-title>\n\n      <button ion-button [menuToggle]>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n  </ion-header>\n\n\n\n<ion-content>\n\n\n\n  <ion-list inset>\n\n    <ion-item *ngFor="let user of users" (click)="expo_detail(user.id)">\n\n      <div class="row">\n\n      <div class="blackscreen"></div>\n\n    <div class="titleexpo">\n\n      <h2>{{user.name}}</h2>\n\n    </div>\n\n    <div class="texthomepage">\n\n      <p>{{user.artists}}</p>\n\n    </div>\n\n\n\n    <div class="imghome">\n\n      <img class="listemenuimage" src="{{user.image_ios}}">\n\n    </div>\n\n    </div>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\home\home.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */]])
     ], HomePage);
@@ -1946,7 +1946,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  *
 */
 var WelcomePage = /** @class */ (function () {
-    function WelcomePage(navCtrl, alertCtrl, authService, formBuilder, menuCtrl, smartAudio, statusBar, splashScreen, modalCtrl, nativeAudio, navParams) {
+    function WelcomePage(navCtrl, alertCtrl, authService, formBuilder, menuCtrl, smartAudio, statusBar, splashScreen, modalCtrl, nativeAudio) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
@@ -1956,19 +1956,15 @@ var WelcomePage = /** @class */ (function () {
         this.smartAudio = smartAudio;
         this.statusBar = statusBar;
         this.nativeAudio = nativeAudio;
-        this.navParams = navParams;
+        this.showSplash = true; // <-- show animation
         this.errorMessage = '';
         this.cpt = 0;
-        this.splashcpt = 0;
         this.statusBar.styleDefault();
         menuCtrl.swipeEnable(false);
         this.menuCtrl.enable(false);
-        this.splashcpt = navParams.get('counter');
-        if (this.splashcpt != 1) {
-            this.showSplash = true;
-            Object(__WEBPACK_IMPORTED_MODULE_9_rxjs_observable_timer__["timer"])(2500).subscribe(function () { return _this.showSplash = false; }); // <-- hide animation after 3s
-        }
-        console.log("AVANT:" + this.splashcpt);
+        this.showSplash = true;
+        Object(__WEBPACK_IMPORTED_MODULE_9_rxjs_observable_timer__["timer"])(2500).subscribe(function () { return _this.showSplash = false; }); // <-- hide animation after 3s
+        console.log("AVANT:" + this.cpt);
         // if (this.cpt = 0)
         // {
         //   this.showSplash = true;
@@ -2040,12 +2036,12 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/welcome/welcome.html"*/'<div *ngIf="showSplash" class="splash">\n  <ion-content>\n    <div class="sk-cube-grid">\n      <div class="sk-cube sk-cube1"></div>\n      <div class="sk-cube sk-cube2"></div>\n      <div class="sk-cube sk-cube3"></div>\n      <div class="sk-cube sk-cube4"></div>\n      <div class="sk-cube sk-cube5"></div>\n      <div class="sk-cube sk-cube6"></div>\n      <div class="sk-cube sk-cube7"></div>\n      <div class="sk-cube sk-cube8"></div>\n      <div class="sk-cube sk-cube9"></div>\n    </div>\n    <div class="titre" textalign="center">\n        <h1>Chargement en cours...</h1>\n    </div>\n    <img class="fullscreen" class="bounce1" src="../assets/img/isiko-SplashScreen.png">\n  </ion-content>\n\n</div>\n<ion-content scroll="false">\n  <div class="blackbg"></div>\n  <div class="splash-bg"></div>\n  <div class="contenthomepage">\n    <div class="splash-info">\n    <div class="splash-logo"></div>\n  </div>\n  <div padding>\n    <button ion-button block (click)="signup()">{{ \'INSCRIPTION\'}}</button>\n    <button ion-button block (click)="login()" class="login">{{ \'LOGIN\' | translate }}</button>\n    <button ion-button icon-left block clear (click)="tryGoogleLogin()">\n      <ion-icon name="logo-google"></ion-icon>\n      Se connecter avec Google\n    </button>\n  </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/welcome/welcome.html"*/
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\welcome\welcome.html"*/'<div *ngIf="showSplash" class="splash">\n\n  <ion-content>\n\n    <div class="sk-cube-grid">\n\n      <div class="sk-cube sk-cube1"></div>\n\n      <div class="sk-cube sk-cube2"></div>\n\n      <div class="sk-cube sk-cube3"></div>\n\n      <div class="sk-cube sk-cube4"></div>\n\n      <div class="sk-cube sk-cube5"></div>\n\n      <div class="sk-cube sk-cube6"></div>\n\n      <div class="sk-cube sk-cube7"></div>\n\n      <div class="sk-cube sk-cube8"></div>\n\n      <div class="sk-cube sk-cube9"></div>\n\n    </div>\n\n    <div class="titre" textalign="center">\n\n        <h1>Chargement en cours...</h1>\n\n    </div>\n\n    <img class="fullscreen" class="bounce1" src="../assets/img/isiko-SplashScreen.png">\n\n  </ion-content>\n\n\n\n</div>\n\n<ion-content scroll="false">\n\n  <div class="blackbg"></div>\n\n  <div class="splash-bg"></div>\n\n  <div class="contenthomepage">\n\n    <div class="splash-info">\n\n    <div class="splash-logo"></div>\n\n  </div>\n\n  <div padding>\n\n    <button ion-button block (click)="signup()">{{ \'INSCRIPTION\'}}</button>\n\n    <button ion-button block (click)="login()" class="login">{{ \'LOGIN\' | translate }}</button>\n\n    <button ion-button icon-left block clear (click)="tryGoogleLogin()">\n\n      <ion-icon name="logo-google"></ion-icon>\n\n      Se connecter avec Google\n\n    </button>\n\n  </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\welcome\welcome.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_8__core_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__core_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* MenuController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["i" /* ModalController */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_native_audio__["a" /* NativeAudio */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_native_audio__["a" /* NativeAudio */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["l" /* NavParams */]) === "function" && _l || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_8__core_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_0__providers_smart_audio_smart_audio__["a" /* SmartAudioProvider */], __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_native_audio__["a" /* NativeAudio */]])
     ], WelcomePage);
     return WelcomePage;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 }());
 
 //# sourceMappingURL=welcome.js.map
