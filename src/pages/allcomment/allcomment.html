@@ -17,8 +17,9 @@
 
   <ion-option *ngIf="value == comment.exhibitionID" >
     <div class="commentsection">
-    <p class="commentaire username">{{comment.userID}}</p>
+    <!-- <p class="commentaire username">{{comment.userID}}</p> -->
     <p class="commentaire username">{{comment.date_post}}</p>
+    <p class="commentaire description"><br>{{comment.title}}</p>
     <ionic3-star-rating
     activeIcon = "ios-star"
     defaultIcon = "ios-star-outline"
@@ -27,6 +28,7 @@
     readonly="true"
     [rating]="comment.stars">
     </ionic3-star-rating>
+    
    <p class="commentaire description"><br>{{comment.content}}</p>
  </div>
 
