@@ -3,7 +3,7 @@ import { SignupPage } from './../signup/signup';
 import { LoginPage } from './../login/login';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 // ALERT POP UP IMPORT
@@ -24,8 +24,8 @@ import { StatusBar } from '@ionic-native/status-bar';
  * and then directs the user to create an account or log in.
  * If you'd like to immediately put the user onto a login/signup page,
  * we recommend not using the Welcome page.
- * 
- * 
+ *
+ *
 */
 
 
@@ -37,19 +37,24 @@ import { StatusBar } from '@ionic-native/status-bar';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-  showSplash = true; // <-- show animation
   loginForm: FormGroup;
   errorMessage: string = '';
   cpt = 0;
+  splashcpt = 0;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,public authService: AuthService,
-    public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio) { 
+    public formBuilder: FormBuilder,public menuCtrl: MenuController, public smartAudio: SmartAudioProvider,private statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,private nativeAudio: NativeAudio, public navParams: NavParams) {
       this.statusBar.styleDefault();
       menuCtrl.swipeEnable(false);
       this.menuCtrl.enable(false);
-      this.showSplash = true;
-      timer(2500).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
-      console.log("AVANT:" + this.cpt);
+      this.splashcpt = navParams.get('counter');
+      if (this.splashcpt != 1)
+      {
+        this.showSplash = true;
+        timer(2500).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
+      }
+
+      console.log("AVANT:" + this.splashcpt);
       // if (this.cpt = 0)
       // {
       //   this.showSplash = true;
@@ -80,7 +85,7 @@ export class WelcomePage {
     this.navCtrl.push(SignupPage);
   }
 
-  
+
 
   tryLogin(value){
     this.menuCtrl.swipeEnable(false);
@@ -130,5 +135,3 @@ export class WelcomePage {
   }
 
 }
-
-

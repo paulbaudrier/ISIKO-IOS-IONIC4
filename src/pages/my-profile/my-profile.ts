@@ -15,7 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
- * 
+ *
  * <!--  <ion-navbar hideBackButton="true"> -->
  */
 
@@ -43,14 +43,14 @@ export class MyProfilePage {
       console.log("USER IDDDDD" + user.name);
     }, err => console.log(err))
   }
-  
 
 
-  logout(cptSplashScreen){
-    cptSplashScreen = 1;
+
+  logout(){
+    this.counter = 1;
     this.authService.doLogout()
     .then((res) => {
-      this.navCtrl.push(WelcomePage, {cptSplashScreen:cptSplashScreen});
+      this.navCtrl.push(WelcomePage, {counter:this.counter});
       this.menuCtrl.enable(false);
     }, (error) => {
       console.log("Logout error", error);
