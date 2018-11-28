@@ -7,6 +7,7 @@ import { AlertController } from 'ionic-angular';
 import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { FirebaseUserModel } from '../core/user.model';
+import { Events } from 'ionic-angular';
 
 
 
@@ -35,9 +36,13 @@ export class AddcommentPage {
   CommentContent: any;
   ExposID: any;
   TitleComment: any;
+  Stars : any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private alertCtrl: AlertController,public restProvider: RestProvider, public userService: UserService,
-    public authService: AuthService) {
+    public authService: AuthService,
+    public events: Events
+    ) {
+    events.subscribe('star-rating:changed', (starRating) => {this.Stars = starRating});
     this.currentDate = new Date();
     this.getFormattedDate()
     this.ExposID = navParams.get('expos');
@@ -66,6 +71,7 @@ export class AddcommentPage {
   // ALERT POP UP
   thankyou(AddDataComment, ExposID)
   {
+    console.log("AU MOMENT DE l'ENVOIE : " + this.Stars);
      // let data={
     //   "id": "sample id",
     //   "userID": [
@@ -83,7 +89,7 @@ export class AddcommentPage {
     // };
     
     AddDataComment= {
-      "userID": [this.UserID.uid],"exhibitionID": [this.ExposID],"content": [this.CommentContent],"stars": "4",
+      "userID": [this.UserID.uid],"exhibitionID": [this.ExposID],"content": [this.CommentContent],"stars": this.Stars,
         "title": this.TitleComment,
         "date_post": this.formattedDate
     };
