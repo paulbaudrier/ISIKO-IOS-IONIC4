@@ -51,6 +51,9 @@ export class WelcomePage {
       this.splashcpt = navParams.get('counter');
       if (this.splashcpt != 1)
       {
+        smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
+        this.Netflix();
+        this.Netflixsound();
         this.showSplash = true;
         timer(2500).subscribe(() => this.showSplash = false) // <-- hide animation after 3s
       }

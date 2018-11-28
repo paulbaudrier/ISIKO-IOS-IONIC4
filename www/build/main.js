@@ -446,11 +446,11 @@ var map = {
 		5
 	],
 	"../pages/expos-details/expos-details.module": [
-		737,
+		736,
 		4
 	],
 	"../pages/feedback/feedback.module": [
-		736,
+		737,
 		3
 	],
 	"../pages/my-favorites/my-favorites.module": [
@@ -458,7 +458,7 @@ var map = {
 		2
 	],
 	"../pages/my-profile/my-profile.module": [
-		740,
+		741,
 		1
 	],
 	"../pages/splashscreen/splashscreen.module": [
@@ -466,7 +466,7 @@ var map = {
 		8
 	],
 	"../pages/thankyou/thankyou.module": [
-		741,
+		740,
 		0
 	]
 };
@@ -955,12 +955,12 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/addcomment/addcomment.module#AddcommentPageModule', name: 'AddcommentPage', segment: 'addcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/allcomment/allcomment.module#AllcommentPageModule', name: 'AllcommentPage', segment: 'allcomment', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/core/core.module#CorePageModule', name: 'CorePage', segment: 'core', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expos-details/expos-details.module#ExposDetailsPageModule', name: 'ExposDetailsPage', segment: 'expos-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/feedback/feedback.module#FeedbackPageModule', name: 'FeedbackPage', segment: 'feedback', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-favorites/my-favorites.module#MyFavoritesPageModule', name: 'MyFavoritesPage', segment: 'my-favorites', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/splashscreen/splashscreen.module#SplashscreenPageModule', name: 'SplashscreenPage', segment: 'splashscreen', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/thankyou/thankyou.module#ThankyouPageModule', name: 'ThankyouPage', segment: 'thankyou', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-profile/my-profile.module#MyProfilePageModule', name: 'MyProfilePage', segment: 'my-profile', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -1965,6 +1965,9 @@ var WelcomePage = /** @class */ (function () {
         this.menuCtrl.enable(false);
         this.splashcpt = navParams.get('counter');
         if (this.splashcpt != 1) {
+            smartAudio.preload('opening', 'assets/img/isiko-opening.mp3');
+            this.Netflix();
+            this.Netflixsound();
             this.showSplash = true;
             Object(__WEBPACK_IMPORTED_MODULE_9_rxjs_observable_timer__["timer"])(2500).subscribe(function () { return _this.showSplash = false; }); // <-- hide animation after 3s
         }
