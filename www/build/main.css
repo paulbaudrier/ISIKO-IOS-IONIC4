@@ -26305,6 +26305,10 @@ page-my-favorites .button-md {
   box-shadow: none !important;
 }
 
+page-my-favorites .center {
+  text-align: center;
+}
+
 page-my-favorites ion-header {
   padding: 10px;
 }

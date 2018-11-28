@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -100,7 +101,7 @@ export class AddcommentPage {
 
   backvisit()
   {
-    this.navCtrl.push('HomePage');
+    this.navCtrl.push(HomePage);
   }
 
   ionViewDidLoad() {

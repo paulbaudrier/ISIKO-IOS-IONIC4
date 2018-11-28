@@ -7,15 +7,16 @@
 <ion-content>
   <ion-list inset>
       <ng-container *ngFor="let expo of expos">
-        <!-- <img class="listemenuimage" src="{{expo.image_ios}}"> -->
-          </ng-container>
-      <ng-container *ngFor="let favorit of favorits">
-          <ion-option *ngIf="user.uid == favorit.id_Users" >
-
-          <h2>{{favorit.id_Expo}}</h2>
-          <p>{{favorit.id_Users}}</p>
-            </ion-option>
+        <ng-container *ngFor="let favorit of favorits">
+                <ion-option *ngIf="user.uid == favorit.id_Users" >
+                        <ion-option *ngIf="favorit.id_Expo == expo.id" >
+                <h2 class="center">{{expo.name}}</h2>
+                <!-- <p>{{favorit.id_Users}}</p> -->
+                <img class="listemenuimage" src="{{expo.image_ios}}">
+                </ion-option>
+                </ion-option>
 
         </ng-container>
+    </ng-container>
     </ion-list>
 </ion-content>
