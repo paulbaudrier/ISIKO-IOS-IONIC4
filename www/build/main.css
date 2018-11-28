@@ -25782,6 +25782,39 @@ page-addcomment .button-md {
   box-shadow: none !important;
 }
 
+page-addcomment ion-header.header.header-md {
+  background: #131313;
+  position: relative;
+}
+
+page-addcomment .toolbar-title.toolbar-title-md {
+  color: white;
+  font-family: 'Cinzel', sans-serif;
+  text-shadow: none !important;
+  font-size: 22px;
+  text-shadow: 1px 1px 20px #eeb06145;
+  position: absolute;
+  top: 10px;
+}
+
+page-addcomment .ionic3-star-rating {
+  text-align: center;
+}
+
+page-addcomment ion-icon.icon.icon-md.ion-ios-star {
+  color: #eeb061 !important;
+}
+
+page-addcomment ion-list p {
+  text-align: center;
+}
+
+page-addcomment textarea {
+  background-color: #000000c7;
+  color: #d89f58;
+  width: 100%;
+}
+
 page-addcomment .button-md:hover {
   background: #f6ae56 !important;
   border-radius: 7px;

@@ -7,6 +7,35 @@ page-addcomment {
 
   }
 
+  ion-header.header.header-md {
+    background: #131313;
+    position: relative;
+}
+      .toolbar-title.toolbar-title-md{
+        color: white;
+        font-family: 'Cinzel', sans-serif;
+        text-shadow: none !important;
+        font-size: 22px;
+        text-shadow: 1px 1px 20px #eeb06145;
+        position: absolute;
+        top: 10px;
+      }
+
+      .ionic3-star-rating {
+          text-align: center;
+      }
+      ion-icon.icon.icon-md.ion-ios-star {
+          color: rgb(238, 176, 97) !important;
+      }
+      ion-list p {
+    text-align: center;
+}
+textarea {
+    background-color: #000000c7;
+    color: #d89f58;
+    width: 100%;
+}
+
   .button-md:hover {
   background: #f6ae56 !important;
   border-radius: 7px;
