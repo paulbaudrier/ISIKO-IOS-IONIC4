@@ -98,12 +98,12 @@ var MyProfilePage = /** @class */ (function () {
             console.log("USER IDDDDD" + user.name);
         }, function (err) { return console.log(err); });
     };
-    MyProfilePage.prototype.logout = function (cptSplashScreen) {
+    MyProfilePage.prototype.logout = function () {
         var _this = this;
-        cptSplashScreen = 1;
+        this.counter = 1;
         this.authService.doLogout()
             .then(function (res) {
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__welcome_welcome__["a" /* WelcomePage */], { cptSplashScreen: cptSplashScreen });
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__welcome_welcome__["a" /* WelcomePage */], { counter: _this.counter });
             _this.menuCtrl.enable(false);
         }, function (error) {
             console.log("Logout error", error);
@@ -121,12 +121,12 @@ var MyProfilePage = /** @class */ (function () {
     };
     MyProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-my-profile',template:/*ion-inline-start:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/'<ion-header>\n\n    <ion-title>Mon Profil</ion-title>\n\n    <button class="buttonmenu" ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <div class="imgprofile">\n\n    <img [src]="user.image"/>\n\n  </div>\n\n    <ion-card-content>\n\n      <div class="profilecontent">\n\n      <ion-card-title>\n\n        <ion-option *ngIf="user.name != NULL">\n\n        {{user.name}}\n\n        </ion-option>\n\n        <ion-option *ngIf="user.name == NULL">\n\n        {{user.email}}\n\n\n\n        </ion-option>\n\n      </ion-card-title>\n\n      <p class="messageprofile">\n\n        Vous trouverez ici les informations de votre profil !\n\n      </p>\n\n      <p class="email">\n\n        <ion-option *ngIf="user.email != NULL">\n\n        Email : {{user.email}}\n\n      </ion-option>\n\n\n\n      </p>\n\n    </div>\n\n    </ion-card-content>\n\n    <br>\n\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Paul\Documents\GitHub\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-profile\my-profile.html"*/,
+            selector: 'page-my-profile',template:/*ion-inline-start:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-profile/my-profile.html"*/'<ion-header>\n    <ion-title>Mon Profil</ion-title>\n    <button class="buttonmenu" ion-button [menuToggle]>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <div class="imgprofile">\n    <img [src]="user.image"/>\n  </div>\n    <ion-card-content>\n      <div class="profilecontent">\n      <ion-card-title>\n        <ion-option *ngIf="user.name != NULL">\n        {{user.name}}\n        </ion-option>\n        <ion-option *ngIf="user.name == NULL">\n        {{user.email}}\n\n        </ion-option>\n      </ion-card-title>\n      <p class="messageprofile">\n        Vous trouverez ici les informations de votre profil !\n      </p>\n      <p class="email">\n        <ion-option *ngIf="user.email != NULL">\n        Email : {{user.email}}\n      </ion-option>\n\n      </p>\n    </div>\n    </ion-card-content>\n    <br>\n    <button ion-button block type="button" (click)=\'logout()\'>Se déconnecter</button>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/rayan/Documents/GVHP/PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER/src/pages/my-profile/my-profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__core_user_service__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__core_auth_service__["a" /* AuthService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* MenuController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _g || Object])
     ], MyProfilePage);
     return MyProfilePage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=my-profile.js.map

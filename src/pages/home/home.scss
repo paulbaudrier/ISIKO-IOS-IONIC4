@@ -43,8 +43,8 @@ page-home {
         z-index: -1;
     }
 
-    .toolbar-title.toolbar-title-md{
-      color: white;
+    ion-title{
+      color: white !important;
       font-family: 'Cinzel', sans-serif;
       text-shadow: none !important;
       font-size: 22px;

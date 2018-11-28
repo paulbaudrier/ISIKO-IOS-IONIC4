@@ -39,6 +39,7 @@ export class ExposDetailsPage {
     this.getExibitionsScript();
     this.getComment();
   }
+
   users: any;
   getUsers() {
     this.restProvider.getUsers()

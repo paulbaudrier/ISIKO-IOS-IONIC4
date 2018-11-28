@@ -5,12 +5,13 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Commentaires Disponible</ion-title>
-  </ion-navbar>
-
-</ion-header>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <ion-title>Liste des expositions</ion-title>
+      <button ion-button [menuToggle]>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-header>
+ 
 <ion-content padding>
 
 <ng-container *ngFor="let comment of comments" class="zeubilamouche">
@@ -28,7 +29,7 @@
     readonly="true"
     [rating]="comment.stars">
     </ionic3-star-rating>
-    
+
    <p class="commentaire description"><br>{{comment.content}}</p>
  </div>
 
