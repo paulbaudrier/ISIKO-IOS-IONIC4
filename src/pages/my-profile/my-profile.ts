@@ -46,10 +46,11 @@ export class MyProfilePage {
   
 
 
-  logout(){
+  logout(cptSplashScreen){
+    cptSplashScreen = 1;
     this.authService.doLogout()
     .then((res) => {
-      this.navCtrl.push(WelcomePage);
+      this.navCtrl.push(WelcomePage, {cptSplashScreen:cptSplashScreen});
       this.menuCtrl.enable(false);
     }, (error) => {
       console.log("Logout error", error);
