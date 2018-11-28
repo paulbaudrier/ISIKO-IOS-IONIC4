@@ -33,7 +33,6 @@
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
     "angularfire2": "^5.0.0-rc.10",
-    "cordova-android": "7.0.0",
     "cordova-ios": "4.5.5",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-facebook4": "^3.1.0",
@@ -89,9 +88,6 @@
       },
       "cordova-plugin-nativeaudio": {}
     },
-    "platforms": [
-      "android",
-      "ios"
-    ]
+    "platforms": []
   }
 }
