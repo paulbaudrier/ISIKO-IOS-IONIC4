@@ -42,15 +42,33 @@ page-home {
     img.listemenuimage {
         z-index: -1;
     }
-
-    .toolbar-title.toolbar-title-md{
-      color: white;
-      font-family: 'Cinzel', sans-serif;
-      text-shadow: none !important;
-      font-size: 22px;
-      text-shadow: 1px 1px 20px #eeb06145;
-      position: absolute;
+    //
+    // ion-title{
+    //   position: absolute;
+    //   top: 30px;
+    //   left: 100px;
+    //
+    // }
+    ion-header{
+      position: relative;
+      background: black;
       top: 10px;
+    }
+    ion-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 90px 1px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    h1 {
+      color: white !important;
+      font-family: 'Cinzel', sans-serif;
+      font-size: 40px;
+      text-shadow: none !important;
+      font-weight: 500;
     }
 
     .texthomepage {

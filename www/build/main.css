@@ -26224,14 +26224,28 @@ page-home img.listemenuimage {
   z-index: -1;
 }
 
-page-home .toolbar-title.toolbar-title-md {
-  color: white;
-  font-family: 'Cinzel', sans-serif;
-  text-shadow: none !important;
-  font-size: 22px;
-  text-shadow: 1px 1px 20px #eeb06145;
-  position: absolute;
+page-home ion-header {
+  position: relative;
+  background: black;
   top: 10px;
+}
+
+page-home ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+page-home h1 {
+  color: white !important;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 40px;
+  text-shadow: none !important;
+  font-weight: 500;
 }
 
 page-home .texthomepage {
