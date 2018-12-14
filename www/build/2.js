@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 738:
+/***/ 739:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyFavoritesPageModule", function() { return MyFavoritesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(747);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__my_favorites__ = __webpack_require__(748);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MyFavoritesPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 747:
+/***/ 748:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,7 +110,7 @@ var MyFavoritesPage = /** @class */ (function () {
     };
     MyFavoritesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-favorites',template:/*ion-inline-start:"Y:\GITHUB DEV\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-header>\n\n    <ion-title>Mes favoris</ion-title>\n\n    <button class="buttonmenu" ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n</ion-header>\n\n<ion-content>\n\n  <ion-list inset>\n\n      <ng-container *ngFor="let expo of expos">\n\n        <ng-container *ngFor="let favorit of favorits">\n\n                <ion-option *ngIf="user.uid == favorit.id_Users" >\n\n                        <ion-option *ngIf="favorit.id_Expo == expo.id" >\n\n                <h2 class="center">{{expo.name}}</h2>\n\n                <!-- <p>{{favorit.id_Users}}</p> -->\n\n                <img class="listemenuimage" src="{{expo.image_ios}}">\n\n                </ion-option>\n\n                </ion-option>\n\n\n\n        </ng-container>\n\n    </ng-container>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"Y:\GITHUB DEV\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
+            selector: 'page-my-favorites',template:/*ion-inline-start:"W:\GITHUB DEV\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/'<ion-header>\n\n    <ion-title>Mes favoris</ion-title>\n\n    <button class="buttonmenu" ion-button [menuToggle]>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n</ion-header>\n\n<ion-content>\n\n  <ion-list inset>\n\n      <ng-container *ngFor="let expo of expos">\n\n        <ng-container *ngFor="let favorit of favorits">\n\n                <ion-option *ngIf="user.uid == favorit.id_Users" >\n\n                        <ion-option *ngIf="favorit.id_Expo == expo.id" >\n\n                <h2 class="center">{{expo.name}}</h2>\n\n                <!-- <p>{{favorit.id_Users}}</p> -->\n\n                <img class="listemenuimage" src="{{expo.image_ios}}">\n\n                </ion-option>\n\n                </ion-option>\n\n\n\n        </ng-container>\n\n    </ng-container>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"W:\GITHUB DEV\PAUL-BAUDRIER-J-AI-TOUJOURS-RESPECTER\src\pages\my-favorites\my-favorites.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_3__core_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_4__core_auth_service__["a" /* AuthService */]])
