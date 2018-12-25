@@ -1,12 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>S'inscrire sur ISIKO</ion-title>
+    <ion-title>Inscription gratuite !</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="form-content">
   <form class="form" [formGroup]="registerForm" (ngSubmit)="tryRegister(registerForm.value)">
-
+    <br>
+    <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">S'inscrire avec Google</button>
+    <br>
     <ion-item>
       <ion-label floating>Email</ion-label>
       <ion-input type="text" formControlName="email"></ion-input>
@@ -20,9 +22,6 @@
     <label class="error-message">{{errorMessage}}</label>
     <label class="success-message">{{successMessage}}</label>
   </form>
-  <br>
-  <button ion-button block type="submit" class="google-button"  (click)="tryGoogleLogin()">S'inscrire avec Google</button>
-  <br>
   <div>
     <p>Déja un compte ? <a (click)="goLoginPage()">Essayer de vous connecter </a></p>
   </div>
